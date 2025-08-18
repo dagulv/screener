@@ -1,0 +1,1 @@
+drop view magic_formula_rankings;

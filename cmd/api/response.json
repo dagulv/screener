@@ -1,0 +1,5594 @@
+[
+  {
+    "fullName": "A.P. Møller - Mærsk A",
+    "symbol": "MAERSK A",
+    "isin": "DK0010244425",
+    "currency": "DKK",
+    "sector": "Industrials",
+    "orderbookId": "CSE3200"
+  },
+  {
+    "fullName": "A.P. Møller - Mærsk B",
+    "symbol": "MAERSK B",
+    "isin": "DK0010244508",
+    "currency": "DKK",
+    "sector": "Industrials",
+    "orderbookId": "CSE3201"
+  },
+  {
+    "fullName": "AaB",
+    "symbol": "AAB",
+    "isin": "DK0060868966",
+    "currency": "DKK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "CSE3307"
+  },
+  {
+    "fullName": "AAK",
+    "symbol": "AAK",
+    "isin": "SE0011337708",
+    "currency": "SEK",
+    "sector": "Consumer Staples",
+    "orderbookId": "SSE36273"
+  },
+  {
+    "fullName": "ABB Ltd",
+    "symbol": "ABB",
+    "isin": "CH0012221716",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE3966"
+  },
+  {
+    "fullName": "AcadeMedia",
+    "symbol": "ACAD",
+    "isin": "SE0007897079",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE123363"
+  },
+  {
+    "fullName": "Acrinova A",
+    "symbol": "ACRI A",
+    "isin": "SE0015660014",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE186414"
+  },
+  {
+    "fullName": "Acrinova B",
+    "symbol": "ACRI B",
+    "isin": "SE0015660030",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE219981"
+  },
+  {
+    "fullName": "Actic Group",
+    "symbol": "ATIC",
+    "isin": "SE0009269467",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE135947"
+  },
+  {
+    "fullName": "Active Biotech",
+    "symbol": "ACTI",
+    "isin": "SE0001137985",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE877"
+  },
+  {
+    "fullName": "AddLife B",
+    "symbol": "ALIF B",
+    "isin": "SE0014401378",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE120190"
+  },
+  {
+    "fullName": "Addnode Group B",
+    "symbol": "ANOD B",
+    "isin": "SE0017885767",
+    "currency": "SEK",
+    "sector": "Technology",
+    "orderbookId": "SSE3887"
+  },
+  {
+    "fullName": "Addtech B",
+    "symbol": "ADDT B",
+    "isin": "SE0014781795",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE14336"
+  },
+  {
+    "fullName": "Afarak Group",
+    "symbol": "AFAGR",
+    "isin": "FI0009800098",
+    "currency": "EUR",
+    "sector": "Basic Materials",
+    "orderbookId": "HEX24343"
+  },
+  {
+    "fullName": "AFRY",
+    "symbol": "AFRY",
+    "isin": "SE0005999836",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE862"
+  },
+  {
+    "fullName": "Agat Ejendomme",
+    "symbol": "AGAT",
+    "isin": "DK0010258995",
+    "currency": "DKK",
+    "sector": "Real Estate",
+    "orderbookId": "CSE3484"
+  },
+  {
+    "fullName": "AGF B",
+    "symbol": "AGF B",
+    "isin": "DK0010263722",
+    "currency": "DKK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "CSE3393"
+  },
+  {
+    "fullName": "Aktia Pankki",
+    "symbol": "AKTIA",
+    "isin": "FI4000058870",
+    "currency": "EUR",
+    "sector": "Financials",
+    "orderbookId": "HEX69423"
+  },
+  {
+    "fullName": "Alfa Laval",
+    "symbol": "ALFA",
+    "isin": "SE0000695876",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE18634"
+  },
+  {
+    "fullName": "Alimak Group",
+    "symbol": "ALIG",
+    "isin": "SE0007158910",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE110204"
+  },
+  {
+    "fullName": "Alisa Pankki Oyj",
+    "symbol": "ALISA",
+    "isin": "FI4000170915",
+    "currency": "EUR",
+    "sector": "Financials",
+    "orderbookId": "HEX115614"
+  },
+  {
+    "fullName": "ALK-Abelló B",
+    "symbol": "ALK B",
+    "isin": "DK0061802139",
+    "currency": "DKK",
+    "sector": "Health Care",
+    "orderbookId": "CSE32679"
+  },
+  {
+    "fullName": "Alleima",
+    "symbol": "ALLEI",
+    "isin": "SE0017615644",
+    "currency": "SEK",
+    "sector": "Basic Materials",
+    "orderbookId": "SSE265918"
+  },
+  {
+    "fullName": "Alligator Bioscience",
+    "symbol": "ATORX",
+    "isin": "SE0024173637",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE129022"
+  },
+  {
+    "fullName": "Alligo B",
+    "symbol": "ALLIGO B",
+    "isin": "SE0009922305",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE139749"
+  },
+  {
+    "fullName": "Alm. Brand",
+    "symbol": "ALMB",
+    "isin": "DK0015250344",
+    "currency": "DKK",
+    "sector": "Financials",
+    "orderbookId": "CSE3340"
+  },
+  {
+    "fullName": "Alma Media Oyj",
+    "symbol": "ALMA",
+    "isin": "FI0009013114",
+    "currency": "EUR",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "HEX29471"
+  },
+  {
+    "fullName": "Alvotech",
+    "symbol": "ALVO",
+    "isin": "LU2458332611",
+    "currency": "ISK",
+    "sector": "Health Care",
+    "orderbookId": "ICE260316"
+  },
+  {
+    "fullName": "Alvotech SDB",
+    "symbol": "ALVO SDB",
+    "isin": "SE0025011463",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE404221"
+  },
+  {
+    "fullName": "Amaroq Minerals Ltd.",
+    "symbol": "AMRQ",
+    "isin": "IS0000034569",
+    "currency": "ISK",
+    "sector": "Basic Materials",
+    "orderbookId": "ICE273304"
+  },
+  {
+    "fullName": "Ambea",
+    "symbol": "AMBEA",
+    "isin": "SE0009663826",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE135504"
+  },
+  {
+    "fullName": "Ambu",
+    "symbol": "AMBU B",
+    "isin": "DK0060946788",
+    "currency": "DKK",
+    "sector": "Health Care",
+    "orderbookId": "CSE3331"
+  },
+  {
+    "fullName": "Annehem Fastigheter B",
+    "symbol": "ANNE B",
+    "isin": "SE0015221684",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE211017"
+  },
+  {
+    "fullName": "Anora Group Oyj",
+    "symbol": "ANORA",
+    "isin": "FI4000292438",
+    "currency": "EUR",
+    "sector": "Consumer Staples",
+    "orderbookId": "HEX151998"
+  },
+  {
+    "fullName": "Anoto Group",
+    "symbol": "ANOT",
+    "isin": "SE0010415281",
+    "currency": "SEK",
+    "sector": "Technology",
+    "orderbookId": "SSE5110"
+  },
+  {
+    "fullName": "Apetit Oyj",
+    "symbol": "APETIT",
+    "isin": "FI0009003503",
+    "currency": "EUR",
+    "sector": "Consumer Staples",
+    "orderbookId": "HEX24300"
+  },
+  {
+    "fullName": "Apotea",
+    "symbol": "APOTEA",
+    "isin": "SE0023313762",
+    "currency": "SEK",
+    "sector": "Consumer Staples",
+    "orderbookId": "SSE373017"
+  },
+  {
+    "fullName": "AQ Group",
+    "symbol": "AQ",
+    "isin": "SE0022062196",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE13236"
+  },
+  {
+    "fullName": "Aquaporin",
+    "symbol": "AQP",
+    "isin": "DK0061555109",
+    "currency": "DKK",
+    "sector": "Industrials",
+    "orderbookId": "CSE228228"
+  },
+  {
+    "fullName": "Arctic Paper",
+    "symbol": "ARP",
+    "isin": "PLARTPR00012",
+    "currency": "SEK",
+    "sector": "Basic Materials",
+    "orderbookId": "SSE91264"
+  },
+  {
+    "fullName": "Arion banki",
+    "symbol": "ARION",
+    "isin": "IS0000028157",
+    "currency": "ISK",
+    "sector": "Financials",
+    "orderbookId": "ICE156438"
+  },
+  {
+    "fullName": "Arion Banki SDB",
+    "symbol": "ARION SDB",
+    "isin": "SE0010413567",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE156393"
+  },
+  {
+    "fullName": "Arise",
+    "symbol": "ARISE",
+    "isin": "SE0002095604",
+    "currency": "SEK",
+    "sector": "Utilities",
+    "orderbookId": "SSE74570"
+  },
+  {
+    "fullName": "Arjo B",
+    "symbol": "ARJO B",
+    "isin": "SE0010468116",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE146954"
+  },
+  {
+    "fullName": "Arla Plast",
+    "symbol": "ARPL",
+    "isin": "SE0015810817",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE225895"
+  },
+  {
+    "fullName": "AS Tallink Grupp FDR",
+    "symbol": "TALLINK",
+    "isin": "FI4000349378",
+    "currency": "EUR",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "HEX163393"
+  },
+  {
+    "fullName": "Ascelia Pharma",
+    "symbol": "ACE",
+    "isin": "SE0010573113",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE170065"
+  },
+  {
+    "fullName": "Asetek",
+    "symbol": "ASTK",
+    "isin": "DK0060477263",
+    "currency": "DKK",
+    "sector": "Technology",
+    "orderbookId": "CSE291227"
+  },
+  {
+    "fullName": "Asker Healthcare Group",
+    "symbol": "ASKER",
+    "isin": "SE0024171458",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE389113"
+  },
+  {
+    "fullName": "Asmodee Group B",
+    "symbol": "ASMDEE B",
+    "isin": "SE0023615638",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE383054"
+  },
+  {
+    "fullName": "Aspo Oyj",
+    "symbol": "ASPO",
+    "isin": "FI0009008072",
+    "currency": "EUR",
+    "sector": "Industrials",
+    "orderbookId": "HEX24236"
+  },
+  {
+    "fullName": "Aspocomp Group Oyj",
+    "symbol": "ACG1V",
+    "isin": "FI0009008080",
+    "currency": "EUR",
+    "sector": "Technology",
+    "orderbookId": "HEX24228"
+  },
+  {
+    "fullName": "ASSA ABLOY B",
+    "symbol": "ASSA B",
+    "isin": "SE0007100581",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE402"
+  },
+  {
+    "fullName": "AstraZeneca",
+    "symbol": "AZN",
+    "isin": "GB0009895292",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE3524"
+  },
+  {
+    "fullName": "Atlantic Petroleum",
+    "symbol": "ATLA DKK",
+    "isin": "FO000A0DN9X4",
+    "currency": "DKK",
+    "sector": "Energy",
+    "orderbookId": "CSE36661"
+  },
+  {
+    "fullName": "Atlas Copco A",
+    "symbol": "ATCO A",
+    "isin": "SE0017486889",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE45"
+  },
+  {
+    "fullName": "Atlas Copco B",
+    "symbol": "ATCO B",
+    "isin": "SE0017486897",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE46"
+  },
+  {
+    "fullName": "Atria Oyj A",
+    "symbol": "ATRAV",
+    "isin": "FI0009006548",
+    "currency": "EUR",
+    "sector": "Consumer Staples",
+    "orderbookId": "HEX24237"
+  },
+  {
+    "fullName": "Atrium Ljungberg B",
+    "symbol": "ATRLJ B",
+    "isin": "SE0024320832",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE1011"
+  },
+  {
+    "fullName": "Attendo",
+    "symbol": "ATT",
+    "isin": "SE0007666110",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE115956"
+  },
+  {
+    "fullName": "Autoliv SDB",
+    "symbol": "ALIV SDB",
+    "isin": "SE0021309614",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE47"
+  },
+  {
+    "fullName": "Avanza Bank Holding",
+    "symbol": "AZA",
+    "isin": "SE0012454072",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE988"
+  },
+  {
+    "fullName": "Axfood",
+    "symbol": "AXFO",
+    "isin": "SE0006993770",
+    "currency": "SEK",
+    "sector": "Consumer Staples",
+    "orderbookId": "SSE4590"
+  },
+  {
+    "fullName": "B3 Consulting Group",
+    "symbol": "B3",
+    "isin": "SE0008347660",
+    "currency": "SEK",
+    "sector": "Technology",
+    "orderbookId": "SSE123339"
+  },
+  {
+    "fullName": "Bactiguard Holding B",
+    "symbol": "BACTI B",
+    "isin": "SE0005878741",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE101601"
+  },
+  {
+    "fullName": "Balco Group",
+    "symbol": "BALCO",
+    "isin": "SE0010323998",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE144569"
+  },
+  {
+    "fullName": "Bang \u0026 Olufsen",
+    "symbol": "BO",
+    "isin": "DK0010218429",
+    "currency": "DKK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "CSE3202"
+  },
+  {
+    "fullName": "Bavarian Nordic",
+    "symbol": "BAVA",
+    "isin": "DK0015998017",
+    "currency": "DKK",
+    "sector": "Health Care",
+    "orderbookId": "CSE3333"
+  },
+  {
+    "fullName": "BE Group",
+    "symbol": "BEGR",
+    "isin": "SE0008321921",
+    "currency": "SEK",
+    "sector": "Basic Materials",
+    "orderbookId": "SSE37309"
+  },
+  {
+    "fullName": "Beijer Alma B",
+    "symbol": "BEIA B",
+    "isin": "SE0011090547",
+    "currency": "SEK",
+    "sector": "Basic Materials",
+    "orderbookId": "SSE875"
+  },
+  {
+    "fullName": "Beijer Ref B",
+    "symbol": "BEIJ B",
+    "isin": "SE0015949748",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE792"
+  },
+  {
+    "fullName": "Bergman \u0026 Beving B",
+    "symbol": "BERG B",
+    "isin": "SE0000101362",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE793"
+  },
+  {
+    "fullName": "Berner Industrier B",
+    "symbol": "BERNER B",
+    "isin": "SE0006143129",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE103391"
+  },
+  {
+    "fullName": "Betsson B",
+    "symbol": "BETS B",
+    "isin": "SE0022726485",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE5121"
+  },
+  {
+    "fullName": "Better Collective",
+    "symbol": "BETCO",
+    "isin": "DK0060952240",
+    "currency": "SEK",
+    "sector": "Technology",
+    "orderbookId": "SSE156147"
+  },
+  {
+    "fullName": "Better Collective",
+    "symbol": "BETCO DKK",
+    "isin": "DK0060952240",
+    "currency": "DKK",
+    "sector": "Technology",
+    "orderbookId": "CSE311247"
+  },
+  {
+    "fullName": "BHG Group",
+    "symbol": "BHG",
+    "isin": "SE0010948588",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE153223"
+  },
+  {
+    "fullName": "BICO Group",
+    "symbol": "BICO",
+    "isin": "SE0013647385",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE128490"
+  },
+  {
+    "fullName": "Bilia A",
+    "symbol": "BILI A",
+    "isin": "SE0009921588",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE794"
+  },
+  {
+    "fullName": "Billerud",
+    "symbol": "BILL",
+    "isin": "SE0000862997",
+    "currency": "SEK",
+    "sector": "Basic Materials",
+    "orderbookId": "SSE14922"
+  },
+  {
+    "fullName": "BioArctic B",
+    "symbol": "BIOA B",
+    "isin": "SE0010323311",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE144602"
+  },
+  {
+    "fullName": "BioGaia B",
+    "symbol": "BIOG B",
+    "isin": "SE0017769995",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE959"
+  },
+  {
+    "fullName": "Biohit Oyj B",
+    "symbol": "BIOBV",
+    "isin": "FI0009005482",
+    "currency": "EUR",
+    "sector": "Health Care",
+    "orderbookId": "HEX24241"
+  },
+  {
+    "fullName": "BioInvent International",
+    "symbol": "BINV",
+    "isin": "SE0015244520",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE13348"
+  },
+  {
+    "fullName": "BioPorto",
+    "symbol": "BIOPOR",
+    "isin": "DK0011048619",
+    "currency": "DKK",
+    "sector": "Health Care",
+    "orderbookId": "CSE3433"
+  },
+  {
+    "fullName": "Biotage",
+    "symbol": "BIOT",
+    "isin": "SE0000454746",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE5209"
+  },
+  {
+    "fullName": "Bittium Oyj",
+    "symbol": "BITTI",
+    "isin": "FI0009007264",
+    "currency": "EUR",
+    "sector": "Technology",
+    "orderbookId": "HEX24251"
+  },
+  {
+    "fullName": "Björn Borg",
+    "symbol": "BORG",
+    "isin": "SE0021921327",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE40286"
+  },
+  {
+    "fullName": "Boliden",
+    "symbol": "BOL",
+    "isin": "SE0020050417",
+    "currency": "SEK",
+    "sector": "Basic Materials",
+    "orderbookId": "SSE15285"
+  },
+  {
+    "fullName": "Bonava A",
+    "symbol": "BONAV A",
+    "isin": "SE0008091573",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE122974"
+  },
+  {
+    "fullName": "Bonava B",
+    "symbol": "BONAV B",
+    "isin": "SE0008091581",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE122975"
+  },
+  {
+    "fullName": "BONESUPPORT HOLDING",
+    "symbol": "BONEX",
+    "isin": "SE0009858152",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE139748"
+  },
+  {
+    "fullName": "Bong",
+    "symbol": "BONG",
+    "isin": "SE0000396061",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE892"
+  },
+  {
+    "fullName": "Boozt",
+    "symbol": "BOOZT",
+    "isin": "SE0009888738",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE138479"
+  },
+  {
+    "fullName": "Boozt",
+    "symbol": "BOOZT DKK",
+    "isin": "SE0009888738",
+    "currency": "DKK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "CSE208253"
+  },
+  {
+    "fullName": "Boreo Oyj",
+    "symbol": "BOREO",
+    "isin": "FI0009900724",
+    "currency": "EUR",
+    "sector": "Industrials",
+    "orderbookId": "HEX24395"
+  },
+  {
+    "fullName": "Boule Diagnostics",
+    "symbol": "BOUL",
+    "isin": "SE0011231158",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE82889"
+  },
+  {
+    "fullName": "Bravida Holding",
+    "symbol": "BRAV",
+    "isin": "SE0007491303",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE113960"
+  },
+  {
+    "fullName": "Brd. Klee B",
+    "symbol": "KLEE B",
+    "isin": "DK0010129089",
+    "currency": "DKK",
+    "sector": "Industrials",
+    "orderbookId": "CSE3420"
+  },
+  {
+    "fullName": "Brdr. A \u0026 O Johansen B",
+    "symbol": "AOJ B",
+    "isin": "DK0061686714",
+    "currency": "DKK",
+    "sector": "Industrials",
+    "orderbookId": "CSE3419"
+  },
+  {
+    "fullName": "Brim",
+    "symbol": "BRIM",
+    "isin": "IS0000000297",
+    "currency": "ISK",
+    "sector": "Consumer Staples",
+    "orderbookId": "ICE36551"
+  },
+  {
+    "fullName": "Brinova Fastigheter B",
+    "symbol": "BRIN B",
+    "isin": "SE0008347652",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE127241"
+  },
+  {
+    "fullName": "Brøndby IF",
+    "symbol": "BIF",
+    "isin": "DK0010247956",
+    "currency": "DKK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "CSE3399"
+  },
+  {
+    "fullName": "BTS Group B",
+    "symbol": "BTS B",
+    "isin": "SE0000805426",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE13288"
+  },
+  {
+    "fullName": "Bufab",
+    "symbol": "BUFAB",
+    "isin": "SE0025010671",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE99667"
+  },
+  {
+    "fullName": "Bulten",
+    "symbol": "BULTEN",
+    "isin": "SE0003849223",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE82239"
+  },
+  {
+    "fullName": "Bure Equity",
+    "symbol": "BURE",
+    "isin": "SE0000195810",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE800"
+  },
+  {
+    "fullName": "Byggmax Group",
+    "symbol": "BMAX",
+    "isin": "SE0003303627",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE75712"
+  },
+  {
+    "fullName": "Byggmästare A J Ahlström H",
+    "symbol": "AJA B",
+    "isin": "SE0006510491",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE105147"
+  },
+  {
+    "fullName": "C-RAD B",
+    "symbol": "CRAD B",
+    "isin": "SE0002016352",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE74313"
+  },
+  {
+    "fullName": "Camurus",
+    "symbol": "CAMX",
+    "isin": "SE0007692850",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE115961"
+  },
+  {
+    "fullName": "Cantargia",
+    "symbol": "CANTA",
+    "isin": "SE0006371126",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE107644"
+  },
+  {
+    "fullName": "CapMan Oyj",
+    "symbol": "CAPMAN",
+    "isin": "FI0009009377",
+    "currency": "EUR",
+    "sector": "Financials",
+    "orderbookId": "HEX24246"
+  },
+  {
+    "fullName": "Carasent",
+    "symbol": "CARA",
+    "isin": "SE0023261599",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE374423"
+  },
+  {
+    "fullName": "Carlsberg A",
+    "symbol": "CARL A",
+    "isin": "DK0010181676",
+    "currency": "DKK",
+    "sector": "Consumer Staples",
+    "orderbookId": "CSE1595"
+  },
+  {
+    "fullName": "Carlsberg B",
+    "symbol": "CARL B",
+    "isin": "DK0010181759",
+    "currency": "DKK",
+    "sector": "Consumer Staples",
+    "orderbookId": "CSE1596"
+  },
+  {
+    "fullName": "Castellum",
+    "symbol": "CAST",
+    "isin": "SE0000379190",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE966"
+  },
+  {
+    "fullName": "Catella A",
+    "symbol": "CAT A",
+    "isin": "SE0000188500",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE62547"
+  },
+  {
+    "fullName": "Catella B",
+    "symbol": "CAT B",
+    "isin": "SE0000188518",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE62559"
+  },
+  {
+    "fullName": "Catena",
+    "symbol": "CATE",
+    "isin": "SE0001664707",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE34362"
+  },
+  {
+    "fullName": "Catena Media",
+    "symbol": "CTM",
+    "isin": "MT0001000109",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE119018"
+  },
+  {
+    "fullName": "Cavotec",
+    "symbol": "CCC",
+    "isin": "CH0136071542",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE84962"
+  },
+  {
+    "fullName": "CBRAIN",
+    "symbol": "CBRAIN",
+    "isin": "DK0060030286",
+    "currency": "DKK",
+    "sector": "Technology",
+    "orderbookId": "CSE33039"
+  },
+  {
+    "fullName": "CellaVision",
+    "symbol": "CEVI",
+    "isin": "SE0000683484",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE40679"
+  },
+  {
+    "fullName": "Cemat",
+    "symbol": "CEMAT",
+    "isin": "DK0010271584",
+    "currency": "DKK",
+    "sector": "Technology",
+    "orderbookId": "CSE3485"
+  },
+  {
+    "fullName": "ChemoMetec",
+    "symbol": "CHEMM",
+    "isin": "DK0060055861",
+    "currency": "DKK",
+    "sector": "Health Care",
+    "orderbookId": "CSE37367"
+  },
+  {
+    "fullName": "Cibus Nordic Real Estate",
+    "symbol": "CIBUS",
+    "isin": "SE0010832204",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE152133"
+  },
+  {
+    "fullName": "Cinclus Pharma Holding",
+    "symbol": "CINPHA",
+    "isin": "SE0020388577",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE335514"
+  },
+  {
+    "fullName": "Cint Group",
+    "symbol": "CINT",
+    "isin": "SE0015483276",
+    "currency": "SEK",
+    "sector": "Technology",
+    "orderbookId": "SSE216858"
+  },
+  {
+    "fullName": "Citycon Oyj",
+    "symbol": "CTY1S",
+    "isin": "FI4000369947",
+    "currency": "EUR",
+    "sector": "Real Estate",
+    "orderbookId": "HEX24249"
+  },
+  {
+    "fullName": "Clas Ohlson B",
+    "symbol": "CLAS B",
+    "isin": "SE0000584948",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE4145"
+  },
+  {
+    "fullName": "Cloetta B",
+    "symbol": "CLA B",
+    "isin": "SE0002626861",
+    "currency": "SEK",
+    "sector": "Consumer Staples",
+    "orderbookId": "SSE63225"
+  },
+  {
+    "fullName": "CoinShares International",
+    "symbol": "CS",
+    "isin": "JE00BLD8Y945",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE219191"
+  },
+  {
+    "fullName": "Coloplast B",
+    "symbol": "COLO B",
+    "isin": "DK0060448595",
+    "currency": "DKK",
+    "sector": "Health Care",
+    "orderbookId": "CSE3203"
+  },
+  {
+    "fullName": "Columbus",
+    "symbol": "COLUM",
+    "isin": "DK0010268366",
+    "currency": "DKK",
+    "sector": "Technology",
+    "orderbookId": "CSE3248"
+  },
+  {
+    "fullName": "Componenta Oyj",
+    "symbol": "CTH1V",
+    "isin": "FI4000476783",
+    "currency": "EUR",
+    "sector": "Basic Materials",
+    "orderbookId": "HEX24247"
+  },
+  {
+    "fullName": "Concejo B",
+    "symbol": "CNCJO B",
+    "isin": "SE0000236382",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE803"
+  },
+  {
+    "fullName": "Consti Oyj",
+    "symbol": "CONSTI",
+    "isin": "FI4000178256",
+    "currency": "EUR",
+    "sector": "Industrials",
+    "orderbookId": "HEX115965"
+  },
+  {
+    "fullName": "Coor Service Management Hold.",
+    "symbol": "COOR",
+    "isin": "SE0007158829",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE110382"
+  },
+  {
+    "fullName": "Copenhagen 40% Pref 2032",
+    "symbol": "CPHCAP PREF32",
+    "isin": "DK0061930641",
+    "currency": "DKK",
+    "sector": "Real Estate",
+    "orderbookId": "CSE282215"
+  },
+  {
+    "fullName": "Copenhagen Capital Stam",
+    "symbol": "CPHCAP ST",
+    "isin": "DK0060093607",
+    "currency": "DKK",
+    "sector": "Real Estate",
+    "orderbookId": "CSE43432"
+  },
+  {
+    "fullName": "Corem Property Group A",
+    "symbol": "CORE A",
+    "isin": "SE0010714279",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE66929"
+  },
+  {
+    "fullName": "Corem Property Group B",
+    "symbol": "CORE B",
+    "isin": "SE0010714287",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE147093"
+  },
+  {
+    "fullName": "Corem Property Group D",
+    "symbol": "CORE D",
+    "isin": "SE0015961594",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE227437"
+  },
+  {
+    "fullName": "Corem Property Group Pref",
+    "symbol": "CORE PREF",
+    "isin": "SE0010714311",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE74282"
+  },
+  {
+    "fullName": "Creades A",
+    "symbol": "CRED A",
+    "isin": "SE0015661236",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE86903"
+  },
+  {
+    "fullName": "CTEK",
+    "symbol": "CTEK",
+    "isin": "SE0016798763",
+    "currency": "SEK",
+    "sector": "Energy",
+    "orderbookId": "SSE235162"
+  },
+  {
+    "fullName": "CTT Systems",
+    "symbol": "CTT",
+    "isin": "SE0000418923",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE3081"
+  },
+  {
+    "fullName": "D/S Norden",
+    "symbol": "DNORD",
+    "isin": "DK0060083210",
+    "currency": "DKK",
+    "sector": "Industrials",
+    "orderbookId": "CSE3293"
+  },
+  {
+    "fullName": "Danske Andelskassers Bank",
+    "symbol": "DAB",
+    "isin": "DK0060299063",
+    "currency": "DKK",
+    "sector": "Financials",
+    "orderbookId": "CSE82609"
+  },
+  {
+    "fullName": "Danske Bank",
+    "symbol": "DANSKE",
+    "isin": "DK0010274414",
+    "currency": "DKK",
+    "sector": "Financials",
+    "orderbookId": "CSE1586"
+  },
+  {
+    "fullName": "Dantax",
+    "symbol": "DANT",
+    "isin": "DK0015205637",
+    "currency": "DKK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "CSE3412"
+  },
+  {
+    "fullName": "Dedicare B",
+    "symbol": "DEDI",
+    "isin": "SE0003909282",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE81878"
+  },
+  {
+    "fullName": "Demant",
+    "symbol": "DEMANT",
+    "isin": "DK0060738599",
+    "currency": "DKK",
+    "sector": "Health Care",
+    "orderbookId": "CSE3247"
+  },
+  {
+    "fullName": "DFDS",
+    "symbol": "DFDS",
+    "isin": "DK0060655629",
+    "currency": "DKK",
+    "sector": "Industrials",
+    "orderbookId": "CSE3308"
+  },
+  {
+    "fullName": "Digia Oyj",
+    "symbol": "DIGIA",
+    "isin": "FI0009007983",
+    "currency": "EUR",
+    "sector": "Technology",
+    "orderbookId": "HEX24367"
+  },
+  {
+    "fullName": "Digitalist Group Oyj",
+    "symbol": "DIGIGR",
+    "isin": "FI0009008007",
+    "currency": "EUR",
+    "sector": "Technology",
+    "orderbookId": "HEX24377"
+  },
+  {
+    "fullName": "Diös Fastigheter",
+    "symbol": "DIOS",
+    "isin": "SE0001634262",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE34271"
+  },
+  {
+    "fullName": "Djurslands Bank",
+    "symbol": "DJUR",
+    "isin": "DK0060136273",
+    "currency": "DKK",
+    "sector": "Financials",
+    "orderbookId": "CSE3186"
+  },
+  {
+    "fullName": "Dometic Group",
+    "symbol": "DOM",
+    "isin": "SE0007691613",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE115619"
+  },
+  {
+    "fullName": "DORO",
+    "symbol": "DORO",
+    "isin": "SE0000215493",
+    "currency": "SEK",
+    "sector": "Telecommunications",
+    "orderbookId": "SSE896"
+  },
+  {
+    "fullName": "Dovre Group Oyj",
+    "symbol": "DOV1V",
+    "isin": "FI0009008098",
+    "currency": "EUR",
+    "sector": "Industrials",
+    "orderbookId": "HEX24325"
+  },
+  {
+    "fullName": "DSV",
+    "symbol": "DSV",
+    "isin": "DK0060079531",
+    "currency": "DKK",
+    "sector": "Industrials",
+    "orderbookId": "CSE3415"
+  },
+  {
+    "fullName": "Duni",
+    "symbol": "DUNI",
+    "isin": "SE0000616716",
+    "currency": "SEK",
+    "sector": "Consumer Staples",
+    "orderbookId": "SSE49775"
+  },
+  {
+    "fullName": "Duroc B",
+    "symbol": "DURC B",
+    "isin": "SE0000331266",
+    "currency": "SEK",
+    "sector": "Basic Materials",
+    "orderbookId": "SSE4005"
+  },
+  {
+    "fullName": "Dustin Group",
+    "symbol": "DUST",
+    "isin": "SE0006625471",
+    "currency": "SEK",
+    "sector": "Technology",
+    "orderbookId": "SSE106202"
+  },
+  {
+    "fullName": "Dynavox Group",
+    "symbol": "DYVOX",
+    "isin": "SE0017105620",
+    "currency": "SEK",
+    "sector": "Technology",
+    "orderbookId": "SSE242376"
+  },
+  {
+    "fullName": "Eastnine",
+    "symbol": "EAST",
+    "isin": "SE0022050183",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE49615"
+  },
+  {
+    "fullName": "Eezy Oyj",
+    "symbol": "EEZY",
+    "isin": "FI4000322326",
+    "currency": "EUR",
+    "sector": "Industrials",
+    "orderbookId": "HEX156200"
+  },
+  {
+    "fullName": "Egetis Therapeutics",
+    "symbol": "EGTX",
+    "isin": "SE0003815604",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE81313"
+  },
+  {
+    "fullName": "Eik fasteignafélag",
+    "symbol": "EIK",
+    "isin": "IS0000020709",
+    "currency": "ISK",
+    "sector": "Real Estate",
+    "orderbookId": "ICE108317"
+  },
+  {
+    "fullName": "Eimskipafélag Íslands",
+    "symbol": "EIM",
+    "isin": "IS0000019800",
+    "currency": "ISK",
+    "sector": "Industrials",
+    "orderbookId": "ICE90274"
+  },
+  {
+    "fullName": "Elanders B",
+    "symbol": "ELAN B",
+    "isin": "SE0000119299",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE897"
+  },
+  {
+    "fullName": "Elecster Oyj A",
+    "symbol": "ELEAV",
+    "isin": "FI0009900658",
+    "currency": "EUR",
+    "sector": "Industrials",
+    "orderbookId": "HEX24253"
+  },
+  {
+    "fullName": "Electrolux A",
+    "symbol": "ELUX A",
+    "isin": "SE0016589170",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE80"
+  },
+  {
+    "fullName": "Electrolux B",
+    "symbol": "ELUX B",
+    "isin": "SE0016589188",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE81"
+  },
+  {
+    "fullName": "Electrolux Professional B",
+    "symbol": "EPRO B",
+    "isin": "SE0013747870",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE191932"
+  },
+  {
+    "fullName": "Elekta B",
+    "symbol": "EKTA B",
+    "isin": "SE0000163628",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE806"
+  },
+  {
+    "fullName": "Elisa Oyj",
+    "symbol": "ELISA",
+    "isin": "FI0009007884",
+    "currency": "EUR",
+    "sector": "Telecommunications",
+    "orderbookId": "HEX24254"
+  },
+  {
+    "fullName": "Elon",
+    "symbol": "ELON",
+    "isin": "SE0001572520",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE66436"
+  },
+  {
+    "fullName": "Eltel",
+    "symbol": "ELTEL",
+    "isin": "SE0006509949",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE106028"
+  },
+  {
+    "fullName": "Embla Medical",
+    "symbol": "EMBLA",
+    "isin": "IS0000000040",
+    "currency": "DKK",
+    "sector": "Health Care",
+    "orderbookId": "CSE68620"
+  },
+  {
+    "fullName": "Embracer Group B",
+    "symbol": "EMBRAC B",
+    "isin": "SE0023615885",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE128651"
+  },
+  {
+    "fullName": "Enad Global 7",
+    "symbol": "EG7",
+    "isin": "SE0010520106",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE168020"
+  },
+  {
+    "fullName": "Endomines Finland Oyj",
+    "symbol": "PAMPALO",
+    "isin": "FI4000508023",
+    "currency": "EUR",
+    "sector": "Basic Materials",
+    "orderbookId": "HEX278081"
+  },
+  {
+    "fullName": "Enea",
+    "symbol": "ENEA",
+    "isin": "SE0009697220",
+    "currency": "SEK",
+    "sector": "Technology",
+    "orderbookId": "SSE1149"
+  },
+  {
+    "fullName": "Enento Group Oyj",
+    "symbol": "ENENTO",
+    "isin": "FI4000123195",
+    "currency": "EUR",
+    "sector": "Financials",
+    "orderbookId": "HEX107645"
+  },
+  {
+    "fullName": "Enersense International Oyj",
+    "symbol": "ESENSE",
+    "isin": "FI4000301585",
+    "currency": "EUR",
+    "sector": "Industrials",
+    "orderbookId": "HEX153716"
+  },
+  {
+    "fullName": "engcon B",
+    "symbol": "ENGCON B",
+    "isin": "SE0017769847",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE259557"
+  },
+  {
+    "fullName": "Eniro Group",
+    "symbol": "ENRO",
+    "isin": "SE0011256312",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE11046"
+  },
+  {
+    "fullName": "Enity Holding",
+    "symbol": "ENITY",
+    "isin": "SE0025011554",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE407578"
+  },
+  {
+    "fullName": "Ennogie Solar Group",
+    "symbol": "ESG",
+    "isin": "DK0010305077",
+    "currency": "DKK",
+    "sector": "Energy",
+    "orderbookId": "CSE3378"
+  },
+  {
+    "fullName": "Eolus B",
+    "symbol": "EOLU B",
+    "isin": "SE0007075056",
+    "currency": "SEK",
+    "sector": "Energy",
+    "orderbookId": "SSE66174"
+  },
+  {
+    "fullName": "Ependion",
+    "symbol": "EPEN",
+    "isin": "SE0000671711",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE5081"
+  },
+  {
+    "fullName": "Epiroc A",
+    "symbol": "EPI A",
+    "isin": "SE0015658109",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE156424"
+  },
+  {
+    "fullName": "Epiroc B",
+    "symbol": "EPI B",
+    "isin": "SE0015658117",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE156425"
+  },
+  {
+    "fullName": "Episurf B",
+    "symbol": "EPIS B",
+    "isin": "SE0003491562",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE78419"
+  },
+  {
+    "fullName": "eQ Oyj",
+    "symbol": "EQV1V",
+    "isin": "FI0009009617",
+    "currency": "EUR",
+    "sector": "Financials",
+    "orderbookId": "HEX24234"
+  },
+  {
+    "fullName": "EQL Pharma",
+    "symbol": "EQL",
+    "isin": "SE0005497732",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE338931"
+  },
+  {
+    "fullName": "EQT",
+    "symbol": "EQT",
+    "isin": "SE0012853455",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE180864"
+  },
+  {
+    "fullName": "Ericsson A",
+    "symbol": "ERIC A",
+    "isin": "SE0000108649",
+    "currency": "SEK",
+    "sector": "Telecommunications",
+    "orderbookId": "SSE100"
+  },
+  {
+    "fullName": "Ericsson B",
+    "symbol": "ERIC B",
+    "isin": "SE0000108656",
+    "currency": "SEK",
+    "sector": "Telecommunications",
+    "orderbookId": "SSE101"
+  },
+  {
+    "fullName": "Essity A",
+    "symbol": "ESSITY A",
+    "isin": "SE0009922156",
+    "currency": "SEK",
+    "sector": "Consumer Staples",
+    "orderbookId": "SSE139300"
+  },
+  {
+    "fullName": "Essity B",
+    "symbol": "ESSITY B",
+    "isin": "SE0009922164",
+    "currency": "SEK",
+    "sector": "Consumer Staples",
+    "orderbookId": "SSE139301"
+  },
+  {
+    "fullName": "Etteplan Oyj",
+    "symbol": "ETTE",
+    "isin": "FI0009008650",
+    "currency": "EUR",
+    "sector": "Industrials",
+    "orderbookId": "HEX24262"
+  },
+  {
+    "fullName": "Evli Oyj",
+    "symbol": "EVLI",
+    "isin": "FI4000513437",
+    "currency": "EUR",
+    "sector": "Financials",
+    "orderbookId": "HEX252993"
+  },
+  {
+    "fullName": "Evolution",
+    "symbol": "EVO",
+    "isin": "SE0012673267",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE107867"
+  },
+  {
+    "fullName": "Ework Group",
+    "symbol": "EWRK",
+    "isin": "SE0002402701",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE72798"
+  },
+  {
+    "fullName": "Exel Composites Oyj",
+    "symbol": "EXL1V",
+    "isin": "FI0009007306",
+    "currency": "EUR",
+    "sector": "Industrials",
+    "orderbookId": "HEX24265"
+  },
+  {
+    "fullName": "F-Secure Oyj",
+    "symbol": "FSECURE",
+    "isin": "FI4000519236",
+    "currency": "EUR",
+    "sector": "Technology",
+    "orderbookId": "HEX258491"
+  },
+  {
+    "fullName": "Fabege",
+    "symbol": "FABG",
+    "isin": "SE0011166974",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE861"
+  },
+  {
+    "fullName": "Fagerhult Group",
+    "symbol": "FAG",
+    "isin": "SE0010048884",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE903"
+  },
+  {
+    "fullName": "Fasadgruppen Group",
+    "symbol": "FG",
+    "isin": "SE0015195771",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE211024"
+  },
+  {
+    "fullName": "Fast Ejendom Danmark",
+    "symbol": "FED",
+    "isin": "DK0060522746",
+    "currency": "DKK",
+    "sector": "Real Estate",
+    "orderbookId": "CSE98410"
+  },
+  {
+    "fullName": "Fast. Balder B",
+    "symbol": "BALD B",
+    "isin": "SE0017832488",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE4212"
+  },
+  {
+    "fullName": "Fastator",
+    "symbol": "FASTAT",
+    "isin": "SE0015407382",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE87683"
+  },
+  {
+    "fullName": "Fastighetsbolag. Emilshus Pref",
+    "symbol": "EMIL PREF",
+    "isin": "SE0016785794",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE236498"
+  },
+  {
+    "fullName": "Fastighetsbolaget Emilshus B",
+    "symbol": "EMIL B",
+    "isin": "SE0016785786",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE259079"
+  },
+  {
+    "fullName": "Fastpartner A",
+    "symbol": "FPAR A",
+    "isin": "SE0013512506",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE980"
+  },
+  {
+    "fullName": "Fastpartner D",
+    "symbol": "FPAR D",
+    "isin": "SE0013512514",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE186254"
+  },
+  {
+    "fullName": "Fenix Outdoor International B",
+    "symbol": "FOI B",
+    "isin": "CH0242214887",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE101639"
+  },
+  {
+    "fullName": "Ferronordic",
+    "symbol": "FNM",
+    "isin": "SE0005468717",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE145193"
+  },
+  {
+    "fullName": "Festi",
+    "symbol": "FESTI",
+    "isin": "IS0000020584",
+    "currency": "ISK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "ICE98870"
+  },
+  {
+    "fullName": "Fingerprint Cards B",
+    "symbol": "FING B",
+    "isin": "SE0008374250",
+    "currency": "SEK",
+    "sector": "Technology",
+    "orderbookId": "SSE4870"
+  },
+  {
+    "fullName": "Finnair Oyj",
+    "symbol": "FIA1S",
+    "isin": "FI4000567029",
+    "currency": "EUR",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "HEX24266"
+  },
+  {
+    "fullName": "FirstFarms",
+    "symbol": "FFARMS",
+    "isin": "DK0060056166",
+    "currency": "DKK",
+    "sector": "Consumer Staples",
+    "orderbookId": "CSE37192"
+  },
+  {
+    "fullName": "Fiskars Oyj Abp",
+    "symbol": "FSKRS",
+    "isin": "FI0009000400",
+    "currency": "EUR",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "HEX24267"
+  },
+  {
+    "fullName": "Flerie",
+    "symbol": "FLERIE",
+    "isin": "SE0022447348",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE127479"
+  },
+  {
+    "fullName": "FLSmidth \u0026 Co.",
+    "symbol": "FLS",
+    "isin": "DK0010234467",
+    "currency": "DKK",
+    "sector": "Industrials",
+    "orderbookId": "CSE3207"
+  },
+  {
+    "fullName": "Fly Play",
+    "symbol": "PLAY",
+    "isin": "IS0000032936",
+    "currency": "ISK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "ICE229790"
+  },
+  {
+    "fullName": "Flügger group B",
+    "symbol": "FLUG B",
+    "isin": "DK0010218189",
+    "currency": "DKK",
+    "sector": "Industrials",
+    "orderbookId": "CSE3315"
+  },
+  {
+    "fullName": "FM Mattsson B",
+    "symbol": "FMM B",
+    "isin": "SE0018040883",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE136221"
+  },
+  {
+    "fullName": "Formpipe Software",
+    "symbol": "FPIP",
+    "isin": "SE0001338039",
+    "currency": "SEK",
+    "sector": "Technology",
+    "orderbookId": "SSE72565"
+  },
+  {
+    "fullName": "Fortnox",
+    "symbol": "FNOX",
+    "isin": "SE0017161243",
+    "currency": "SEK",
+    "sector": "Technology",
+    "orderbookId": "SSE254941"
+  },
+  {
+    "fullName": "Fortum Oyj",
+    "symbol": "FORTUM",
+    "isin": "FI0009007132",
+    "currency": "EUR",
+    "sector": "Utilities",
+    "orderbookId": "HEX24271"
+  },
+  {
+    "fullName": "Fynske Bank",
+    "symbol": "FYNBK",
+    "isin": "DK0060520377",
+    "currency": "DKK",
+    "sector": "Financials",
+    "orderbookId": "CSE14651"
+  },
+  {
+    "fullName": "Føroya Banki",
+    "symbol": "FOBANK",
+    "isin": "FO0000000088",
+    "currency": "DKK",
+    "sector": "Financials",
+    "orderbookId": "CSE40854"
+  },
+  {
+    "fullName": "G5 Entertainment",
+    "symbol": "G5EN",
+    "isin": "SE0001824004",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE60158"
+  },
+  {
+    "fullName": "Gabriel Holding",
+    "symbol": "GABR",
+    "isin": "DK0060124691",
+    "currency": "DKK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "CSE3317"
+  },
+  {
+    "fullName": "Garo",
+    "symbol": "GARO",
+    "isin": "SE0015812417",
+    "currency": "SEK",
+    "sector": "Technology",
+    "orderbookId": "SSE119990"
+  },
+  {
+    "fullName": "Genmab",
+    "symbol": "GMAB",
+    "isin": "DK0010272202",
+    "currency": "DKK",
+    "sector": "Health Care",
+    "orderbookId": "CSE11143"
+  },
+  {
+    "fullName": "Genova Property Group",
+    "symbol": "GPG",
+    "isin": "SE0007184189",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE198720"
+  },
+  {
+    "fullName": "Gentoo Media",
+    "symbol": "G2M",
+    "isin": "US36467X2062",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE170080"
+  },
+  {
+    "fullName": "German High Street Properties",
+    "symbol": "GERHSP",
+    "isin": "DK0060093524",
+    "currency": "DKK",
+    "sector": "Real Estate",
+    "orderbookId": "CSE42233"
+  },
+  {
+    "fullName": "Getinge B",
+    "symbol": "GETI B",
+    "isin": "SE0000202624",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE812"
+  },
+  {
+    "fullName": "Glaston Oyj Abp",
+    "symbol": "GLA1V",
+    "isin": "FI4000587340",
+    "currency": "EUR",
+    "sector": "Industrials",
+    "orderbookId": "HEX24293"
+  },
+  {
+    "fullName": "Glunz \u0026 Jensen Holding",
+    "symbol": "GJ",
+    "isin": "DK0010249309",
+    "currency": "DKK",
+    "sector": "Industrials",
+    "orderbookId": "CSE3318"
+  },
+  {
+    "fullName": "GN Store Nord",
+    "symbol": "GN",
+    "isin": "DK0010272632",
+    "currency": "DKK",
+    "sector": "Health Care",
+    "orderbookId": "CSE3205"
+  },
+  {
+    "fullName": "Gofore Oyj",
+    "symbol": "GOFORE",
+    "isin": "FI4000283130",
+    "currency": "EUR",
+    "sector": "Technology",
+    "orderbookId": "HEX145875"
+  },
+  {
+    "fullName": "Green Hydrogen Systems",
+    "symbol": "GREENH",
+    "isin": "DK0061540341",
+    "currency": "DKK",
+    "sector": "Energy",
+    "orderbookId": "CSE227439"
+  },
+  {
+    "fullName": "Green Landscaping Group",
+    "symbol": "GREEN",
+    "isin": "SE0010985028",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE153197"
+  },
+  {
+    "fullName": "GreenMobility",
+    "symbol": "GREENM",
+    "isin": "DK0060817898",
+    "currency": "DKK",
+    "sector": "Industrials",
+    "orderbookId": "CSE138514"
+  },
+  {
+    "fullName": "GRK Infra Oyj",
+    "symbol": "GRK",
+    "isin": "FI4000517966",
+    "currency": "EUR",
+    "sector": "Industrials",
+    "orderbookId": "HEX392087"
+  },
+  {
+    "fullName": "Gruvaktiebolaget Viscaria",
+    "symbol": "VISC",
+    "isin": "SE0021148160",
+    "currency": "SEK",
+    "sector": "Basic Materials",
+    "orderbookId": "SSE38904"
+  },
+  {
+    "fullName": "Gränges",
+    "symbol": "GRNG",
+    "isin": "SE0006288015",
+    "currency": "SEK",
+    "sector": "Basic Materials",
+    "orderbookId": "SSE103110"
+  },
+  {
+    "fullName": "Grønlandsbanken",
+    "symbol": "GRLA",
+    "isin": "DK0010230630",
+    "currency": "DKK",
+    "sector": "Financials",
+    "orderbookId": "CSE3210"
+  },
+  {
+    "fullName": "Gubra",
+    "symbol": "GUBRA",
+    "isin": "DK0062266474",
+    "currency": "DKK",
+    "sector": "Health Care",
+    "orderbookId": "CSE287995"
+  },
+  {
+    "fullName": "Gyldendal A",
+    "symbol": "GYLD A",
+    "isin": "DK0010247527",
+    "currency": "DKK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "CSE3281"
+  },
+  {
+    "fullName": "Gyldendal B",
+    "symbol": "GYLD B",
+    "isin": "DK0010247600",
+    "currency": "DKK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "CSE3283"
+  },
+  {
+    "fullName": "H+H International",
+    "symbol": "HH",
+    "isin": "DK0015202451",
+    "currency": "DKK",
+    "sector": "Industrials",
+    "orderbookId": "CSE3284"
+  },
+  {
+    "fullName": "H. Lundbeck A",
+    "symbol": "HLUN A",
+    "isin": "DK0061804697",
+    "currency": "DKK",
+    "sector": "Health Care",
+    "orderbookId": "CSE258946"
+  },
+  {
+    "fullName": "H. Lundbeck B",
+    "symbol": "HLUN B",
+    "isin": "DK0061804770",
+    "currency": "DKK",
+    "sector": "Health Care",
+    "orderbookId": "CSE258947"
+  },
+  {
+    "fullName": "Hagar",
+    "symbol": "HAGA",
+    "isin": "IS0000020121",
+    "currency": "ISK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "ICE85677"
+  },
+  {
+    "fullName": "HAKI Safety A",
+    "symbol": "HAKI A",
+    "isin": "SE0000122657",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE834"
+  },
+  {
+    "fullName": "HAKI Safety B",
+    "symbol": "HAKI B",
+    "isin": "SE0000122673",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE835"
+  },
+  {
+    "fullName": "Hampiðjan",
+    "symbol": "HAMP",
+    "isin": "IS0000000305",
+    "currency": "ISK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "ICE35457"
+  },
+  {
+    "fullName": "Hansa Biopharma",
+    "symbol": "HNSA",
+    "isin": "SE0002148817",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE43288"
+  },
+  {
+    "fullName": "HANZA",
+    "symbol": "HANZA",
+    "isin": "SE0005878543",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE100972"
+  },
+  {
+    "fullName": "Harboes Bryggeri B",
+    "symbol": "HARB B",
+    "isin": "DK0060014751",
+    "currency": "DKK",
+    "sector": "Consumer Staples",
+    "orderbookId": "CSE3351"
+  },
+  {
+    "fullName": "Harvia Oyj",
+    "symbol": "HARVIA",
+    "isin": "FI4000306873",
+    "currency": "EUR",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "HEX152347"
+  },
+  {
+    "fullName": "Havsfrun Investment B",
+    "symbol": "HAV B",
+    "isin": "SE0000312043",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE990"
+  },
+  {
+    "fullName": "HEBA B",
+    "symbol": "HEBA B",
+    "isin": "SE0017911480",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE991"
+  },
+  {
+    "fullName": "Heimar",
+    "symbol": "HEIMAR",
+    "isin": "IS0000021301",
+    "currency": "ISK",
+    "sector": "Real Estate",
+    "orderbookId": "ICE88769"
+  },
+  {
+    "fullName": "Hemnet Group",
+    "symbol": "HEM",
+    "isin": "SE0015671995",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE223061"
+  },
+  {
+    "fullName": "Hennes \u0026 Mauritz B",
+    "symbol": "HM B",
+    "isin": "SE0000106270",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE992"
+  },
+  {
+    "fullName": "Hexagon B",
+    "symbol": "HEXA B",
+    "isin": "SE0015961909",
+    "currency": "SEK",
+    "sector": "Technology",
+    "orderbookId": "SSE819"
+  },
+  {
+    "fullName": "Hexatronic Group",
+    "symbol": "HTRO",
+    "isin": "SE0018040677",
+    "currency": "SEK",
+    "sector": "Telecommunications",
+    "orderbookId": "SSE82816"
+  },
+  {
+    "fullName": "HEXPOL B",
+    "symbol": "HPOL B",
+    "isin": "SE0007074281",
+    "currency": "SEK",
+    "sector": "Basic Materials",
+    "orderbookId": "SSE55907"
+  },
+  {
+    "fullName": "Hiab Oyj",
+    "symbol": "HIAB",
+    "isin": "FI4000571013",
+    "currency": "EUR",
+    "sector": "Industrials",
+    "orderbookId": "HEX29983"
+  },
+  {
+    "fullName": "HKFoods Oyj A",
+    "symbol": "HKFOODS",
+    "isin": "FI0009006308",
+    "currency": "EUR",
+    "sector": "Consumer Staples",
+    "orderbookId": "HEX24273"
+  },
+  {
+    "fullName": "HMS Networks",
+    "symbol": "HMS",
+    "isin": "SE0009997018",
+    "currency": "SEK",
+    "sector": "Telecommunications",
+    "orderbookId": "SSE43302"
+  },
+  {
+    "fullName": "Hoist Finance",
+    "symbol": "HOFI",
+    "isin": "SE0006887063",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE107904"
+  },
+  {
+    "fullName": "Holmen A",
+    "symbol": "HOLM A",
+    "isin": "SE0011090000",
+    "currency": "SEK",
+    "sector": "Basic Materials",
+    "orderbookId": "SSE221"
+  },
+  {
+    "fullName": "Holmen B",
+    "symbol": "HOLM B",
+    "isin": "SE0011090018",
+    "currency": "SEK",
+    "sector": "Basic Materials",
+    "orderbookId": "SSE222"
+  },
+  {
+    "fullName": "Honkarakenne Oyj B",
+    "symbol": "HONBS",
+    "isin": "FI0009900104",
+    "currency": "EUR",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "HEX24274"
+  },
+  {
+    "fullName": "Hufvudstaden A",
+    "symbol": "HUFV A",
+    "isin": "SE0000170375",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE820"
+  },
+  {
+    "fullName": "Huhtamäki Oyj",
+    "symbol": "HUH1V",
+    "isin": "FI0009000459",
+    "currency": "EUR",
+    "sector": "Industrials",
+    "orderbookId": "HEX24276"
+  },
+  {
+    "fullName": "Humana",
+    "symbol": "HUM",
+    "isin": "SE0008040653",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE120363"
+  },
+  {
+    "fullName": "Humble Group",
+    "symbol": "HUMBLE",
+    "isin": "SE0006261046",
+    "currency": "SEK",
+    "sector": "Consumer Staples",
+    "orderbookId": "SSE103618"
+  },
+  {
+    "fullName": "HusCompagniet",
+    "symbol": "HUSCO",
+    "isin": "DK0061412855",
+    "currency": "DKK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "CSE207079"
+  },
+  {
+    "fullName": "Husqvarna A",
+    "symbol": "HUSQ A",
+    "isin": "SE0001662222",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE34913"
+  },
+  {
+    "fullName": "Husqvarna B",
+    "symbol": "HUSQ B",
+    "isin": "SE0001662230",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE34915"
+  },
+  {
+    "fullName": "Hvidbjerg Bank",
+    "symbol": "HVID",
+    "isin": "DK0060135978",
+    "currency": "DKK",
+    "sector": "Financials",
+    "orderbookId": "CSE3212"
+  },
+  {
+    "fullName": "I.A.R Systems Group",
+    "symbol": "IAR B",
+    "isin": "SE0005851706",
+    "currency": "SEK",
+    "sector": "Technology",
+    "orderbookId": "SSE2346"
+  },
+  {
+    "fullName": "Iceland Seafood International",
+    "symbol": "ICESEA",
+    "isin": "IS0000026961",
+    "currency": "ISK",
+    "sector": "Consumer Staples",
+    "orderbookId": "ICE122596"
+  },
+  {
+    "fullName": "Icelandair Group",
+    "symbol": "ICEAIR",
+    "isin": "IS0000013464",
+    "currency": "ISK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "ICE37744"
+  },
+  {
+    "fullName": "Ilkka Oyj 2",
+    "symbol": "ILKKA2",
+    "isin": "FI0009800205",
+    "currency": "EUR",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "HEX24278"
+  },
+  {
+    "fullName": "Image Systems",
+    "symbol": "IS",
+    "isin": "SE0006421871",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE3571"
+  },
+  {
+    "fullName": "Immunovia",
+    "symbol": "IMMNOV",
+    "isin": "SE0006091997",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE115966"
+  },
+  {
+    "fullName": "Incap Oyj",
+    "symbol": "ICP1V",
+    "isin": "FI0009006407",
+    "currency": "EUR",
+    "sector": "Industrials",
+    "orderbookId": "HEX24279"
+  },
+  {
+    "fullName": "Industrivärden A",
+    "symbol": "INDU A",
+    "isin": "SE0000190126",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE142"
+  },
+  {
+    "fullName": "Industrivärden C",
+    "symbol": "INDU C",
+    "isin": "SE0000107203",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE143"
+  },
+  {
+    "fullName": "Indutrade",
+    "symbol": "INDT",
+    "isin": "SE0001515552",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE31308"
+  },
+  {
+    "fullName": "Infant Bacterial TherapeuticsB",
+    "symbol": "IBT B",
+    "isin": "SE0008015259",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE120381"
+  },
+  {
+    "fullName": "Infrea",
+    "symbol": "INFREA",
+    "isin": "SE0010600106",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE154032"
+  },
+  {
+    "fullName": "Inission B",
+    "symbol": "INISS B",
+    "isin": "SE0016275069",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE110377"
+  },
+  {
+    "fullName": "Instalco",
+    "symbol": "INSTAL",
+    "isin": "SE0017483506",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE137177"
+  },
+  {
+    "fullName": "Intea Fastigheter B",
+    "symbol": "INTEA B",
+    "isin": "SE0017072259",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE375154"
+  },
+  {
+    "fullName": "Intea Fastigheter D",
+    "symbol": "INTEA D",
+    "isin": "SE0017072267",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE375155"
+  },
+  {
+    "fullName": "International Petroleum Corp.",
+    "symbol": "IPCO",
+    "isin": "CA46016U1084",
+    "currency": "SEK",
+    "sector": "Energy",
+    "orderbookId": "SSE136295"
+  },
+  {
+    "fullName": "Intrum",
+    "symbol": "INTRUM",
+    "isin": "SE0000936478",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE18962"
+  },
+  {
+    "fullName": "Investor A",
+    "symbol": "INVE A",
+    "isin": "SE0015811955",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE160"
+  },
+  {
+    "fullName": "Investor B",
+    "symbol": "INVE B",
+    "isin": "SE0015811963",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE161"
+  },
+  {
+    "fullName": "Investors House Oyj",
+    "symbol": "INVEST",
+    "isin": "FI0009900559",
+    "currency": "EUR",
+    "sector": "Real Estate",
+    "orderbookId": "HEX24358"
+  },
+  {
+    "fullName": "INVISIO",
+    "symbol": "IVSO",
+    "isin": "SE0001200015",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE34597"
+  },
+  {
+    "fullName": "Inwido",
+    "symbol": "INWI",
+    "isin": "SE0006220018",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE102786"
+  },
+  {
+    "fullName": "IRLAB Therapeutics A",
+    "symbol": "IRLAB A",
+    "isin": "SE0012675361",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE132776"
+  },
+  {
+    "fullName": "Isofol Medical",
+    "symbol": "ISOFOL",
+    "isin": "SE0009581051",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE135681"
+  },
+  {
+    "fullName": "ISS",
+    "symbol": "ISS",
+    "isin": "DK0060542181",
+    "currency": "DKK",
+    "sector": "Industrials",
+    "orderbookId": "CSE80901"
+  },
+  {
+    "fullName": "ITAB Shop Concept",
+    "symbol": "ITAB",
+    "isin": "SE0015962097",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE56940"
+  },
+  {
+    "fullName": "JBT Marel Corp.",
+    "symbol": "JBTM",
+    "isin": "US4778391049",
+    "currency": "ISK",
+    "sector": "Industrials",
+    "orderbookId": "ICE377934"
+  },
+  {
+    "fullName": "Jeudan",
+    "symbol": "JDAN",
+    "isin": "DK0061282464",
+    "currency": "DKK",
+    "sector": "Real Estate",
+    "orderbookId": "CSE3327"
+  },
+  {
+    "fullName": "JM",
+    "symbol": "JM",
+    "isin": "SE0000806994",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE13217"
+  },
+  {
+    "fullName": "John Mattson Fastighetsföret.",
+    "symbol": "JOMA",
+    "isin": "SE0012481364",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE174531"
+  },
+  {
+    "fullName": "Jyske Bank",
+    "symbol": "JYSK",
+    "isin": "DK0010307958",
+    "currency": "DKK",
+    "sector": "Financials",
+    "orderbookId": "CSE1587"
+  },
+  {
+    "fullName": "K2A Knaust \u0026 Andersson B",
+    "symbol": "K2A B",
+    "isin": "SE0010520254",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE175417"
+  },
+  {
+    "fullName": "K2A Knaust \u0026 Andersson Pref",
+    "symbol": "K2A PREF",
+    "isin": "SE0006852075",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE107160"
+  },
+  {
+    "fullName": "K-Fast Holding B",
+    "symbol": "KFAST B",
+    "isin": "SE0016101679",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE185734"
+  },
+  {
+    "fullName": "KABE Group B",
+    "symbol": "KABE B",
+    "isin": "SE0000107724",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE912"
+  },
+  {
+    "fullName": "Kaldalón",
+    "symbol": "KALD",
+    "isin": "IS0000035632",
+    "currency": "ISK",
+    "sector": "Real Estate",
+    "orderbookId": "ICE178971"
+  },
+  {
+    "fullName": "Kalmar Oyj B",
+    "symbol": "KALMAR",
+    "isin": "FI4000571054",
+    "currency": "EUR",
+    "sector": "Industrials",
+    "orderbookId": "HEX339873"
+  },
+  {
+    "fullName": "Kamux Oyj",
+    "symbol": "KAMUX",
+    "isin": "FI4000206750",
+    "currency": "EUR",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "HEX136667"
+  },
+  {
+    "fullName": "Karnell Group B",
+    "symbol": "KARNEL B",
+    "isin": "SE0017832173",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE325739"
+  },
+  {
+    "fullName": "Karnov Group",
+    "symbol": "KAR",
+    "isin": "SE0012323715",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE172049"
+  },
+  {
+    "fullName": "Karolinska Development B",
+    "symbol": "KDEV",
+    "isin": "SE0002190926",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE81547"
+  },
+  {
+    "fullName": "Kemira Oyj",
+    "symbol": "KEMIRA",
+    "isin": "FI0009004824",
+    "currency": "EUR",
+    "sector": "Basic Materials",
+    "orderbookId": "HEX24292"
+  },
+  {
+    "fullName": "Kempower Oyj",
+    "symbol": "KEMPOWR",
+    "isin": "FI4000513593",
+    "currency": "EUR",
+    "sector": "Industrials",
+    "orderbookId": "HEX243297"
+  },
+  {
+    "fullName": "Keskisuomalainen Oyj",
+    "symbol": "KSL",
+    "isin": "FI0009007546",
+    "currency": "EUR",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "HEX24294"
+  },
+  {
+    "fullName": "Kesko Oyj A",
+    "symbol": "KESKOA",
+    "isin": "FI0009007900",
+    "currency": "EUR",
+    "sector": "Consumer Staples",
+    "orderbookId": "HEX24287"
+  },
+  {
+    "fullName": "Kesko Oyj B",
+    "symbol": "KESKOB",
+    "isin": "FI0009000202",
+    "currency": "EUR",
+    "sector": "Consumer Staples",
+    "orderbookId": "HEX24288"
+  },
+  {
+    "fullName": "Kesla Oyj A",
+    "symbol": "KELAS",
+    "isin": "FI0009900237",
+    "currency": "EUR",
+    "sector": "Industrials",
+    "orderbookId": "HEX24286"
+  },
+  {
+    "fullName": "KH Group Oyj",
+    "symbol": "KHG",
+    "isin": "FI0009008924",
+    "currency": "EUR",
+    "sector": "Industrials",
+    "orderbookId": "HEX24348"
+  },
+  {
+    "fullName": "Kinnevik A",
+    "symbol": "KINV A",
+    "isin": "SE0022060513",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE998"
+  },
+  {
+    "fullName": "Kinnevik B",
+    "symbol": "KINV B",
+    "isin": "SE0022060521",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE999"
+  },
+  {
+    "fullName": "KlaraBo Sverige B",
+    "symbol": "KLARA B",
+    "isin": "SE0010832287",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE241502"
+  },
+  {
+    "fullName": "Knowit",
+    "symbol": "KNOW",
+    "isin": "SE0000421273",
+    "currency": "SEK",
+    "sector": "Technology",
+    "orderbookId": "SSE3219"
+  },
+  {
+    "fullName": "Kojamo Oyj",
+    "symbol": "KOJAMO",
+    "isin": "FI4000312251",
+    "currency": "EUR",
+    "sector": "Real Estate",
+    "orderbookId": "HEX155855"
+  },
+  {
+    "fullName": "KONE Oyj",
+    "symbol": "KNEBV",
+    "isin": "FI0009013403",
+    "currency": "EUR",
+    "sector": "Industrials",
+    "orderbookId": "HEX29981"
+  },
+  {
+    "fullName": "Konecranes Oyj",
+    "symbol": "KCR",
+    "isin": "FI0009005870",
+    "currency": "EUR",
+    "sector": "Industrials",
+    "orderbookId": "HEX24284"
+  },
+  {
+    "fullName": "Koskisen Oyj",
+    "symbol": "KOSKI",
+    "isin": "FI4000533005",
+    "currency": "EUR",
+    "sector": "Basic Materials",
+    "orderbookId": "HEX274974"
+  },
+  {
+    "fullName": "Kreate Group Oyj",
+    "symbol": "KREATE",
+    "isin": "FI4000476866",
+    "currency": "EUR",
+    "sector": "Industrials",
+    "orderbookId": "HEX216105"
+  },
+  {
+    "fullName": "Kreditbanken",
+    "symbol": "KRE",
+    "isin": "DK0010253764",
+    "currency": "DKK",
+    "sector": "Financials",
+    "orderbookId": "CSE3389"
+  },
+  {
+    "fullName": "Kvika banki",
+    "symbol": "KVIKA",
+    "isin": "IS0000020469",
+    "currency": "ISK",
+    "sector": "Financials",
+    "orderbookId": "ICE152974"
+  },
+  {
+    "fullName": "Københavns Lufthavne",
+    "symbol": "KBHL",
+    "isin": "DK0010201102",
+    "currency": "DKK",
+    "sector": "Industrials",
+    "orderbookId": "CSE3195"
+  },
+  {
+    "fullName": "Lagercrantz Group B",
+    "symbol": "LAGR B",
+    "isin": "SE0014990966",
+    "currency": "SEK",
+    "sector": "Technology",
+    "orderbookId": "SSE14335"
+  },
+  {
+    "fullName": "Lammhults Design Group B",
+    "symbol": "LAMM B",
+    "isin": "SE0000386138",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE1049"
+  },
+  {
+    "fullName": "Lamor Corporation Oyj",
+    "symbol": "LAMOR",
+    "isin": "FI4000512488",
+    "currency": "EUR",
+    "sector": "Utilities",
+    "orderbookId": "HEX241501"
+  },
+  {
+    "fullName": "Lassila \u0026 Tikanoja Oyj",
+    "symbol": "LAT1V",
+    "isin": "FI0009010854",
+    "currency": "EUR",
+    "sector": "Utilities",
+    "orderbookId": "HEX24297"
+  },
+  {
+    "fullName": "Latour B",
+    "symbol": "LATO B",
+    "isin": "SE0010100958",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE914"
+  },
+  {
+    "fullName": "Lehto Group Oyj",
+    "symbol": "LEHTO",
+    "isin": "FI4000081138",
+    "currency": "EUR",
+    "sector": "Industrials",
+    "orderbookId": "HEX121152"
+  },
+  {
+    "fullName": "Lifco B",
+    "symbol": "LIFCO B",
+    "isin": "SE0015949201",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE103930"
+  },
+  {
+    "fullName": "Lime Technologies",
+    "symbol": "LIME",
+    "isin": "SE0011870195",
+    "currency": "SEK",
+    "sector": "Technology",
+    "orderbookId": "SSE164294"
+  },
+  {
+    "fullName": "Linc",
+    "symbol": "LINC",
+    "isin": "SE0015949433",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE226182"
+  },
+  {
+    "fullName": "Lindab International",
+    "symbol": "LIAB",
+    "isin": "SE0001852419",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE37400"
+  },
+  {
+    "fullName": "Lindex Group Oyj",
+    "symbol": "LINDEX",
+    "isin": "FI0009000251",
+    "currency": "EUR",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "HEX24363"
+  },
+  {
+    "fullName": "Logistea A",
+    "symbol": "LOGI A",
+    "isin": "SE0017131329",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE40936"
+  },
+  {
+    "fullName": "Logistea B",
+    "symbol": "LOGI B",
+    "isin": "SE0017131337",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE241165"
+  },
+  {
+    "fullName": "Lollands Bank",
+    "symbol": "LOLB",
+    "isin": "DK0060000107",
+    "currency": "DKK",
+    "sector": "Financials",
+    "orderbookId": "CSE3489"
+  },
+  {
+    "fullName": "Loomis",
+    "symbol": "LOOMIS",
+    "isin": "SE0014504817",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE61536"
+  },
+  {
+    "fullName": "Lundbergföretagen B",
+    "symbol": "LUND B",
+    "isin": "SE0000108847",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE1012"
+  },
+  {
+    "fullName": "Lundin Gold",
+    "symbol": "LUG",
+    "isin": "CA5503711080",
+    "currency": "SEK",
+    "sector": "Basic Materials",
+    "orderbookId": "SSE105183"
+  },
+  {
+    "fullName": "Lundin Mining Corporation",
+    "symbol": "LUMI",
+    "isin": "CA5503721063",
+    "currency": "SEK",
+    "sector": "Basic Materials",
+    "orderbookId": "SSE27709"
+  },
+  {
+    "fullName": "Luxor B",
+    "symbol": "LUXOR B",
+    "isin": "DK0010213628",
+    "currency": "DKK",
+    "sector": "Financials",
+    "orderbookId": "CSE3446"
+  },
+  {
+    "fullName": "Lån og Spar Bank",
+    "symbol": "LASP",
+    "isin": "DK0010201532",
+    "currency": "DKK",
+    "sector": "Financials",
+    "orderbookId": "CSE3490"
+  },
+  {
+    "fullName": "Maha Energy",
+    "symbol": "MAHA A",
+    "isin": "SE0008374383",
+    "currency": "SEK",
+    "sector": "Energy",
+    "orderbookId": "SSE124631"
+  },
+  {
+    "fullName": "Malmbergs Elektriska B",
+    "symbol": "MEAB B",
+    "isin": "SE0000507659",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE3223"
+  },
+  {
+    "fullName": "Mandatum",
+    "symbol": "MANTA",
+    "isin": "FI4000552526",
+    "currency": "EUR",
+    "sector": "Financials",
+    "orderbookId": "HEX303530"
+  },
+  {
+    "fullName": "Mangold",
+    "symbol": "MANG",
+    "isin": "SE0001449380",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE88788"
+  },
+  {
+    "fullName": "Marimekko Oyj",
+    "symbol": "MEKKO",
+    "isin": "FI0009007660",
+    "currency": "EUR",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "HEX24304"
+  },
+  {
+    "fullName": "Martela Oyj A",
+    "symbol": "MARAS",
+    "isin": "FI0009900385",
+    "currency": "EUR",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "HEX24301"
+  },
+  {
+    "fullName": "Matas",
+    "symbol": "MATAS",
+    "isin": "DK0060497295",
+    "currency": "DKK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "CSE94835"
+  },
+  {
+    "fullName": "MedCap",
+    "symbol": "MCAP",
+    "isin": "SE0009160872",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE35364"
+  },
+  {
+    "fullName": "Medicover B",
+    "symbol": "MCOV B",
+    "isin": "SE0009778848",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE138158"
+  },
+  {
+    "fullName": "Medivir",
+    "symbol": "MVIR",
+    "isin": "SE0020181014",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE1020"
+  },
+  {
+    "fullName": "MEKO",
+    "symbol": "MEKO",
+    "isin": "SE0002110064",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE4986"
+  },
+  {
+    "fullName": "Mendus",
+    "symbol": "IMMU",
+    "isin": "SE0022239950",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE93632"
+  },
+  {
+    "fullName": "Meren Energy",
+    "symbol": "MER",
+    "isin": "CA5889141019",
+    "currency": "SEK",
+    "sector": "Energy",
+    "orderbookId": "SSE77948"
+  },
+  {
+    "fullName": "Metso Oyj",
+    "symbol": "METSO",
+    "isin": "FI0009014575",
+    "currency": "EUR",
+    "sector": "Industrials",
+    "orderbookId": "HEX36695"
+  },
+  {
+    "fullName": "Metsä Board Oyj A",
+    "symbol": "METSA",
+    "isin": "FI0009000640",
+    "currency": "EUR",
+    "sector": "Basic Materials",
+    "orderbookId": "HEX24306"
+  },
+  {
+    "fullName": "Metsä Board Oyj B",
+    "symbol": "METSB",
+    "isin": "FI0009000665",
+    "currency": "EUR",
+    "sector": "Basic Materials",
+    "orderbookId": "HEX24307"
+  },
+  {
+    "fullName": "Micro Systemation B",
+    "symbol": "MSAB B",
+    "isin": "SE0000526626",
+    "currency": "SEK",
+    "sector": "Technology",
+    "orderbookId": "SSE85846"
+  },
+  {
+    "fullName": "Midsona A",
+    "symbol": "MSON A",
+    "isin": "SE0000565210",
+    "currency": "SEK",
+    "sector": "Consumer Staples",
+    "orderbookId": "SSE3921"
+  },
+  {
+    "fullName": "Midsona B",
+    "symbol": "MSON B",
+    "isin": "SE0000565228",
+    "currency": "SEK",
+    "sector": "Consumer Staples",
+    "orderbookId": "SSE3922"
+  },
+  {
+    "fullName": "Mildef Group",
+    "symbol": "MILDEF",
+    "isin": "SE0016074249",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE226645"
+  },
+  {
+    "fullName": "Mips",
+    "symbol": "MIPS",
+    "isin": "SE0009216278",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE135088"
+  },
+  {
+    "fullName": "Moberg Pharma",
+    "symbol": "MOB",
+    "isin": "SE0020353928",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE79252"
+  },
+  {
+    "fullName": "Modern Times Group A",
+    "symbol": "MTG A",
+    "isin": "SE0018012486",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE3598"
+  },
+  {
+    "fullName": "Modern Times Group B",
+    "symbol": "MTG B",
+    "isin": "SE0018012494",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE3599"
+  },
+  {
+    "fullName": "Moment Group",
+    "symbol": "MOMENT",
+    "isin": "SE0020388932",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE32720"
+  },
+  {
+    "fullName": "Momentum Group B",
+    "symbol": "MMGR B",
+    "isin": "SE0017562523",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE252994"
+  },
+  {
+    "fullName": "MT Højgaard Holding",
+    "symbol": "MTHH",
+    "isin": "DK0010255975",
+    "currency": "DKK",
+    "sector": "Industrials",
+    "orderbookId": "CSE3360"
+  },
+  {
+    "fullName": "Munters Group",
+    "symbol": "MTRS",
+    "isin": "SE0009806607",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE137814"
+  },
+  {
+    "fullName": "Musti Group Oyj",
+    "symbol": "MUSTI",
+    "isin": "FI4000410758",
+    "currency": "EUR",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "HEX189015"
+  },
+  {
+    "fullName": "Mycronic",
+    "symbol": "MYCR",
+    "isin": "SE0025158629",
+    "currency": "SEK",
+    "sector": "Technology",
+    "orderbookId": "SSE4714"
+  },
+  {
+    "fullName": "mySafety Group B",
+    "symbol": "SAFETY B",
+    "isin": "SE0010769182",
+    "currency": "SEK",
+    "sector": "Technology",
+    "orderbookId": "SSE1023"
+  },
+  {
+    "fullName": "Møns Bank",
+    "symbol": "MNBA",
+    "isin": "DK0060133841",
+    "currency": "DKK",
+    "sector": "Financials",
+    "orderbookId": "CSE3251"
+  },
+  {
+    "fullName": "Nanologica",
+    "symbol": "NICA",
+    "isin": "SE0005454873",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE252995"
+  },
+  {
+    "fullName": "NAXS",
+    "symbol": "NAXS",
+    "isin": "SE0001965369",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE40342"
+  },
+  {
+    "fullName": "NCAB Group",
+    "symbol": "NCAB",
+    "isin": "SE0017160773",
+    "currency": "SEK",
+    "sector": "Technology",
+    "orderbookId": "SSE155562"
+  },
+  {
+    "fullName": "NCC A",
+    "symbol": "NCC A",
+    "isin": "SE0000118952",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE837"
+  },
+  {
+    "fullName": "NCC B",
+    "symbol": "NCC B",
+    "isin": "SE0000117970",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE838"
+  },
+  {
+    "fullName": "Nederman Holding",
+    "symbol": "NMAN",
+    "isin": "SE0011204510",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE40347"
+  },
+  {
+    "fullName": "Nelly Group",
+    "symbol": "NELLY",
+    "isin": "SE0015245535",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE79303"
+  },
+  {
+    "fullName": "Neobo Fastigheter",
+    "symbol": "NEOBO",
+    "isin": "SE0005034550",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE282798"
+  },
+  {
+    "fullName": "Neste Oyj",
+    "symbol": "NESTE",
+    "isin": "FI0009013296",
+    "currency": "EUR",
+    "sector": "Energy",
+    "orderbookId": "HEX29375"
+  },
+  {
+    "fullName": "Net Insight B",
+    "symbol": "NETI B",
+    "isin": "SE0000366098",
+    "currency": "SEK",
+    "sector": "Telecommunications",
+    "orderbookId": "SSE3871"
+  },
+  {
+    "fullName": "Netcompany Group",
+    "symbol": "NETC",
+    "isin": "DK0060952919",
+    "currency": "DKK",
+    "sector": "Technology",
+    "orderbookId": "CSE154904"
+  },
+  {
+    "fullName": "Netel Holding",
+    "symbol": "NETEL",
+    "isin": "SE0016798417",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE237971"
+  },
+  {
+    "fullName": "New Wave B",
+    "symbol": "NEWA B",
+    "isin": "SE0020356970",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE920"
+  },
+  {
+    "fullName": "Newcap Holding",
+    "symbol": "NEWCAP",
+    "isin": "DK0010212570",
+    "currency": "DKK",
+    "sector": "Financials",
+    "orderbookId": "CSE3326"
+  },
+  {
+    "fullName": "NGS Group",
+    "symbol": "NGS",
+    "isin": "SE0009947708",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE122588"
+  },
+  {
+    "fullName": "NIBE Industrier B",
+    "symbol": "NIBE B",
+    "isin": "SE0015988019",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE921"
+  },
+  {
+    "fullName": "Nightingale Health Oyj B",
+    "symbol": "HEALTH",
+    "isin": "FI4000490875",
+    "currency": "EUR",
+    "sector": "Health Care",
+    "orderbookId": "HEX218851"
+  },
+  {
+    "fullName": "Nilfisk Holding",
+    "symbol": "NLFSK",
+    "isin": "DK0060907293",
+    "currency": "DKK",
+    "sector": "Industrials",
+    "orderbookId": "CSE144340"
+  },
+  {
+    "fullName": "Nilörngruppen B",
+    "symbol": "NIL B",
+    "isin": "SE0007100342",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE110376"
+  },
+  {
+    "fullName": "Nivika Fastigheter B",
+    "symbol": "NIVI B",
+    "isin": "SE0017083272",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE241524"
+  },
+  {
+    "fullName": "NKT",
+    "symbol": "NKT",
+    "isin": "DK0010287663",
+    "currency": "DKK",
+    "sector": "Industrials",
+    "orderbookId": "CSE3478"
+  },
+  {
+    "fullName": "NNIT",
+    "symbol": "NNIT",
+    "isin": "DK0060580512",
+    "currency": "DKK",
+    "sector": "Technology",
+    "orderbookId": "CSE106330"
+  },
+  {
+    "fullName": "Nobia",
+    "symbol": "NOBI",
+    "isin": "SE0000949331",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE19095"
+  },
+  {
+    "fullName": "NoHo Partners Oyj",
+    "symbol": "NOHO",
+    "isin": "FI4000064332",
+    "currency": "EUR",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "HEX98247"
+  },
+  {
+    "fullName": "Nokia Oyj",
+    "symbol": "NOKIA",
+    "isin": "FI0009000681",
+    "currency": "EUR",
+    "sector": "Telecommunications",
+    "orderbookId": "HEX24311"
+  },
+  {
+    "fullName": "Nokian Renkaat Oyj",
+    "symbol": "TYRES",
+    "isin": "FI0009005318",
+    "currency": "EUR",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "HEX24312"
+  },
+  {
+    "fullName": "Nolato B",
+    "symbol": "NOLA B",
+    "isin": "SE0015962477",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE923"
+  },
+  {
+    "fullName": "Nordea Bank Abp",
+    "symbol": "NDA DK",
+    "isin": "FI4000297767",
+    "currency": "DKK",
+    "sector": "Financials",
+    "orderbookId": "CSE160272"
+  },
+  {
+    "fullName": "Nordea Bank Abp",
+    "symbol": "NDA FI",
+    "isin": "FI4000297767",
+    "currency": "EUR",
+    "sector": "Financials",
+    "orderbookId": "HEX150235"
+  },
+  {
+    "fullName": "Nordea Bank Abp",
+    "symbol": "NDA SE",
+    "isin": "FI4000297767",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE160271"
+  },
+  {
+    "fullName": "Nordfyns Bank",
+    "symbol": "NRDF",
+    "isin": "DK0061295441",
+    "currency": "DKK",
+    "sector": "Financials",
+    "orderbookId": "CSE3265"
+  },
+  {
+    "fullName": "Nordic Paper Holding",
+    "symbol": "NPAPER",
+    "isin": "SE0014808838",
+    "currency": "SEK",
+    "sector": "Basic Materials",
+    "orderbookId": "SSE205432"
+  },
+  {
+    "fullName": "Nordisk Bergteknik B",
+    "symbol": "NORB B",
+    "isin": "SE0015812128",
+    "currency": "SEK",
+    "sector": "Basic Materials",
+    "orderbookId": "SSE237579"
+  },
+  {
+    "fullName": "Nordnet",
+    "symbol": "SAVE",
+    "isin": "SE0015192067",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE209451"
+  },
+  {
+    "fullName": "Norion Bank",
+    "symbol": "NORION",
+    "isin": "SE0017831795",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE261591"
+  },
+  {
+    "fullName": "North Media",
+    "symbol": "NORTHM",
+    "isin": "DK0010270347",
+    "currency": "DKK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "CSE3428"
+  },
+  {
+    "fullName": "NOTE",
+    "symbol": "NOTE",
+    "isin": "SE0001161654",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE25319"
+  },
+  {
+    "fullName": "Nova Klúbburinn",
+    "symbol": "NOVA",
+    "isin": "IS0000031045",
+    "currency": "ISK",
+    "sector": "Telecommunications",
+    "orderbookId": "ICE259842"
+  },
+  {
+    "fullName": "Novo Nordisk B",
+    "symbol": "NOVO B",
+    "isin": "DK0062498333",
+    "currency": "DKK",
+    "sector": "Health Care",
+    "orderbookId": "CSE1158"
+  },
+  {
+    "fullName": "Novonesis (Novozymes) B",
+    "symbol": "NSIS B",
+    "isin": "DK0060336014",
+    "currency": "DKK",
+    "sector": "Health Care",
+    "orderbookId": "CSE11273"
+  },
+  {
+    "fullName": "NOVOTEK B",
+    "symbol": "NTEK B",
+    "isin": "SE0000567752",
+    "currency": "SEK",
+    "sector": "Technology",
+    "orderbookId": "SSE4000"
+  },
+  {
+    "fullName": "NP3 Fastigheter",
+    "symbol": "NP3",
+    "isin": "SE0006342333",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE104592"
+  },
+  {
+    "fullName": "NP3 Fastigheter Pref",
+    "symbol": "NP3 PREF",
+    "isin": "SE0010820514",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE152346"
+  },
+  {
+    "fullName": "NTG Nordic Transport Group",
+    "symbol": "NTG",
+    "isin": "DK0061141215",
+    "currency": "DKK",
+    "sector": "Industrials",
+    "orderbookId": "CSE3476"
+  },
+  {
+    "fullName": "NTR Holding B",
+    "symbol": "NTR B",
+    "isin": "DK0010027671",
+    "currency": "DKK",
+    "sector": "Industrials",
+    "orderbookId": "CSE3480"
+  },
+  {
+    "fullName": "Nurminen Logistics Oyj",
+    "symbol": "NLG1V",
+    "isin": "FI0009900187",
+    "currency": "EUR",
+    "sector": "Industrials",
+    "orderbookId": "HEX24283"
+  },
+  {
+    "fullName": "Nyfosa",
+    "symbol": "NYF",
+    "isin": "SE0011426428",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE162997"
+  },
+  {
+    "fullName": "Oculis Holding",
+    "symbol": "OCS",
+    "isin": "CH1242303498",
+    "currency": "ISK",
+    "sector": "Health Care",
+    "orderbookId": "ICE332930"
+  },
+  {
+    "fullName": "OEM International B",
+    "symbol": "OEM B",
+    "isin": "SE0017766843",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE927"
+  },
+  {
+    "fullName": "Olvi Oyj A",
+    "symbol": "OLVAS",
+    "isin": "FI0009900401",
+    "currency": "EUR",
+    "sector": "Consumer Staples",
+    "orderbookId": "HEX24317"
+  },
+  {
+    "fullName": "Oma Säästöpankki Oyj",
+    "symbol": "OMASP",
+    "isin": "FI4000306733",
+    "currency": "EUR",
+    "sector": "Financials",
+    "orderbookId": "HEX163392"
+  },
+  {
+    "fullName": "Oncopeptides",
+    "symbol": "ONCO",
+    "isin": "SE0009414576",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE133615"
+  },
+  {
+    "fullName": "Optomed Oyj",
+    "symbol": "OPTOMED",
+    "isin": "FI4000410881",
+    "currency": "EUR",
+    "sector": "Health Care",
+    "orderbookId": "HEX185117"
+  },
+  {
+    "fullName": "Orexo",
+    "symbol": "ORX",
+    "isin": "SE0000736415",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE31885"
+  },
+  {
+    "fullName": "Oriola Oyj",
+    "symbol": "ORIOLA",
+    "isin": "FI0009014351",
+    "currency": "EUR",
+    "sector": "Health Care",
+    "orderbookId": "HEX35366"
+  },
+  {
+    "fullName": "Orion Oyj A",
+    "symbol": "ORNAV",
+    "isin": "FI0009014369",
+    "currency": "EUR",
+    "sector": "Health Care",
+    "orderbookId": "HEX35362"
+  },
+  {
+    "fullName": "Orion Oyj B",
+    "symbol": "ORNBV",
+    "isin": "FI0009014377",
+    "currency": "EUR",
+    "sector": "Health Care",
+    "orderbookId": "HEX35363"
+  },
+  {
+    "fullName": "Orrön Energy",
+    "symbol": "ORRON",
+    "isin": "SE0000825820",
+    "currency": "SEK",
+    "sector": "Energy",
+    "orderbookId": "SSE22335"
+  },
+  {
+    "fullName": "Orthex Oyj",
+    "symbol": "ORTHEX",
+    "isin": "FI4000480504",
+    "currency": "EUR",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "HEX219193"
+  },
+  {
+    "fullName": "Outokumpu Oyj",
+    "symbol": "OUT1V",
+    "isin": "FI0009002422",
+    "currency": "EUR",
+    "sector": "Basic Materials",
+    "orderbookId": "HEX24321"
+  },
+  {
+    "fullName": "Ovaro Kiinteistösijoitus Oyj",
+    "symbol": "OVARO",
+    "isin": "FI4000349113",
+    "currency": "EUR",
+    "sector": "Real Estate",
+    "orderbookId": "HEX97068"
+  },
+  {
+    "fullName": "Ovzon",
+    "symbol": "OVZON",
+    "isin": "SE0010948711",
+    "currency": "SEK",
+    "sector": "Telecommunications",
+    "orderbookId": "SSE155079"
+  },
+  {
+    "fullName": "Pandora",
+    "symbol": "PNDORA",
+    "isin": "DK0060252690",
+    "currency": "DKK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "CSE77855"
+  },
+  {
+    "fullName": "Pandox B",
+    "symbol": "PNDX B",
+    "isin": "SE0007100359",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE110533"
+  },
+  {
+    "fullName": "Panostaja Oyj",
+    "symbol": "PNA1V",
+    "isin": "FI0009800379",
+    "currency": "EUR",
+    "sector": "Financials",
+    "orderbookId": "HEX24324"
+  },
+  {
+    "fullName": "Papirfabrikken Invest",
+    "symbol": "PFINV",
+    "isin": "DK0010128008",
+    "currency": "DKK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "CSE3285"
+  },
+  {
+    "fullName": "Park Street A",
+    "symbol": "PARKST A",
+    "isin": "DK0010158500",
+    "currency": "DKK",
+    "sector": "Real Estate",
+    "orderbookId": "CSE3261"
+  },
+  {
+    "fullName": "PARKEN Sport \u0026 Entertainment",
+    "symbol": "PARKEN",
+    "isin": "DK0010237643",
+    "currency": "DKK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "CSE3422"
+  },
+  {
+    "fullName": "Peab B",
+    "symbol": "PEAB B",
+    "isin": "SE0000106205",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE928"
+  },
+  {
+    "fullName": "Per Aarsleff Holding B",
+    "symbol": "PAAL B",
+    "isin": "DK0060700516",
+    "currency": "DKK",
+    "sector": "Industrials",
+    "orderbookId": "CSE3272"
+  },
+  {
+    "fullName": "Pharma Equity Group",
+    "symbol": "PEG",
+    "isin": "DK0061155009",
+    "currency": "DKK",
+    "sector": "Health Care",
+    "orderbookId": "CSE21613"
+  },
+  {
+    "fullName": "Pierce Group",
+    "symbol": "PIERCE",
+    "isin": "SE0015658364",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE220494"
+  },
+  {
+    "fullName": "Pihlajalinna Oyj",
+    "symbol": "PIHLIS",
+    "isin": "FI4000092556",
+    "currency": "EUR",
+    "sector": "Health Care",
+    "orderbookId": "HEX109978"
+  },
+  {
+    "fullName": "PION Group B",
+    "symbol": "PION B",
+    "isin": "SE0000567539",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE3974"
+  },
+  {
+    "fullName": "Platzer Fastigheter Holding B",
+    "symbol": "PLAZ B",
+    "isin": "SE0004977692",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE98395"
+  },
+  {
+    "fullName": "Ponsse Oyj 1",
+    "symbol": "PON1V",
+    "isin": "FI0009005078",
+    "currency": "EUR",
+    "sector": "Industrials",
+    "orderbookId": "HEX24332"
+  },
+  {
+    "fullName": "PowerCell Sweden",
+    "symbol": "PCELL",
+    "isin": "SE0006425815",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE105121"
+  },
+  {
+    "fullName": "Precise Biometrics",
+    "symbol": "PREC",
+    "isin": "SE0018013849",
+    "currency": "SEK",
+    "sector": "Technology",
+    "orderbookId": "SSE10751"
+  },
+  {
+    "fullName": "Prevas B",
+    "symbol": "PREV B",
+    "isin": "SE0000356008",
+    "currency": "SEK",
+    "sector": "Technology",
+    "orderbookId": "SSE1039"
+  },
+  {
+    "fullName": "Pricer B",
+    "symbol": "PRIC B",
+    "isin": "SE0000233934",
+    "currency": "SEK",
+    "sector": "Technology",
+    "orderbookId": "SSE1040"
+  },
+  {
+    "fullName": "Prime Office",
+    "symbol": "PRIMOF",
+    "isin": "DK0060137594",
+    "currency": "DKK",
+    "sector": "Real Estate",
+    "orderbookId": "CSE55880"
+  },
+  {
+    "fullName": "Prisma Properties",
+    "symbol": "PRISMA",
+    "isin": "SE0022062055",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE339413"
+  },
+  {
+    "fullName": "Proact IT Group",
+    "symbol": "PACT",
+    "isin": "SE0015961222",
+    "currency": "SEK",
+    "sector": "Technology",
+    "orderbookId": "SSE4003"
+  },
+  {
+    "fullName": "Profilgruppen B",
+    "symbol": "PROF B",
+    "isin": "SE0000393860",
+    "currency": "SEK",
+    "sector": "Basic Materials",
+    "orderbookId": "SSE929"
+  },
+  {
+    "fullName": "Profoto Holding",
+    "symbol": "PRFO",
+    "isin": "SE0015962147",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE228963"
+  },
+  {
+    "fullName": "Projektengagemang Sweden B",
+    "symbol": "PENG B",
+    "isin": "SE0011337666",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE156567"
+  },
+  {
+    "fullName": "Puuilo Oyj",
+    "symbol": "PUUILO",
+    "isin": "FI4000507124",
+    "currency": "EUR",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "HEX227473"
+  },
+  {
+    "fullName": "Q-Linea",
+    "symbol": "QLINEA",
+    "isin": "SE0011527845",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE164308"
+  },
+  {
+    "fullName": "Qliro",
+    "symbol": "QLIRO",
+    "isin": "SE0013719077",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE204109"
+  },
+  {
+    "fullName": "QPR Software Oyj",
+    "symbol": "QPR1V",
+    "isin": "FI0009008668",
+    "currency": "EUR",
+    "sector": "Technology",
+    "orderbookId": "HEX24334"
+  },
+  {
+    "fullName": "Qt Group Oyj",
+    "symbol": "QTCOM",
+    "isin": "FI4000198031",
+    "currency": "EUR",
+    "sector": "Technology",
+    "orderbookId": "HEX121457"
+  },
+  {
+    "fullName": "Railcare Group",
+    "symbol": "RAIL",
+    "isin": "SE0010441139",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE153508"
+  },
+  {
+    "fullName": "Raisio Oyj Vaihto-osake",
+    "symbol": "RAIVV",
+    "isin": "FI0009002943",
+    "currency": "EUR",
+    "sector": "Consumer Staples",
+    "orderbookId": "HEX24336"
+  },
+  {
+    "fullName": "Rapala VMC Oyj",
+    "symbol": "RAP1V",
+    "isin": "FI0009007355",
+    "currency": "EUR",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "HEX24338"
+  },
+  {
+    "fullName": "Ratos A",
+    "symbol": "RATO A",
+    "isin": "SE0000191090",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE1044"
+  },
+  {
+    "fullName": "Ratos B",
+    "symbol": "RATO B",
+    "isin": "SE0000111940",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE1045"
+  },
+  {
+    "fullName": "Raute Oyj",
+    "symbol": "RAUTE",
+    "isin": "FI0009004741",
+    "currency": "EUR",
+    "sector": "Industrials",
+    "orderbookId": "HEX24344"
+  },
+  {
+    "fullName": "RaySearch Laboratories B",
+    "symbol": "RAY B",
+    "isin": "SE0000135485",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE1063"
+  },
+  {
+    "fullName": "Rebl Group Oyj",
+    "symbol": "REBL",
+    "isin": "FI0009900468",
+    "currency": "EUR",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "HEX24327"
+  },
+  {
+    "fullName": "Reitir fasteignafélag",
+    "symbol": "REITIR",
+    "isin": "IS0000020352",
+    "currency": "ISK",
+    "sector": "Real Estate",
+    "orderbookId": "ICE107988"
+  },
+  {
+    "fullName": "Rejlers B",
+    "symbol": "REJL B",
+    "isin": "SE0000123671",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE37758"
+  },
+  {
+    "fullName": "Reka Industrial Oyj",
+    "symbol": "REKA",
+    "isin": "FI0009800296",
+    "currency": "EUR",
+    "sector": "Industrials",
+    "orderbookId": "HEX24309"
+  },
+  {
+    "fullName": "Relais Group Oyj",
+    "symbol": "RELAIS",
+    "isin": "FI4000391487",
+    "currency": "EUR",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "HEX181961"
+  },
+  {
+    "fullName": "Remedy Entertainment Oyj",
+    "symbol": "REMEDY",
+    "isin": "FI4000251897",
+    "currency": "EUR",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "HEX137987"
+  },
+  {
+    "fullName": "Resurs Holding",
+    "symbol": "RESURS",
+    "isin": "SE0007665823",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE121360"
+  },
+  {
+    "fullName": "Revenio Group Oyj",
+    "symbol": "REG1V",
+    "isin": "FI0009010912",
+    "currency": "EUR",
+    "sector": "Health Care",
+    "orderbookId": "HEX24250"
+  },
+  {
+    "fullName": "Rias B",
+    "symbol": "RIAS B",
+    "isin": "DK0010125848",
+    "currency": "DKK",
+    "sector": "Industrials",
+    "orderbookId": "CSE3434"
+  },
+  {
+    "fullName": "Ringkjøbing Landbobank",
+    "symbol": "RILBA",
+    "isin": "DK0060854669",
+    "currency": "DKK",
+    "sector": "Financials",
+    "orderbookId": "CSE3292"
+  },
+  {
+    "fullName": "Robit Oyj",
+    "symbol": "ROBIT",
+    "isin": "FI4000150016",
+    "currency": "EUR",
+    "sector": "Industrials",
+    "orderbookId": "HEX108858"
+  },
+  {
+    "fullName": "Roblon B",
+    "symbol": "RBLN B",
+    "isin": "DK0060485019",
+    "currency": "DKK",
+    "sector": "Industrials",
+    "orderbookId": "CSE3452"
+  },
+  {
+    "fullName": "Rockwool A",
+    "symbol": "ROCK A",
+    "isin": "DK0063855085",
+    "currency": "DKK",
+    "sector": "Industrials",
+    "orderbookId": "CSE3454"
+  },
+  {
+    "fullName": "Rockwool B",
+    "symbol": "ROCK B",
+    "isin": "DK0063855168",
+    "currency": "DKK",
+    "sector": "Industrials",
+    "orderbookId": "CSE3456"
+  },
+  {
+    "fullName": "Rottneros",
+    "symbol": "RROS",
+    "isin": "SE0000112252",
+    "currency": "SEK",
+    "sector": "Basic Materials",
+    "orderbookId": "SSE930"
+  },
+  {
+    "fullName": "Rovsing",
+    "symbol": "ROV",
+    "isin": "DK0061152170",
+    "currency": "DKK",
+    "sector": "Industrials",
+    "orderbookId": "CSE36995"
+  },
+  {
+    "fullName": "Royal UNIBREW",
+    "symbol": "RBREW",
+    "isin": "DK0060634707",
+    "currency": "DKK",
+    "sector": "Consumer Staples",
+    "orderbookId": "CSE3273"
+  },
+  {
+    "fullName": "RTX",
+    "symbol": "RTX",
+    "isin": "DK0010267129",
+    "currency": "DKK",
+    "sector": "Telecommunications",
+    "orderbookId": "CSE5090"
+  },
+  {
+    "fullName": "Rusta",
+    "symbol": "RUSTA",
+    "isin": "SE0020848356",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE307420"
+  },
+  {
+    "fullName": "RVRC Holding",
+    "symbol": "RVRC",
+    "isin": "SE0015962485",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE227664"
+  },
+  {
+    "fullName": "Röko B",
+    "symbol": "ROKO B",
+    "isin": "SE0023950795",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE389112"
+  },
+  {
+    "fullName": "SAAB B",
+    "symbol": "SAAB B",
+    "isin": "SE0021921269",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE1051"
+  },
+  {
+    "fullName": "Saga Furs Oyj C",
+    "symbol": "SAGCV",
+    "isin": "FI0009800551",
+    "currency": "EUR",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "HEX24384"
+  },
+  {
+    "fullName": "Sagax A",
+    "symbol": "SAGA A",
+    "isin": "SE0004635878",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE43045"
+  },
+  {
+    "fullName": "Sagax B",
+    "symbol": "SAGA B",
+    "isin": "SE0005127818",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE93169"
+  },
+  {
+    "fullName": "Sagax D",
+    "symbol": "SAGA D",
+    "isin": "SE0009161052",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE128555"
+  },
+  {
+    "fullName": "Samhällsbyggnadsbo. i Norden B",
+    "symbol": "SBB B",
+    "isin": "SE0009554454",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE103614"
+  },
+  {
+    "fullName": "Samhällsbyggnadsbo. i Norden D",
+    "symbol": "SBB D",
+    "isin": "SE0011844091",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE164962"
+  },
+  {
+    "fullName": "Sampo Oyj A",
+    "symbol": "SAMPO",
+    "isin": "FI4000552500",
+    "currency": "EUR",
+    "sector": "Financials",
+    "orderbookId": "HEX24346"
+  },
+  {
+    "fullName": "Sampo Oyj A",
+    "symbol": "SAMPO DKK",
+    "isin": "FI4000552500",
+    "currency": "DKK",
+    "sector": "Financials",
+    "orderbookId": "CSE352040"
+  },
+  {
+    "fullName": "Sampo Oyj SDB",
+    "symbol": "SAMPO SDB",
+    "isin": "SE0018768707",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE275003"
+  },
+  {
+    "fullName": "Sandvik",
+    "symbol": "SAND",
+    "isin": "SE0000667891",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE4928"
+  },
+  {
+    "fullName": "Saniona",
+    "symbol": "SANION",
+    "isin": "SE0005794617",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE100428"
+  },
+  {
+    "fullName": "Sanoma Oyj",
+    "symbol": "SANOMA",
+    "isin": "FI0009007694",
+    "currency": "EUR",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "HEX24366"
+  },
+  {
+    "fullName": "SCA A",
+    "symbol": "SCA A",
+    "isin": "SE0000171886",
+    "currency": "SEK",
+    "sector": "Basic Materials",
+    "orderbookId": "SSE322"
+  },
+  {
+    "fullName": "SCA B",
+    "symbol": "SCA B",
+    "isin": "SE0000112724",
+    "currency": "SEK",
+    "sector": "Basic Materials",
+    "orderbookId": "SSE323"
+  },
+  {
+    "fullName": "Scandi Standard",
+    "symbol": "SCST",
+    "isin": "SE0005999760",
+    "currency": "SEK",
+    "sector": "Consumer Staples",
+    "orderbookId": "SSE101634"
+  },
+  {
+    "fullName": "Scandic Hotels Group",
+    "symbol": "SHOT",
+    "isin": "SE0007640156",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE115964"
+  },
+  {
+    "fullName": "Scandinavian Investment Group",
+    "symbol": "SIG",
+    "isin": "DK0060038933",
+    "currency": "DKK",
+    "sector": "Industrials",
+    "orderbookId": "CSE3414"
+  },
+  {
+    "fullName": "Scandinavian Tobacco Group",
+    "symbol": "STG",
+    "isin": "DK0060696300",
+    "currency": "DKK",
+    "sector": "Consumer Staples",
+    "orderbookId": "CSE118442"
+  },
+  {
+    "fullName": "Scanfil Oyj",
+    "symbol": "SCANFL",
+    "isin": "FI4000029905",
+    "currency": "EUR",
+    "sector": "Industrials",
+    "orderbookId": "HEX86230"
+  },
+  {
+    "fullName": "Schouw \u0026 Co.",
+    "symbol": "SCHO",
+    "isin": "DK0010253921",
+    "currency": "DKK",
+    "sector": "Industrials",
+    "orderbookId": "CSE3259"
+  },
+  {
+    "fullName": "Sdiptech B",
+    "symbol": "SDIP B",
+    "isin": "SE0003756758",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE137416"
+  },
+  {
+    "fullName": "Sdiptech Pref",
+    "symbol": "SDIP PREF",
+    "isin": "SE0006758348",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE106736"
+  },
+  {
+    "fullName": "Seafire",
+    "symbol": "SEAF",
+    "isin": "SE0009779796",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE176011"
+  },
+  {
+    "fullName": "SEB A",
+    "symbol": "SEB A",
+    "isin": "SE0000148884",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE281"
+  },
+  {
+    "fullName": "SEB C",
+    "symbol": "SEB C",
+    "isin": "SE0000120784",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE282"
+  },
+  {
+    "fullName": "SECTRA B",
+    "symbol": "SECT B",
+    "isin": "SE0022419784",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE3083"
+  },
+  {
+    "fullName": "Securitas B",
+    "symbol": "SECU B",
+    "isin": "SE0000163594",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE401"
+  },
+  {
+    "fullName": "Sedana Medical",
+    "symbol": "SEDANA",
+    "isin": "SE0015988373",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE139763"
+  },
+  {
+    "fullName": "Sensys Gatso Group",
+    "symbol": "SGG",
+    "isin": "SE0020356244",
+    "currency": "SEK",
+    "sector": "Technology",
+    "orderbookId": "SSE12241"
+  },
+  {
+    "fullName": "Senzime",
+    "symbol": "SEZI",
+    "isin": "SE0002478776",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE56147"
+  },
+  {
+    "fullName": "Shape Robotics",
+    "symbol": "SHAPE",
+    "isin": "DK0061273125",
+    "currency": "DKK",
+    "sector": "Technology",
+    "orderbookId": "CSE197194"
+  },
+  {
+    "fullName": "Siili Solutions Oyj",
+    "symbol": "SIILI",
+    "isin": "FI4000043435",
+    "currency": "EUR",
+    "sector": "Technology",
+    "orderbookId": "HEX90227"
+  },
+  {
+    "fullName": "Sinch",
+    "symbol": "SINCH",
+    "isin": "SE0016101844",
+    "currency": "SEK",
+    "sector": "Technology",
+    "orderbookId": "SSE113927"
+  },
+  {
+    "fullName": "SinterCast",
+    "symbol": "SINT",
+    "isin": "SE0000950982",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE1058"
+  },
+  {
+    "fullName": "Sitowise Group Oyj",
+    "symbol": "SITOWS",
+    "isin": "FI4000480215",
+    "currency": "EUR",
+    "sector": "Industrials",
+    "orderbookId": "HEX219192"
+  },
+  {
+    "fullName": "Sivers Semiconductors",
+    "symbol": "SIVE",
+    "isin": "SE0003917798",
+    "currency": "SEK",
+    "sector": "Technology",
+    "orderbookId": "SSE146655"
+  },
+  {
+    "fullName": "Sjóvá-Almennar tryggingar",
+    "symbol": "SJOVA",
+    "isin": "IS0000024602",
+    "currency": "ISK",
+    "sector": "Financials",
+    "orderbookId": "ICE100381"
+  },
+  {
+    "fullName": "Skagi",
+    "symbol": "SKAGI",
+    "isin": "IS0000007078",
+    "currency": "ISK",
+    "sector": "Financials",
+    "orderbookId": "ICE93633"
+  },
+  {
+    "fullName": "SKAKO",
+    "symbol": "SKAKO",
+    "isin": "DK0010231877",
+    "currency": "DKK",
+    "sector": "Industrials",
+    "orderbookId": "CSE3254"
+  },
+  {
+    "fullName": "Skanska B",
+    "symbol": "SKA B",
+    "isin": "SE0000113250",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE283"
+  },
+  {
+    "fullName": "Skel fjárfestingafélag",
+    "symbol": "SKEL",
+    "isin": "IS0000000503",
+    "currency": "ISK",
+    "sector": "Energy",
+    "orderbookId": "ICE128822"
+  },
+  {
+    "fullName": "SKF A",
+    "symbol": "SKF A",
+    "isin": "SE0000108201",
+    "currency": "SEK",
+    "sector": "Basic Materials",
+    "orderbookId": "SSE284"
+  },
+  {
+    "fullName": "SKF B",
+    "symbol": "SKF B",
+    "isin": "SE0000108227",
+    "currency": "SEK",
+    "sector": "Basic Materials",
+    "orderbookId": "SSE285"
+  },
+  {
+    "fullName": "SkiStar B",
+    "symbol": "SKIS B",
+    "isin": "SE0012141687",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE939"
+  },
+  {
+    "fullName": "Skjern Bank",
+    "symbol": "SKJE",
+    "isin": "DK0010295922",
+    "currency": "DKK",
+    "sector": "Financials",
+    "orderbookId": "CSE3301"
+  },
+  {
+    "fullName": "Sleep Cycle",
+    "symbol": "SLEEP",
+    "isin": "SE0015961404",
+    "currency": "SEK",
+    "sector": "Technology",
+    "orderbookId": "SSE227472"
+  },
+  {
+    "fullName": "Softronic B",
+    "symbol": "SOF B",
+    "isin": "SE0000323305",
+    "currency": "SEK",
+    "sector": "Technology",
+    "orderbookId": "SSE1546"
+  },
+  {
+    "fullName": "Solar B",
+    "symbol": "SOLAR B",
+    "isin": "DK0010274844",
+    "currency": "DKK",
+    "sector": "Industrials",
+    "orderbookId": "CSE3431"
+  },
+  {
+    "fullName": "Solid Försäkringsaktiebolag",
+    "symbol": "SFAB",
+    "isin": "SE0017082548",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE241465"
+  },
+  {
+    "fullName": "Solteq Oyj",
+    "symbol": "SOLTEQ",
+    "isin": "FI0009007991",
+    "currency": "EUR",
+    "sector": "Technology",
+    "orderbookId": "HEX24354"
+  },
+  {
+    "fullName": "Sotkamo Silver AB",
+    "symbol": "SOSI1",
+    "isin": "SE0001057910",
+    "currency": "EUR",
+    "sector": "Basic Materials",
+    "orderbookId": "HEX88956"
+  },
+  {
+    "fullName": "SP Group",
+    "symbol": "SPG",
+    "isin": "DK0061027356",
+    "currency": "DKK",
+    "sector": "Industrials",
+    "orderbookId": "CSE3358"
+  },
+  {
+    "fullName": "Spar Nord Bank",
+    "symbol": "SPNO",
+    "isin": "DK0060036564",
+    "currency": "DKK",
+    "sector": "Financials",
+    "orderbookId": "CSE3260"
+  },
+  {
+    "fullName": "Sparekassen Sjælland-Fyn",
+    "symbol": "SPKSJF",
+    "isin": "DK0060670776",
+    "currency": "DKK",
+    "sector": "Financials",
+    "orderbookId": "CSE115948"
+  },
+  {
+    "fullName": "SRV Yhtiöt Oyj",
+    "symbol": "SRV1V",
+    "isin": "FI4000523675",
+    "currency": "EUR",
+    "sector": "Industrials",
+    "orderbookId": "HEX40925"
+  },
+  {
+    "fullName": "SSAB A",
+    "symbol": "SSAB A",
+    "isin": "SE0000171100",
+    "currency": "SEK",
+    "sector": "Basic Materials",
+    "orderbookId": "SSE300"
+  },
+  {
+    "fullName": "SSAB A",
+    "symbol": "SSABAH",
+    "isin": "SE0000171100",
+    "currency": "EUR",
+    "sector": "Basic Materials",
+    "orderbookId": "HEX102049"
+  },
+  {
+    "fullName": "SSAB B",
+    "symbol": "SSAB B",
+    "isin": "SE0000120669",
+    "currency": "SEK",
+    "sector": "Basic Materials",
+    "orderbookId": "SSE301"
+  },
+  {
+    "fullName": "SSAB B",
+    "symbol": "SSABBH",
+    "isin": "SE0000120669",
+    "currency": "EUR",
+    "sector": "Basic Materials",
+    "orderbookId": "HEX102050"
+  },
+  {
+    "fullName": "SSH Communications Security",
+    "symbol": "SSH1V",
+    "isin": "FI0009008270",
+    "currency": "EUR",
+    "sector": "Technology",
+    "orderbookId": "HEX24357"
+  },
+  {
+    "fullName": "Starbreeze A",
+    "symbol": "STAR A",
+    "isin": "SE0007158928",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE110197"
+  },
+  {
+    "fullName": "Starbreeze B",
+    "symbol": "STAR B",
+    "isin": "SE0005992831",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE5285"
+  },
+  {
+    "fullName": "Stendörren Fastigheter B",
+    "symbol": "STEF B",
+    "isin": "SE0006543344",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE80255"
+  },
+  {
+    "fullName": "Stenhus Fastigheter i Norden",
+    "symbol": "SFAST",
+    "isin": "SE0014956819",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE209426"
+  },
+  {
+    "fullName": "Stillfront Group",
+    "symbol": "SF",
+    "isin": "SE0015346135",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE116312"
+  },
+  {
+    "fullName": "Stockwik Förvaltning",
+    "symbol": "STWK",
+    "isin": "SE0012257970",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE1007"
+  },
+  {
+    "fullName": "Stora Enso A",
+    "symbol": "STE A",
+    "isin": "FI0009007603",
+    "currency": "SEK",
+    "sector": "Basic Materials",
+    "orderbookId": "SSE2169"
+  },
+  {
+    "fullName": "Stora Enso Oyj A",
+    "symbol": "STEAV",
+    "isin": "FI0009005953",
+    "currency": "EUR",
+    "sector": "Basic Materials",
+    "orderbookId": "HEX24359"
+  },
+  {
+    "fullName": "Stora Enso Oyj R",
+    "symbol": "STERV",
+    "isin": "FI0009005961",
+    "currency": "EUR",
+    "sector": "Basic Materials",
+    "orderbookId": "HEX24360"
+  },
+  {
+    "fullName": "Stora Enso R",
+    "symbol": "STE R",
+    "isin": "FI0009007611",
+    "currency": "SEK",
+    "sector": "Basic Materials",
+    "orderbookId": "SSE2170"
+  },
+  {
+    "fullName": "Storskogen Group B",
+    "symbol": "STOR B",
+    "isin": "SE0016797732",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE236754"
+  },
+  {
+    "fullName": "Strategic Investments",
+    "symbol": "STRINV",
+    "isin": "DK0010271238",
+    "currency": "DKK",
+    "sector": "Financials",
+    "orderbookId": "CSE12275"
+  },
+  {
+    "fullName": "Strategic Partners",
+    "symbol": "STRAP",
+    "isin": "DK0062502894",
+    "currency": "DKK",
+    "sector": "Health Care",
+    "orderbookId": "CSE145804"
+  },
+  {
+    "fullName": "Studsvik",
+    "symbol": "SVIK",
+    "isin": "SE0000653230",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE13094"
+  },
+  {
+    "fullName": "Suominen Oyj",
+    "symbol": "SUY1V",
+    "isin": "FI0009010862",
+    "currency": "EUR",
+    "sector": "Consumer Staples",
+    "orderbookId": "HEX24364"
+  },
+  {
+    "fullName": "Sv. Handelsbanken A",
+    "symbol": "SHB A",
+    "isin": "SE0007100599",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE340"
+  },
+  {
+    "fullName": "Sv. Handelsbanken B",
+    "symbol": "SHB B",
+    "isin": "SE0007100607",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE341"
+  },
+  {
+    "fullName": "Sveafastigheter",
+    "symbol": "SVEAF",
+    "isin": "SE0022243812",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE361471"
+  },
+  {
+    "fullName": "Svedbergs Group B",
+    "symbol": "SVED B",
+    "isin": "SE0000407991",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE935"
+  },
+  {
+    "fullName": "Svolder A",
+    "symbol": "SVOL A",
+    "isin": "SE0017161441",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE936"
+  },
+  {
+    "fullName": "Svolder B",
+    "symbol": "SVOL B",
+    "isin": "SE0017161458",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE937"
+  },
+  {
+    "fullName": "SWECO A",
+    "symbol": "SWEC A",
+    "isin": "SE0014960365",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE1061"
+  },
+  {
+    "fullName": "SWECO B",
+    "symbol": "SWEC B",
+    "isin": "SE0014960373",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE1062"
+  },
+  {
+    "fullName": "Swedbank A",
+    "symbol": "SWED A",
+    "isin": "SE0000242455",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE120"
+  },
+  {
+    "fullName": "Swedish Logistic Property B",
+    "symbol": "SLP B",
+    "isin": "SE0017565476",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE252844"
+  },
+  {
+    "fullName": "Swedish Orphan Biovitrum",
+    "symbol": "SOBI",
+    "isin": "SE0000872095",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE36316"
+  },
+  {
+    "fullName": "Sydbank",
+    "symbol": "SYDB",
+    "isin": "DK0010311471",
+    "currency": "DKK",
+    "sector": "Financials",
+    "orderbookId": "CSE3366"
+  },
+  {
+    "fullName": "SynAct Pharma",
+    "symbol": "SYNACT",
+    "isin": "SE0008241491",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE261590"
+  },
+  {
+    "fullName": "Synsam",
+    "symbol": "SYNSAM",
+    "isin": "SE0016829709",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE239244"
+  },
+  {
+    "fullName": "Systemair",
+    "symbol": "SYSR",
+    "isin": "SE0016609499",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE43007"
+  },
+  {
+    "fullName": "Síldarvinnslan",
+    "symbol": "SVN",
+    "isin": "IS0000000479",
+    "currency": "ISK",
+    "sector": "Consumer Staples",
+    "orderbookId": "ICE226422"
+  },
+  {
+    "fullName": "Síminn",
+    "symbol": "SIMINN",
+    "isin": "IS0000026193",
+    "currency": "ISK",
+    "sector": "Telecommunications",
+    "orderbookId": "ICE113958"
+  },
+  {
+    "fullName": "Sýn",
+    "symbol": "SYN",
+    "isin": "IS0000020485",
+    "currency": "ISK",
+    "sector": "Telecommunications",
+    "orderbookId": "ICE91228"
+  },
+  {
+    "fullName": "Taaleri Oyj",
+    "symbol": "TAALA",
+    "isin": "FI4000062195",
+    "currency": "EUR",
+    "sector": "Financials",
+    "orderbookId": "HEX93664"
+  },
+  {
+    "fullName": "Talenom Oyj",
+    "symbol": "TNOM",
+    "isin": "FI4000153580",
+    "currency": "EUR",
+    "sector": "Industrials",
+    "orderbookId": "HEX109537"
+  },
+  {
+    "fullName": "TCM Group",
+    "symbol": "TCM",
+    "isin": "DK0060915478",
+    "currency": "DKK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "CSE145918"
+  },
+  {
+    "fullName": "Tecnotree Oyj",
+    "symbol": "TEM1V",
+    "isin": "FI4000570890",
+    "currency": "EUR",
+    "sector": "Technology",
+    "orderbookId": "HEX24373"
+  },
+  {
+    "fullName": "Tele2 A",
+    "symbol": "TEL2 A",
+    "isin": "SE0005190220",
+    "currency": "SEK",
+    "sector": "Telecommunications",
+    "orderbookId": "SSE1026"
+  },
+  {
+    "fullName": "Tele2 B",
+    "symbol": "TEL2 B",
+    "isin": "SE0005190238",
+    "currency": "SEK",
+    "sector": "Telecommunications",
+    "orderbookId": "SSE1027"
+  },
+  {
+    "fullName": "Teleste Oyj",
+    "symbol": "TLT1V",
+    "isin": "FI0009007728",
+    "currency": "EUR",
+    "sector": "Telecommunications",
+    "orderbookId": "HEX24372"
+  },
+  {
+    "fullName": "Telia Company",
+    "symbol": "TELIA",
+    "isin": "SE0000667925",
+    "currency": "SEK",
+    "sector": "Telecommunications",
+    "orderbookId": "SSE5095"
+  },
+  {
+    "fullName": "Telia Company",
+    "symbol": "TELIA1",
+    "isin": "SE0000667925",
+    "currency": "EUR",
+    "sector": "Telecommunications",
+    "orderbookId": "HEX24381"
+  },
+  {
+    "fullName": "Terveystalo Oyj",
+    "symbol": "TTALO",
+    "isin": "FI4000252127",
+    "currency": "EUR",
+    "sector": "Health Care",
+    "orderbookId": "HEX144124"
+  },
+  {
+    "fullName": "TF Bank",
+    "symbol": "TFBANK",
+    "isin": "SE0007331608",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE123340"
+  },
+  {
+    "fullName": "Thule Group",
+    "symbol": "THULE",
+    "isin": "SE0006422390",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE104058"
+  },
+  {
+    "fullName": "TietoEVRY Oyj",
+    "symbol": "TIETO",
+    "isin": "FI0009000277",
+    "currency": "EUR",
+    "sector": "Technology",
+    "orderbookId": "HEX24376"
+  },
+  {
+    "fullName": "TietoEVRY Oyj",
+    "symbol": "TIETOS",
+    "isin": "FI0009000277",
+    "currency": "SEK",
+    "sector": "Technology",
+    "orderbookId": "SSE4025"
+  },
+  {
+    "fullName": "Tivoli A/S",
+    "symbol": "TIV",
+    "isin": "DK0060726743",
+    "currency": "DKK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "CSE3440"
+  },
+  {
+    "fullName": "Tobii",
+    "symbol": "TOBII",
+    "isin": "SE0002591420",
+    "currency": "SEK",
+    "sector": "Technology",
+    "orderbookId": "SSE108332"
+  },
+  {
+    "fullName": "Toivo Group Oyj",
+    "symbol": "TOIVO",
+    "isin": "FI4000496716",
+    "currency": "EUR",
+    "sector": "Real Estate",
+    "orderbookId": "HEX226440"
+  },
+  {
+    "fullName": "Tokmanni Group Oyj",
+    "symbol": "TOKMAN",
+    "isin": "FI4000197934",
+    "currency": "EUR",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "HEX121161"
+  },
+  {
+    "fullName": "TORM A",
+    "symbol": "TRMD A",
+    "isin": "GB00BZ3CNK81",
+    "currency": "DKK",
+    "sector": "Industrials",
+    "orderbookId": "CSE120191"
+  },
+  {
+    "fullName": "Traction  B",
+    "symbol": "TRAC B",
+    "isin": "SE0000391716",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE4963"
+  },
+  {
+    "fullName": "TradeDoubler",
+    "symbol": "TRAD",
+    "isin": "SE0001552357",
+    "currency": "SEK",
+    "sector": "Technology",
+    "orderbookId": "SSE31884"
+  },
+  {
+    "fullName": "Trainers´ House Oyj",
+    "symbol": "TRH1V",
+    "isin": "FI4000519202",
+    "currency": "EUR",
+    "sector": "Technology",
+    "orderbookId": "HEX24347"
+  },
+  {
+    "fullName": "Transtema Group",
+    "symbol": "TRANS",
+    "isin": "SE0006758587",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE109528"
+  },
+  {
+    "fullName": "TRATON",
+    "symbol": "8TRA",
+    "isin": "DE000TRAT0N7",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE175638"
+  },
+  {
+    "fullName": "Trelleborg B",
+    "symbol": "TREL B",
+    "isin": "SE0000114837",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE364"
+  },
+  {
+    "fullName": "Trianon B",
+    "symbol": "TRIAN B",
+    "isin": "SE0018013658",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE139762"
+  },
+  {
+    "fullName": "Trifork Group",
+    "symbol": "TRIFOR",
+    "isin": "CH1111227810",
+    "currency": "DKK",
+    "sector": "Technology",
+    "orderbookId": "CSE225643"
+  },
+  {
+    "fullName": "Troax Group",
+    "symbol": "TROAX",
+    "isin": "SE0012729366",
+    "currency": "SEK",
+    "sector": "Basic Materials",
+    "orderbookId": "SSE107899"
+  },
+  {
+    "fullName": "Truecaller B",
+    "symbol": "TRUE B",
+    "isin": "SE0016787071",
+    "currency": "SEK",
+    "sector": "Technology",
+    "orderbookId": "SSE236643"
+  },
+  {
+    "fullName": "Tryg",
+    "symbol": "TRYG",
+    "isin": "DK0060636678",
+    "currency": "DKK",
+    "sector": "Financials",
+    "orderbookId": "CSE31315"
+  },
+  {
+    "fullName": "Tulikivi Oyj A",
+    "symbol": "TULAV",
+    "isin": "FI0009900583",
+    "currency": "EUR",
+    "sector": "Industrials",
+    "orderbookId": "HEX24383"
+  },
+  {
+    "fullName": "UIE Plc",
+    "symbol": "UIE",
+    "isin": "MT0002400118",
+    "currency": "DKK",
+    "sector": "Consumer Staples",
+    "orderbookId": "CSE3441"
+  },
+  {
+    "fullName": "United Bankers Oyj",
+    "symbol": "UNITED",
+    "isin": "FI4000081427",
+    "currency": "EUR",
+    "sector": "Financials",
+    "orderbookId": "HEX103563"
+  },
+  {
+    "fullName": "UPM-Kymmene Oyj",
+    "symbol": "UPM",
+    "isin": "FI0009005987",
+    "currency": "EUR",
+    "sector": "Basic Materials",
+    "orderbookId": "HEX24386"
+  },
+  {
+    "fullName": "Vaisala Oyj A",
+    "symbol": "VAIAS",
+    "isin": "FI0009900682",
+    "currency": "EUR",
+    "sector": "Industrials",
+    "orderbookId": "HEX24388"
+  },
+  {
+    "fullName": "Valmet Oyj",
+    "symbol": "VALMT",
+    "isin": "FI4000074984",
+    "currency": "EUR",
+    "sector": "Industrials",
+    "orderbookId": "HEX98819"
+  },
+  {
+    "fullName": "VBG GROUP B",
+    "symbol": "VBG B",
+    "isin": "SE0000115107",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE942"
+  },
+  {
+    "fullName": "VEF",
+    "symbol": "VEFAB",
+    "isin": "SE0016128151",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE228862"
+  },
+  {
+    "fullName": "Verkkokauppa.com Oyj",
+    "symbol": "VERK",
+    "isin": "FI4000049812",
+    "currency": "EUR",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "HEX100175"
+  },
+  {
+    "fullName": "Vestas Wind Systems",
+    "symbol": "VWS",
+    "isin": "DK0061539921",
+    "currency": "DKK",
+    "sector": "Energy",
+    "orderbookId": "CSE3258"
+  },
+  {
+    "fullName": "Vestjysk Bank",
+    "symbol": "VJBA",
+    "isin": "DK0010304500",
+    "currency": "DKK",
+    "sector": "Financials",
+    "orderbookId": "CSE3271"
+  },
+  {
+    "fullName": "Vestum",
+    "symbol": "VESTUM",
+    "isin": "SE0017134125",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE55316"
+  },
+  {
+    "fullName": "Viaplay Group A",
+    "symbol": "VPLAY A",
+    "isin": "SE0012324226",
+    "currency": "SEK",
+    "sector": "Telecommunications",
+    "orderbookId": "SSE171334"
+  },
+  {
+    "fullName": "Viaplay Group B",
+    "symbol": "VPLAY B",
+    "isin": "SE0012116390",
+    "currency": "SEK",
+    "sector": "Telecommunications",
+    "orderbookId": "SSE171335"
+  },
+  {
+    "fullName": "Vicore Pharma Holding",
+    "symbol": "VICO",
+    "isin": "SE0007577895",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE116629"
+  },
+  {
+    "fullName": "Viking Line Abp",
+    "symbol": "VIK1V",
+    "isin": "FI0009005250",
+    "currency": "EUR",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "HEX24389"
+  },
+  {
+    "fullName": "Vimian Group",
+    "symbol": "VIMIAN",
+    "isin": "SE0015961982",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE228568"
+  },
+  {
+    "fullName": "Vitec Software Group B",
+    "symbol": "VIT B",
+    "isin": "SE0007871363",
+    "currency": "SEK",
+    "sector": "Technology",
+    "orderbookId": "SSE5177"
+  },
+  {
+    "fullName": "Vitrolife",
+    "symbol": "VITR",
+    "isin": "SE0011205202",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE13469"
+  },
+  {
+    "fullName": "Vivesto",
+    "symbol": "VIVE",
+    "isin": "SE0000722365",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE76461"
+  },
+  {
+    "fullName": "VNV Global",
+    "symbol": "VNV",
+    "isin": "SE0014428835",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE198737"
+  },
+  {
+    "fullName": "Volati",
+    "symbol": "VOLO",
+    "isin": "SE0009143662",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE129150"
+  },
+  {
+    "fullName": "Volati Pref",
+    "symbol": "VOLO PREF",
+    "isin": "SE0009143670",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE110084"
+  },
+  {
+    "fullName": "Volvo A",
+    "symbol": "VOLV A",
+    "isin": "SE0000115420",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE365"
+  },
+  {
+    "fullName": "Volvo B",
+    "symbol": "VOLV B",
+    "isin": "SE0000115446",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE366"
+  },
+  {
+    "fullName": "Volvo Car B",
+    "symbol": "VOLCAR B",
+    "isin": "SE0021628898",
+    "currency": "SEK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "SSE238766"
+  },
+  {
+    "fullName": "Wall to Wall Group A",
+    "symbol": "WTW A",
+    "isin": "SE0016075246",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE228461"
+  },
+  {
+    "fullName": "Wallenstam B",
+    "symbol": "WALL B",
+    "isin": "SE0017780133",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE945"
+  },
+  {
+    "fullName": "Wetteri Oyj",
+    "symbol": "WETTERI",
+    "isin": "FI0009012793",
+    "currency": "EUR",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "HEX49534"
+  },
+  {
+    "fullName": "Wihlborgs Fastigheter",
+    "symbol": "WIHL",
+    "isin": "SE0018012635",
+    "currency": "SEK",
+    "sector": "Real Estate",
+    "orderbookId": "SSE29759"
+  },
+  {
+    "fullName": "Wise Group",
+    "symbol": "WISE",
+    "isin": "SE0007277876",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE40017"
+  },
+  {
+    "fullName": "WithSecure Oyj",
+    "symbol": "WITH",
+    "isin": "FI4000519228",
+    "currency": "EUR",
+    "sector": "Technology",
+    "orderbookId": "HEX24270"
+  },
+  {
+    "fullName": "Wulff-Yhtiöt Oyj",
+    "symbol": "WUF1V",
+    "isin": "FI0009008452",
+    "currency": "EUR",
+    "sector": "Industrials",
+    "orderbookId": "HEX24239"
+  },
+  {
+    "fullName": "Wärtsilä Oyj Abp",
+    "symbol": "WRT1V",
+    "isin": "FI0009003727",
+    "currency": "EUR",
+    "sector": "Industrials",
+    "orderbookId": "HEX24394"
+  },
+  {
+    "fullName": "Wästbygg Gruppen B",
+    "symbol": "WBGR B",
+    "isin": "SE0014453874",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE204364"
+  },
+  {
+    "fullName": "XANO Industri B",
+    "symbol": "XANO B",
+    "isin": "SE0018014151",
+    "currency": "SEK",
+    "sector": "Industrials",
+    "orderbookId": "SSE1074"
+  },
+  {
+    "fullName": "Xbrane Biopharma",
+    "symbol": "XBRANE",
+    "isin": "SE0007789409",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE118813"
+  },
+  {
+    "fullName": "Xspray Pharma",
+    "symbol": "XSPRAY",
+    "isin": "SE0009973563",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE144229"
+  },
+  {
+    "fullName": "Xvivo Perfusion",
+    "symbol": "XVIVO",
+    "isin": "SE0004840718",
+    "currency": "SEK",
+    "sector": "Health Care",
+    "orderbookId": "SSE90126"
+  },
+  {
+    "fullName": "YIT Oyj",
+    "symbol": "YIT",
+    "isin": "FI0009800643",
+    "currency": "EUR",
+    "sector": "Industrials",
+    "orderbookId": "HEX24397"
+  },
+  {
+    "fullName": "Yubico",
+    "symbol": "YUBICO",
+    "isin": "SE0015657788",
+    "currency": "SEK",
+    "sector": "Technology",
+    "orderbookId": "SSE219986"
+  },
+  {
+    "fullName": "Zealand Pharma",
+    "symbol": "ZEAL",
+    "isin": "DK0060257814",
+    "currency": "DKK",
+    "sector": "Health Care",
+    "orderbookId": "CSE78587"
+  },
+  {
+    "fullName": "Ålandsbanken Abp A",
+    "symbol": "ALBAV",
+    "isin": "FI0009000103",
+    "currency": "EUR",
+    "sector": "Financials",
+    "orderbookId": "HEX24229"
+  },
+  {
+    "fullName": "Ålandsbanken Abp B",
+    "symbol": "ALBBV",
+    "isin": "FI0009001127",
+    "currency": "EUR",
+    "sector": "Financials",
+    "orderbookId": "HEX24230"
+  },
+  {
+    "fullName": "Ísfélag",
+    "symbol": "ISF",
+    "isin": "IS0000030112",
+    "currency": "ISK",
+    "sector": "Consumer Staples",
+    "orderbookId": "ICE313670"
+  },
+  {
+    "fullName": "Íslandsbanki",
+    "symbol": "ISB",
+    "isin": "IS0000028538",
+    "currency": "ISK",
+    "sector": "Financials",
+    "orderbookId": "ICE228604"
+  },
+  {
+    "fullName": "Ölgerðin Egill Skallagrímsson",
+    "symbol": "OLGERD",
+    "isin": "IS0000028678",
+    "currency": "ISK",
+    "sector": "Consumer Discretionary",
+    "orderbookId": "ICE259078"
+  },
+  {
+    "fullName": "Öresund",
+    "symbol": "ORES",
+    "isin": "SE0008321608",
+    "currency": "SEK",
+    "sector": "Financials",
+    "orderbookId": "SSE863"
+  },
+  {
+    "fullName": "Ørsted",
+    "symbol": "ORSTED",
+    "isin": "DK0060094928",
+    "currency": "DKK",
+    "sector": "Utilities",
+    "orderbookId": "CSE122544"
+  },
+  {
+    "fullName": "Østasiatiske Kompagni",
+    "symbol": "OKEAC",
+    "isin": "DK0061277894",
+    "currency": "DKK",
+    "sector": "Industrials",
+    "orderbookId": "CSE3305"
+  }
+]

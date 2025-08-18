@@ -1,0 +1,3168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <script
+      src="/js/anticlickjack.min.js?25627256?25627256"
+      type="text/javascript"
+    ></script>
+    <script type="text/javascript">
+      var allowedFrameParents =
+          "iwtadmin.morningstar.com|euiwtadmqa.morningstar.com|euiwtadm.morningstar.com|euffiwtadm.morningstar.com|www.nasdaqomxnordic.com|www.nasdaqbaltic.com|www.uutechnicgroup.fi|market.ee.omxgroup.com|kalkulaator.pensionikeskus.ee|market.lt.omxgroup.com|yandex.ru|prfoods.ee|www.google.fi|brown.nasdaq.com|qc.nasdaq.com|preprod.nasdaq.com|www.nasdaq.com|stage.nasdaq.com|lt.morningstar.com",
+        pCJ = false,
+        pCJU =
+          "https://lt.morningstar.com/gj8uge2g9k/stockreport/default.aspx?SecurityToken=0P0000A5RF]3]1]E0EXG$XCSE_3060&LanguageId=en-GB&tab=10&externalidexchange=EX$$$$XCSE&CurrencyId=DKK&ClearXrayPortfolioManagerApiInputData=true&xid=DK0060868966";
+    </script>
+    <title>Morningstar&reg; Integrated Web Tools</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+    <meta
+      http-equiv="content-type"
+      content="application/xhtml+xml; charset=utf-8"
+    />
+
+    <meta name="robots" content="noindex" />
+
+    <meta http-equiv="content-language" content="en-GB" />
+    <meta name="language" content="English" />
+
+    <link rel="stylesheet" type="text/css" href="/styles/reset.css?25627256" />
+    <link rel="stylesheet" type="text/css" href="/styles/styles.css?25627256" />
+    <script type="text/javascript" src="/js/scripts.js?25627256"></script>
+    <script type="text/javascript" src="/js/help.js?25627256"></script>
+    <script type="text/javascript" src="/js/homefunctions.js?25627256"></script>
+
+    <script
+      type="text/javascript"
+      src="/js/jquery/jquery-1.7.1.min.js?25627256"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/styles/popupmenu.css?25627256"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/styles/reports.css?25627256"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/styles/reports-eq.css?25627256"
+    />
+
+    <script
+      type="text/javascript"
+      src="/js/jquery-lt/jquery.lt.tabSwitching.min.js?25627256"
+    ></script>
+
+    <script type="text/javascript">
+      var tab = "10";
+      var vw = "";
+      var ticker = "AAB";
+    </script>
+
+    <script type="text/javascript">
+      var AppPath = "";
+      var CurrencyId = "DKK";
+      var LanguageId = "en-GB";
+      var LocalAppPath = "";
+      var StaticContentURL = ""; // For static content called via javascript. Please fully qualify any links that use this.
+      var UrlKey = "gj8uge2g9k";
+      var ModuleId = "59";
+      var JSMode = "min";
+      var AllowCookies = "true";
+      var AllowedCookies = "";
+      var bpchartUrl = "https://00243.eci0254d.eas.morningstar.com/chart";
+
+      var CultureInfo = {
+        name: "en-GB",
+        number: { decimalSeparator: ".", groupingSeparator: "," },
+      };
+      var StandardFormats = {
+        number: {
+          Integer: "#,###,##0",
+          ShortDecimal: "#,##0.0",
+          StandardDecimal: "#,##0.00",
+          LongDecimal: "#,##0.000",
+          VeryLongDecimal: "#,##0.0000",
+          Million: "#,##0.000m",
+          AbbreviatedWhole: "#,##0.0abbr",
+        },
+        date: {
+          DayMonth: "dd/MM",
+          FullMonth: "MMMM",
+          FullTextMonthYear: "MMMM yyyy",
+          NumberMonthYear: "MM yyyy",
+          TextMonthShortYear: "MMM yy",
+          TextMonthYear: "MMM yyyy",
+          ShortTime: "HH:mm",
+          LongTime: "HH:mm:ss",
+          ShortDatePattern: "dd/MM/yyyy",
+          LongDatePattern: "dd MMMM yyyy",
+          ShortDateTimePattern: "dd/MM/yyyy HH:mm",
+          LongDateTimePattern: "dd MMMM yyyy HH:mm",
+        },
+      };
+
+      var SecurityToken = "0P0000A5RF\x5d3\x5d1\x5dE0EXG\x24XCSE_3060";
+      var tab = "10";
+      var externalidexchange = "EX\x24\x24\x24\x24XCSE";
+      var ClearXrayPortfolioManagerApiInputData = "true";
+      var xid = "DK0060868966";
+
+      //the trim function is in the scripts.js file, but in IE, sometimes the next code will call first before the js loaded.
+      function trimSpace(text) {
+        //trim whitespace from a string
+        text = text.replace(/^\s+/g, ""); //leading space
+        return text.replace(/\s+$/g, ""); //trailing space
+      }
+
+      if (trimSpace(StaticContentURL) != "") {
+        while (StaticContentURL.substr(StaticContentURL.length - 1, 1) == "/")
+          StaticContentURL = StaticContentURL.substr(
+            0,
+            StaticContentURL.length - 1
+          );
+      }
+    </script>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="print"
+      href="/styles/print.css?25627256"
+    />
+
+    <style type="text/css">
+      #MasterNavigationRight {
+        display: none;
+      }
+      #MasterNavigationBottom {
+        display: none;
+      }
+      #MasterNavigationLeft {
+        display: none;
+      }
+
+      .devFooter {
+        clear: both;
+        color: Red;
+        text-align: center;
+        font-size: 2em;
+        font-weight: bold;
+        padding: 25px;
+        border: 2px solid Black;
+      }
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitter:wght@400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://www.nasdaq.com/themes/nsdq/src/assets/styles/jupiter22/_variables.scss"
+      rel="stylesheet"
+    />
+    <link
+      href="https://www.nasdaq.com/themes/nsdq/src/assets/styles/_size.scss"
+      rel="stylesheet"
+    />
+    <link
+      href="https://www.nasdaq.com/themes/nsdq/src/assets/styles/_reset.scss"
+      rel="stylesheet"
+    />
+    <link
+      href="https://www.nasdaq.com/themes/nsdq/src/assets/styles/_typography-presets.scss"
+      rel="stylesheet"
+    />
+
+    <style type="text/css">
+      @font-face {
+        font-family: tstarqBold;
+        src: url("/util/GetImage.ashx?FileId=8897");
+        src: url("/util/GetImage.ashx?FileId=8898") format("woff");
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      html,
+      body {
+        font-family: sans-serif;
+        font-size: 16px;
+        background-color: transparent;
+      }
+
+      html,
+      body {
+        font-family: "Inter";
+        font-weight: 400;
+      }
+
+      #MainDiv {
+        background-color: transparent;
+      }
+      #MasterMainContent {
+        width: 100%;
+        font-size: 12px;
+      }
+      body.FramedIn .msTitleBar {
+        display: none;
+      }
+      body.FramedIn #SnapshotTitle {
+        display: none;
+      }
+      body.FramedIn #HorizontalNav {
+        display: none;
+      }
+
+      #SharePriceChartFrameITGrowthChart {
+        width: 100%;
+      }
+
+      caption.sectionHeader,
+/*#SnapshotBodyContent h2 { font-family: tstarqBold, Sans-Serif; border-top: none; border-bottom: none; }*/
+
+#SnapshotBodyContent h2 {
+        font-family: "Inter";
+        font-weight: 600;
+        border-top: none;
+        border-bottom: none;
+      }
+
+      #Performance10kGrowthChart img {
+        width: 100%;
+        height: 180px;
+      }
+      #Performance10kGrowthChartXLegend {
+        margin-left: 5%;
+      }
+      #Performance10kGrowthChartXLegend li span {
+        padding-right: 0;
+      }
+
+      /*tr.totals td, tr.totals th { background-color: #EFEFEF; border-bottom: 1px solid #999; }*/
+
+      tr.totals td,
+      tr.totals th {
+        background-color: #ffffff;
+        border-bottom: 1px solid #999;
+      }
+
+      #HorizontalNav #LnkPage88 {
+        display: none;
+      }
+      div.testBox {
+        border: solid 1px #66c;
+        background: #eef;
+        padding: 4px 5px;
+        border-radius: 4px;
+      }
+
+      .msDisclaimerCopyright * {
+        display: none;
+      }
+      div.NasdaqDisclaimer {
+        font-size: 8px;
+        text-align: justify;
+      }
+      /*div.NasdaqDisclaimer h4 { font-weight: bold; font-size: 9px; }
+div.NasdaqDisclaimer h4 { font-weight: bold; }*/
+      div.NasdaqDisclaimer td.colA,
+      div.NasdaqDisclaimer td.colB {
+        padding-right: 3em;
+        width: 26%;
+      }
+
+      @media screen and (min-width: 1250px) {
+        #MasterMainContent {
+          width: 1250px;
+        }
+      }
+
+      /*start //#03a1fc;*/
+      /*
+#OverviewFinancials .alternate, 
+#OverviewRatios .alternate,
+#OverviewDividends .alternate{
+    background:  #F5F5FA;        
+}*/
+
+      .alternateForColorChange {
+        background: #f5f5fa;
+      }
+
+      /*
+tr.fontChange *{ font-weight: normal }
+tr.fontBold *{ font-weight: bold}
+
+#legends_simple li {
+   border: 0;
+    background: #FFFFFF;
+    box-shadow: 0 0 0 #FFFFFF;
+}
+
+*/
+
+      tr.fontChange th {
+        font-weight: normal;
+      }
+      tr.fontBold th {
+        font-weight: bold;
+      }
+
+      div.headlinePricing {
+        clear: both;
+        margin-left: 10px !important;
+        margin-top: 6px;
+      }
+
+      #IntradayPriceSummaryQuotationWide {
+        border: 0px solid #d6d6d6;
+        width: 55%;
+        border-radius: 10px;
+      }
+
+      .priceInformation {
+        margin-left: 10px;
+      }
+
+      /*end*/
+
+      /*Nasdaq Font related changes*/
+
+      tr.total td,
+      tr.total th {
+        font-weight: 600;
+      }
+
+      caption.sectionHeader,
+      #SnapshotBodyContent h2 {
+        border-left: 3px solid #0092bc;
+        padding-left: 15px;
+      }
+
+      #CompanyProfile h2,
+      #OverviewRatios caption.sectionHeader,
+      #OverviewDividends caption.sectionHeader {
+        border-left: 0;
+        padding-left: 0;
+      }
+
+      li.pdf a,
+      a.pdf {
+        background: url(util/GetImage.ashx?FileId=14433) no-repeat left center;
+        padding-left: 28px !important;
+        background-size: 20px 20px;
+      }
+
+      #CompanyProfile h2,
+      #OverviewRatios caption.sectionHeader,
+      #OverviewDividends caption.sectionHeader,
+      #SnapshotBodyContent h3 {
+        font-family: "Inter";
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: -0.02em;
+      }
+
+      #CompanyProfile .item {
+        font-family: "Inter";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+      }
+
+      .CompanyProfileText {
+        font-family: "Inter";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+      }
+
+      .NasdaqHeader h4 {
+        font-family: "Inter";
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;
+      }
+
+      .NasdaqHeader p {
+        font-family: "Inter";
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+      }
+
+      #SharePriceChartITGrowthChart h2 {
+        font-family: "Inter";
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: -0.02em;
+      }
+
+      .headlinePricing .first:not(#Col0Price),
+      .headlinePricingText {
+        font-family: "Inter";
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+      .headlinePricing #Col0Price {
+        font-family: "Inter";
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      .headlinePricingText0 {
+        font-family: "Inter";
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+      .headlinePricingText1 {
+        font-family: "Inter";
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+      .headlinePricing1 strong {
+        font-family: "Inter";
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      #Col0PriceArrow,
+      #Col0PriceDetail {
+        font-family: "Inter";
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      .priceInformation {
+        font-family: "Inter";
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;
+      }
+
+      #SnapshotContent thead {
+        font-family: "Inter";
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: -0.02em;
+      }
+
+      #SnapshotContent .sectionHeader {
+        font-family: "Inter";
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: -0.02em;
+      }
+
+      #SnapshotContent .subHeader th {
+        font-family: "Inter";
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+      }
+
+      #SnapshotContent tbody > tr:not(.subHeader) {
+        font-family: "Inter";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+      }
+
+      /*Nasdaq Font related changes*/
+    </style>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var url = self.location.href;
+
+        $($("#CompanyProfile .item")[0]).text(
+          $(".longprofile_companyprofile").text()
+        );
+        $("#IntradayPriceSummaryVolumeWide").remove();
+        $("#TrailingReturns span").remove();
+        $("#AnnualReturns span").remove();
+        $(".page1-dropdown").remove();
+        $("#Col0PriceTimeDisclaimer ").remove();
+
+        $("#FinancialsBalanceSheet table").removeClass("toggleFinancialRows"); //disable toggle functionality for the template FinancialsBalanceSheet by removing class
+
+        $(".liabilitiesStock.subTotals:eq(0)").addClass("fontChange");
+        $(".liabilitiesStock.liabilities.subSubTotals").addClass("fontChange");
+        $(".doubleIndent:eq(0)").addClass("fontBold");
+
+        $("#IntradayPriceSummaryQuotationWide .priceInformation br:eq(0)")
+          .wrap('<span style="padding-left: 2px;/>')
+          .replaceWith(" ");
+
+        /*Nasdaq  font related changes and alternate row colors ticket DSASTAN-4530*/
+        addAlternateColorForAllTables();
+        addClassForHeaderInOverviewTab();
+
+        /*Nasdaq  font related changes and alternate row colors DSASTAN-4530*/
+
+        /*DSASTAN-4623*/
+        $(".msTitleBar").remove();
+        if (url.toLowerCase().indexOf("languageid=") == -1) {
+          addLanguageInURL(url);
+        }
+
+        /*DSASTAN-4623*/
+      });
+
+      function addClassForHeaderInOverviewTab() {
+        $("#CompanyProfile .item:eq(0)").addClass("CompanyProfileText");
+        $(".headlinePricing .first strong").addClass("headlinePricingText");
+        $(".headlinePricing:eq(0) strong").addClass("headlinePricingText0");
+        $(".headlinePricing:eq(1) strong").addClass("headlinePricingText1");
+      }
+
+      function addAlternateColorForAllTables() {
+        // add alternate color code for all tables in all tabs
+        $("#SnapshotContent  tbody tr:nth-child(odd)").each(function (i) {
+          $(this).addClass("alternateForColorChange");
+        });
+
+        //adjustments for alternate colors
+        adjustClassTotalsInRowsInTables(
+          "FinancialsIncomeStatement",
+          [0, 1],
+          [2, 7]
+        );
+        adjustClassTotalsInRowsInTables("FinancialsCashFlow", [2], [4]);
+        adjustClassTotalsInRowsInTables(
+          "KeyRatiosBalanceSheet",
+          [1, 1],
+          [5, 9]
+        );
+
+        adjustClassTotalsInTables("KeyRatiosMargins", [2]);
+        adjustClassTotalsInTables("KeyRatiosProfitability", [2, 4]);
+        adjustClassTotalsInTables("KeyRatiosBalanceSheet", [4, 8]);
+
+        adjustAlternateColorCodeInTables("OverviewFinancials", [2]);
+        adjustAlternateColorCodeInTables("KeyRatiosBalanceSheet", [1]);
+        adjustAlternateColorCodeInTables(
+          "FinancialsIncomeStatement",
+          [1, 2, 4]
+        );
+      }
+
+      var findRow;
+      var classAlternateColorChange = "alternateForColorChange";
+      var classTotals = "totals";
+
+      function adjustAlternateColorCodeInTables(divId, tbodyNoArray) {
+        for (i = 0; i < tbodyNoArray.length; i++) {
+          findRow = "#" + divId + " tbody:eq(" + tbodyNoArray[i] + ") >tr";
+          $(findRow).removeClass(classAlternateColorChange);
+          $(findRow).each(function (i) {
+            if (i % 2 == 1) {
+              $(this).addClass(classAlternateColorChange);
+            }
+          });
+        }
+      }
+
+      function adjustClassTotalsInTables(divId, tbodyNoArray) {
+        for (i = 0; i < tbodyNoArray.length; i++) {
+          findRow = "#" + divId + " tbody >tr:eq(" + tbodyNoArray[i] + ")";
+          $(findRow).removeClass(classTotals).addClass("total");
+        }
+      }
+
+      function adjustClassTotalsInRowsInTables(
+        divId,
+        tbodyNoArray,
+        nxtRowArray
+      ) {
+        for (i = 0; i < tbodyNoArray.length; i++) {
+          for (j = 0; j < nxtRowArray.length; j++) {
+            findRow =
+              "#" +
+              divId +
+              " tbody:eq(" +
+              tbodyNoArray[i] +
+              ") >tr:eq(" +
+              nxtRowArray[j] +
+              ")";
+            $(findRow).removeClass(classTotals).addClass("total");
+          }
+        }
+      }
+
+      function addLanguageInURL(url) {
+        if (url.toLowerCase().indexOf("languageid=") == -1) {
+          url = url + "&LanguageId=";
+        }
+        var params = url.split("&");
+        for (var i = 0; i < params.length; i++) {
+          var pair = params[i].split("=");
+          if (pair[0] == "LanguageId") {
+            params[i] = pair[0] + "=" + LanguageId;
+          }
+        }
+        url = params.join("&");
+        self.location.href = url;
+      }
+    </script>
+    <!--[if IE 8]>
+      <link
+        rel="stylesheet"
+        type="text/css"
+        media="all"
+        href="/styles/ie8.css?25627256"
+      />
+
+      <script type="text/javascript" src="/js/ie.js?25627256"></script>
+    <![endif]-->
+
+    <!--[if IE 7]>
+      <link
+        rel="stylesheet"
+        type="text/css"
+        media="all"
+        href="/styles/ie7.css?25627256"
+      />
+
+      <script type="text/javascript" src="/js/ie.js?25627256"></script>
+    <![endif]-->
+
+    <!--[if lte IE 6]>
+      <link
+        rel="stylesheet"
+        type="text/css"
+        media="all"
+        href="/styles/ie6.css?25627256"
+      />
+
+      <link
+        rel="stylesheet"
+        type="text/css"
+        href="/styles/popupmenu-ie6.css?25627256"
+      />
+      <script
+        type="text/javascript"
+        src="/js/popupmenu-ie6.js?25627256"
+      ></script>
+
+      <script type="text/javascript" src="/js/ie.js?25627256"></script>
+    <![endif]-->
+
+    <script
+      type="text/javascript"
+      src="/js/jquery/jquery.cookie.min.js?25627256"
+    ></script>
+    <script type="text/javascript" src="/js/cookie.min.js?25627256"></script>
+  </head>
+
+  <body
+    id="ctl00_MasterBody"
+    class="stockreport&#32;0p0000a5rf&#32;e0exgxcse_3060&#32;en&#32;enGB&#32;dkk"
+  >
+    <script type="text/tcl"></script>
+    <noscript>
+      <h3>
+        You don't have Javascript enabled. For full functionality this page
+        requires javascript to be enabled.<br /><br />
+      </h3>
+    </noscript>
+
+    <div id="MasterNavigationTop">
+      <script type="text/javascript">
+        if (window.self !== window.top) {
+          $("body").addClass("FramedIn");
+        }
+      </script>
+    </div>
+
+    <div id="MasterMiddle">
+      <div id="MasterNavigationLeft"></div>
+
+      <div id="MasterMainContent">
+        <div id="MasterMainContentTop">
+          <script type="text/javascript">
+            var getQueryParam = function (name, defValue) {
+              var local = window.top.location.href.replace(location.hash, "");
+              var reg = new RegExp(
+                "[&|?]" + name + "=([^&;]+?)(&|#|;|$)",
+                "gi"
+              );
+              var isHas = reg.test(local);
+              return decodeURIComponent(isHas ? RegExp.$1 : defValue);
+            };
+
+            var showNavbar = getQueryParam("showNavbar", "true");
+            if (showNavbar == "false") {
+              var styles = "#HorizontalNav .mainMenu {display: none;}";
+              var styleSheet = document.createElement("style");
+              styleSheet.textContent = styles;
+              document.head.appendChild(styleSheet);
+            }
+          </script>
+        </div>
+        <div id="MasterMainNavigationTop"></div>
+
+        <form
+          method="post"
+          action="/gj8uge2g9k/stockreport/default.aspx?SecurityToken=0P0000A5RF]3]1]E0EXG$XCSE_3060&amp;LanguageId=en-GB&amp;tab=10&amp;externalidexchange=EX$$$$XCSE&amp;CurrencyId=DKK&amp;ClearXrayPortfolioManagerApiInputData=true&amp;xid=DK0060868966"
+          id="aspnetForm"
+        >
+          <div>
+            <input
+              type="hidden"
+              name="__VIEWSTATE"
+              id="__VIEWSTATE"
+              value="3LbZ2FNoVxuk3Qy2xpeCT10zDay24w5OOPqhS+gMkO7fd4/+fxl4ug6qI9ItdfrUS9tMGfTtBwS3/wHXbeqpjVRvKVLhAMce0MSLUbutIDCZCHucJdvm3DXriGDevt5X"
+            />
+          </div>
+
+          <script type="text/javascript">
+            //<![CDATA[
+            if (typeof checkforValidFrameParent == "function") {
+              checkforValidFrameParent(allowedFrameParents);
+            } //]]>
+          </script>
+
+          <div>
+            <input
+              type="hidden"
+              name="__VIEWSTATEGENERATOR"
+              id="__VIEWSTATEGENERATOR"
+              value="98786A43"
+            />
+            <input
+              type="hidden"
+              name="__VIEWSTATEENCRYPTED"
+              id="__VIEWSTATEENCRYPTED"
+              value=""
+            />
+            <input
+              type="hidden"
+              name="__EVENTVALIDATION"
+              id="__EVENTVALIDATION"
+              value="z/j3dJ3V1cfO0DD5gtHGWnvmmolOTP2QNAeYhujEviPW8FDfTLlVdkHEomrh8K8eibHokU/ICDh3mjILP150oMAlzTGfREmrvu1hnhq0NBU7px4R0fuWN/D5buSXwjly2Q7LF+HdyFMEOjE5oC7Uaep1pNTtOyTYIgMQzynzaOUQosHvVvy5OXF/ipIFlhFgsP9pkQD1rC4OlgJDe/sF3l0Ma9dbnr7TTLd8NbMNJ+V21tfYdcec1TyOoEtBnzKC3tby0N1W2SNArOwFIyNO6/WNqV4/9c8POMrgcbSZEPIQLuhTp00JnHeY+M2DlHlRqJWsffU+C8WZtUuVbD5ji78S6m0NrSX9Nf8W30uBEXJ79g+1iRc/i2WRc8r0Aa+R"
+            />
+          </div>
+          <div><a id="top"></a></div>
+
+          <div id="MainDiv">
+            <div
+              id="ctl00_ContentPlaceHolder1_msTopBar_divTitleBar"
+              class="ms_titlebar&#32;msTitleBar&#32;clearfix"
+            >
+              <div class="floatLeft">
+                <div
+                  id="ctl00_ContentPlaceHolder1_msTopBar_divTitleBarTitle"
+                  class="ms_titlebar_title&#32;msTitleBarTitle"
+                >
+                  <h1>Morningstar® Stock Report™</h1>
+                </div>
+              </div>
+
+              <div class="floatRight">
+                <div
+                  id="divTitleBarOptions"
+                  class="ms_titlebar_dropdowns msTitleBarOptions noPrint"
+                >
+                  <div
+                    id="ctl00_ContentPlaceHolder1_msTopBar_divTitleBarOptionsCurrencyLanguage"
+                    class="msTitleBarOptionsCurrencyLanguage"
+                  >
+                    <span
+                      id="ctl00_ContentPlaceHolder1_msTopBar_lblTitleBarCurrencyLanguageStart"
+                      class="hidden"
+                      >(Start of Change Currency and Language)</span
+                    >
+                    <label
+                      for="ctl00_ContentPlaceHolder1_msTopBar_ddlTitleBarCurrency"
+                      id="ctl00_ContentPlaceHolder1_msTopBar_lblTitleBarCurrency"
+                      class="msTitleBarLabel&#32;msTitleBarLabelCurrency&#32;mrd-sr-only"
+                      >Currency</label
+                    >
+                    <select
+                      name="ctl00$ContentPlaceHolder1$msTopBar$ddlTitleBarCurrency"
+                      id="ctl00_ContentPlaceHolder1_msTopBar_ddlTitleBarCurrency"
+                      title="Change&#32;Currency"
+                      class="msTitleBarSelect&#32;msTitleBarSelectCurrency"
+                      onchange="toolBarChangeCurrency(this);return&#32;false;"
+                    >
+                      <option value="EUR">EUR</option>
+                      <option value="SEK">SEK</option>
+                      <option selected="selected" value="DKK">DKK</option>
+                      <option value="ISK">ISK</option>
+                      <option value="NOK">NOK</option>
+                      <option value="USD">USD</option>
+                    </select>
+                    <label
+                      for="ctl00_ContentPlaceHolder1_msTopBar_ddlTitleBarLanguage"
+                      id="ctl00_ContentPlaceHolder1_msTopBar_lblTitleBarLanguage"
+                      class="msTitleBarLabel&#32;msTitleBarLabelLanguage&#32;mrd-sr-only"
+                      >Language</label
+                    >
+                    <select
+                      name="ctl00$ContentPlaceHolder1$msTopBar$ddlTitleBarLanguage"
+                      id="ctl00_ContentPlaceHolder1_msTopBar_ddlTitleBarLanguage"
+                      title="Change&#32;Language"
+                      class="msTitleBarSelect&#32;msTitleBarSelectLanguage"
+                      onchange="toolBarChangeLanguage(this);return&#32;false;"
+                    >
+                      <option selected="selected" value="en-GB">English</option>
+                      <option value="da-DK">Danish</option>
+                      <option value="sv-SE">Swedish</option>
+                      <option value="fi-FI">Finnish</option>
+                    </select>
+                    <noscript>
+                      <div>
+                        <input
+                          type="submit"
+                          name="ctl00$ContentPlaceHolder1$msTopBar$btnTitleBarCurrencyLanguage"
+                          value="Go"
+                          id="ctl00_ContentPlaceHolder1_msTopBar_btnTitleBarCurrencyLanguage"
+                          title="Go"
+                          class="msTitleBarButton&#32;msTitleBarButtonCurrencyLanguage"
+                        />
+                      </div>
+                    </noscript>
+                    <span
+                      id="ctl00_ContentPlaceHolder1_msTopBar_lblTitleBarCurrencyLanguageEnd"
+                      class="hidden"
+                      >(End of Change Currency and Language)</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <script type="text/javascript">
+                //<![CDATA[
+                var btnTitleBarCurrencyLanguage =
+                    "ctl00_ContentPlaceHolder1_msTopBar_btnTitleBarCurrencyLanguage",
+                  btnTitleBarTools =
+                    "ctl00_ContentPlaceHolder1_msTopBar_btnTitleBarTools",
+                  ddlTitleBarCurrency =
+                    "ctl00_ContentPlaceHolder1_msTopBar_ddlTitleBarCurrency",
+                  ddlTitleBarLanguage =
+                    "ctl00_ContentPlaceHolder1_msTopBar_ddlTitleBarLanguage",
+                  ddlTitleBarTools =
+                    "ctl00_ContentPlaceHolder1_msTopBar_ddlTitleBarTools",
+                  divTitleBar =
+                    "ctl00_ContentPlaceHolder1_msTopBar_divTitleBar",
+                  divTitleBarBack =
+                    "ctl00_ContentPlaceHolder1_msTopBar_divTitleBarBack",
+                  divTitleBarHelp =
+                    "ctl00_ContentPlaceHolder1_msTopBar_divTitleBarHelp",
+                  divTitleBarOptions = "divTitleBarOptions",
+                  divTitleBarOptionsCurrencyLanguage =
+                    "ctl00_ContentPlaceHolder1_msTopBar_divTitleBarOptionsCurrencyLanguage",
+                  divTitleBarOptionsTools =
+                    "ctl00_ContentPlaceHolder1_msTopBar_divTitleBarOptionsTools",
+                  divTitleBarTitle =
+                    "ctl00_ContentPlaceHolder1_msTopBar_divTitleBarTitle",
+                  lblTitleBarCurrency =
+                    "ctl00_ContentPlaceHolder1_msTopBar_lblTitleBarCurrency",
+                  lblTitleBarLanguage =
+                    "ctl00_ContentPlaceHolder1_msTopBar_lblTitleBarLanguage",
+                  lblTitleBarTools =
+                    "ctl00_ContentPlaceHolder1_msTopBar_lblTitleBarTools",
+                  lnkTitleBarBackButton =
+                    "ctl00_ContentPlaceHolder1_msTopBar_lnkTitleBarBackButton",
+                  lnkTitleBarHelp =
+                    "ctl00_ContentPlaceHolder1_msTopBar_lnkTitleBarHelp";
+
+                function toolsTitleBarChangeTool(selectedToolObject) {
+                  var path = "";
+                  switch (parseInt(selectedToolObject.value)) {
+                  }
+                  if (trim(path) != "") window.location = unescape(path);
+                }
+
+                function navigateTo(siteNo) {
+                  if (window.history.length > 0) {
+                    window.history.go(siteNo);
+                  } else {
+                    //IE workaround to avoid dialog
+                    //this is not working for FF
+                    window.open("", "_parent", "");
+                    window.close();
+                  }
+                }
+
+                function hideBackButton() {
+                  var msReferrer = "False";
+                  if (msReferrer) {
+                    msReferrer = msReferrer.toLowerCase();
+                    if (msReferrer) {
+                      var backButtonContainer = $("#" + divTitleBarBack);
+                      if (backButtonContainer.length > 0) {
+                        var backButton = $("#" + lnkTitleBarBackButton);
+                        if (backButton.length > 0) {
+                          var minLength = 2;
+                          if (
+                            navigator.userAgent.toLowerCase().indexOf("msie") !=
+                            -1
+                          )
+                            minLength = 1;
+                          if (window.history.length < minLength) {
+                            backButtonContainer.hide();
+                            return;
+                          }
+
+                          var backToClick = backButton.attr("onclick");
+                          var backTo = new String(backToClick);
+                          backTo = backTo.substring(
+                            backTo.indexOf("navigateTo(") + 11,
+                            backTo.indexOf(
+                              ")",
+                              backTo.indexOf("navigateTo(") + 11
+                            )
+                          );
+                          backTo = parseInt(backTo, 10);
+                          if (window.history.length + backTo < minLength - 1)
+                            backButtonContainer.remove();
+                        }
+                      }
+                    }
+                  }
+                }
+
+                hideBackButton();
+
+                var ShowHelpIcon = false;
+                if (ShowHelpIcon) {
+                  if ($("#" + divTitleBarHelp + " #helpDiv").length > 0) {
+                    _positionDivId = divTitleBar;
+                    _helpLink = "";
+                    InitHelp();
+                  }
+                }
+                //]]>
+              </script>
+            </div>
+            <!-- start of stock report -->
+            <script type="text/javascript">
+              //<![CDATA[
+              var SnapshotOriginalQueryString =
+                "&URLKey=gj8uge2g9k&SecurityToken=0P0000A5RF%5D3%5D1%5DE0EXG%24XCSE_3060&LanguageId=en-GB&tab=10&externalidexchange=EX$$$$XCSE&CurrencyId=DKK&ClearXrayPortfolioManagerApiInputData=true&xid=DK0060868966";
+              var IsReloading = false;
+              var epic = "AAB";
+              if (typeof SecurityToken == "undefined")
+                var SecurityToken = "0P0000A5RF";
+              if (SecurityToken.length == 0) SecurityToken = "0P0000A5RF";
+              if (typeof CurrencyId == "undefined") var CurrencyId = "DKK";
+              //if (CurrencyId == 'BAS') CurrencyId = 'DKK';
+
+              function toolBarChangeCurrency(o) {
+                if (!IsReloading) {
+                  IsReloading = true;
+
+                  var snapshotReloadURL = "default.aspx?",
+                    snapshotQueryString = SnapshotOriginalQueryString;
+
+                  var baseCurrencyKey = "&CurrencyId=" + CurrencyId;
+
+                  if (o != null && o.value != null) CurrencyId = o.value;
+
+                  var newCurrencyKey = "&CurrencyId=" + CurrencyId;
+
+                  snapshotQueryString = snapshotQueryString.replace(
+                    baseCurrencyKey,
+                    ""
+                  );
+                  snapshotQueryString += newCurrencyKey;
+
+                  // If the URL was being called with the BAS currency Id we add it and remove BAS
+                  // We should not have CurrencyId=BAS in the url.  Snapshot does not support it.
+                  // Therefore we remove it
+                  if (snapshotQueryString.match("&CurrencyId=BAS")) {
+                    var BaseCurrencyId = getURLParameter("BaseCurrencyId");
+                    if (BaseCurrencyId.length > 0)
+                      snapshotQueryString = snapshotQueryString.replace(
+                        newCurrencyKey,
+                        "&CurrencyId=" + BaseCurrencyId
+                      );
+                  }
+                  snapshotQueryString = snapshotQueryString.replace(
+                    "&CurrencyId=BAS",
+                    ""
+                  );
+
+                  if (snapshotQueryString.indexOf("reloadsnapshot") == -1)
+                    snapshotReloadURL =
+                      snapshotReloadURL +
+                      snapshotQueryString +
+                      "&reloadsnapshot=1";
+                  else
+                    snapshotReloadURL = snapshotReloadURL + snapshotQueryString;
+
+                  window.location.href = snapshotReloadURL;
+                }
+
+                return false;
+              }
+
+              function toolBarChangeLanguage(o) {
+                if (!IsReloading) {
+                  IsReloading = true;
+
+                  var snapshotReloadURL = "default.aspx?",
+                    snapshotQueryString = SnapshotOriginalQueryString;
+
+                  var baseLanguageKey = "&LanguageId=" + LanguageId;
+
+                  if (o != null && o.value != null) LanguageId = o.value;
+
+                  var newLanguageKey = "&LanguageId=" + LanguageId;
+
+                  snapshotQueryString = snapshotQueryString.replace(
+                    baseLanguageKey,
+                    ""
+                  );
+                  snapshotQueryString += newLanguageKey;
+
+                  if (snapshotQueryString.indexOf("reloadsnapshot") == -1)
+                    snapshotReloadURL =
+                      snapshotReloadURL +
+                      snapshotQueryString +
+                      "&reloadsnapshot=1";
+                  else
+                    snapshotReloadURL = snapshotReloadURL + snapshotQueryString;
+
+                  window.location.href = snapshotReloadURL;
+                }
+
+                return false;
+              }
+              //]]>
+            </script>
+            <div
+              id="SnapshotTopLeftMainRightBottomContainer"
+              class="page10 viewIs"
+            >
+              <div id="SnapshotLeftMainRightContainer" class="clearfix">
+                <div id="SnapshotContent" class="wideLayout">
+                  <!-- start of report header -->
+                  <div id="SnapshotTitle" class="clearfix">
+                    <div id="MorningstarIntradayLogo">
+                      <img
+                        src="/img/morningstar_logo_small.gif?25627256"
+                        alt="Morningstar"
+                        height="30"
+                        width="144"
+                      /><br /><span>Stock Report</span>
+                    </div>
+                  </div>
+                  <!-- end of report header -->
+                  <div id="HorizontalNav" class="noPrint">
+                    <!-- start of horizontal tools -->
+                    <ul class="tools clearfix">
+                      <li>
+                        <a
+                          id="LnkToolProfile"
+                          class="pdf"
+                          href="../stockprofile/default.aspx?LanguageId=en-GB&amp;SecurityToken=0P0000A5RF%5D3%5D1%5DE0EXG%24XCSE_3060&amp;Id=0P0000A5RF&amp;ClientFund=1&amp;BaseCurrencyId=DKK&amp;InvestmentType=E0&amp;externalidexchange=EX$$$$XCSE&amp;ClearXrayPortfolioManagerApiInputData=true&amp;xid=DK0060868966"
+                          target="_blank"
+                          >Fact Sheet</a
+                        >
+                      </li>
+                    </ul>
+                    <!-- end of horizontal tools --><!-- start of horizontal major nav -->
+                    <ul class="mainMenu clearfix">
+                      <li>
+                        <a
+                          id="LnkPage0"
+                          class="first"
+                          href="default.aspx?tab=0&amp;vw=sum&amp;SecurityToken=0P0000A5RF%5D3%5D1%5DE0EXG%24XCSE_3060&amp;Id=0P0000A5RF&amp;ClientFund=1&amp;CurrencyId=DKK"
+                          >Overview</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          id="LnkPage7"
+                          href="default.aspx?tab=7&amp;SecurityToken=0P0000A5RF%5D3%5D1%5DE0EXG%24XCSE_3060&amp;Id=0P0000A5RF&amp;ClientFund=1&amp;CurrencyId=DKK"
+                          >Chart</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          id="LnkPage1"
+                          href="default.aspx?tab=1&amp;vw=sum&amp;SecurityToken=0P0000A5RF%5D3%5D1%5DE0EXG%24XCSE_3060&amp;Id=0P0000A5RF&amp;ClientFund=1&amp;CurrencyId=DKK"
+                          >Performance</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          id="LnkPage11"
+                          href="default.aspx?tab=11&amp;vw=pr&amp;SecurityToken=0P0000A5RF%5D3%5D1%5DE0EXG%24XCSE_3060&amp;Id=0P0000A5RF&amp;ClientFund=1&amp;CurrencyId=DKK"
+                          >Key Ratios</a
+                        >
+                      </li>
+                      <li class="selected"><a id="LnkPage10">Financials</a></li>
+                      <li>
+                        <a
+                          id="LnkPage88"
+                          href="default.aspx?tab=88&amp;SecurityToken=0P0000A5RF%5D3%5D1%5DE0EXG%24XCSE_3060&amp;Id=0P0000A5RF&amp;ClientFund=1&amp;CurrencyId=DKK"
+                          >TEST</a
+                        >
+                      </li>
+                    </ul>
+                    <!-- end of horizontal major nav -->
+                  </div>
+                  <div id="SnapshotBodyContent" class="clearfix">
+                    <div id="DivClientSpecificPanel"></div>
+                    <!-- start of FinancialsIncomeStatement--><span
+                      class="hidden"
+                      >(Start of Section)</span
+                    >
+                    <div
+                      id="FinancialsIncomeStatement"
+                      class="box financialsIncomeStatement"
+                    >
+                      <table class="right years5">
+                        <caption class="sectionHeader">
+                          Income Statement
+                        </caption>
+                        <col class="colDataPoint" />
+                        <col class="data" />
+                        <col class="data" />
+                        <col class="data" />
+                        <col class="data" />
+                        <col class="data" />
+                        <thead>
+                          <tr>
+                            <th
+                              class="colDataPoint"
+                              id="MsStockReportFisDp"
+                              scope="col"
+                            ></th>
+                            <th
+                              scope="col"
+                              class="number"
+                              id="MsStockReportFisY1"
+                            >
+                              2020
+                            </th>
+                            <th
+                              scope="col"
+                              class="number"
+                              id="MsStockReportFisY2"
+                            >
+                              2021
+                            </th>
+                            <th
+                              scope="col"
+                              class="number"
+                              id="MsStockReportFisY3"
+                            >
+                              2022
+                            </th>
+                            <th
+                              scope="col"
+                              class="number"
+                              id="MsStockReportFisY4"
+                            >
+                              2023
+                            </th>
+                            <th
+                              scope="col"
+                              class="number"
+                              id="MsStockReportFisY5"
+                            >
+                              2024
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th headers="MsStockReportFisDp" scope="row">
+                              Revenue
+                            </th>
+                            <td class="number" headers="MsStockReportFisY1">
+                              43.64
+                            </td>
+                            <td class="number" headers="MsStockReportFisY2">
+                              64.28
+                            </td>
+                            <td class="number" headers="MsStockReportFisY3">
+                              85.16
+                            </td>
+                            <td class="number" headers="MsStockReportFisY4">
+                              81.83
+                            </td>
+                            <td class="number" headers="MsStockReportFisY5">
+                              75.19
+                            </td>
+                          </tr>
+                          <tr class="alternate">
+                            <th headers="MsStockReportFisDp" scope="row">
+                              Cost of Revenue
+                            </th>
+                            <td class="number" headers="MsStockReportFisY1">
+                              16.56
+                            </td>
+                            <td class="number" headers="MsStockReportFisY2">
+                              19.00
+                            </td>
+                            <td class="number" headers="MsStockReportFisY3">
+                              25.77
+                            </td>
+                            <td class="number" headers="MsStockReportFisY4">
+                              25.28
+                            </td>
+                            <td class="number" headers="MsStockReportFisY5">
+                              23.10
+                            </td>
+                          </tr>
+                          <tr class="totals">
+                            <th headers="MsStockReportFisDp" scope="row">
+                              Gross Operating Profit
+                            </th>
+                            <td class="number" headers="MsStockReportFisY1">
+                              27.09
+                            </td>
+                            <td class="number" headers="MsStockReportFisY2">
+                              45.28
+                            </td>
+                            <td class="number" headers="MsStockReportFisY3">
+                              59.38
+                            </td>
+                            <td class="number" headers="MsStockReportFisY4">
+                              56.55
+                            </td>
+                            <td class="number" headers="MsStockReportFisY5">
+                              52.09
+                            </td>
+                          </tr>
+                        </tbody>
+                        <tbody>
+                          <tr class="majorGrouping" id="OperatingExpenses">
+                            <th colspan="6" class="expand">
+                              Operating expenses
+                            </th>
+                          </tr>
+                          <tr class="operatingExpenses indent">
+                            <th headers="MsStockReportFisDp" scope="row">
+                              Research and development
+                            </th>
+                            <td class="number" headers="MsStockReportFisY1">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFisY2">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFisY3">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFisY4">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFisY5">
+                              -
+                            </td>
+                          </tr>
+                          <tr class="operatingExpenses indent alternate">
+                            <th headers="MsStockReportFisDp" scope="row">
+                              Sales, general and administrative
+                            </th>
+                            <td class="number" headers="MsStockReportFisY1">
+                              6.92
+                            </td>
+                            <td class="number" headers="MsStockReportFisY2">
+                              7.69
+                            </td>
+                            <td class="number" headers="MsStockReportFisY3">
+                              8.81
+                            </td>
+                            <td class="number" headers="MsStockReportFisY4">
+                              13.40
+                            </td>
+                            <td class="number" headers="MsStockReportFisY5">
+                              11.82
+                            </td>
+                          </tr>
+                          <tr class="operatingExpenses indent">
+                            <th headers="MsStockReportFisDp" scope="row">
+                              Staff cost
+                            </th>
+                            <td class="number" headers="MsStockReportFisY1">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFisY2">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFisY3">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFisY4">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFisY5">
+                              -
+                            </td>
+                          </tr>
+                          <tr class="operatingExpenses indent alternate">
+                            <th headers="MsStockReportFisDp" scope="row">
+                              Depreciation and amortization
+                            </th>
+                            <td class="number" headers="MsStockReportFisY1">
+                              13.03
+                            </td>
+                            <td class="number" headers="MsStockReportFisY2">
+                              15.17
+                            </td>
+                            <td class="number" headers="MsStockReportFisY3">
+                              18.78
+                            </td>
+                            <td class="number" headers="MsStockReportFisY4">
+                              20.43
+                            </td>
+                            <td class="number" headers="MsStockReportFisY5">
+                              5.29
+                            </td>
+                          </tr>
+                          <tr class="operatingExpenses indent">
+                            <th headers="MsStockReportFisDp" scope="row">
+                              Other Operating Expenses
+                            </th>
+                            <td class="number" headers="MsStockReportFisY1">
+                              -4.85
+                            </td>
+                            <td class="number" headers="MsStockReportFisY2">
+                              37.85
+                            </td>
+                            <td class="number" headers="MsStockReportFisY3">
+                              45.35
+                            </td>
+                            <td class="number" headers="MsStockReportFisY4">
+                              52.54
+                            </td>
+                            <td class="number" headers="MsStockReportFisY5">
+                              73.80
+                            </td>
+                          </tr>
+                          <tr class="operatingExpenses indent alternate">
+                            <th headers="MsStockReportFisDp" scope="row">
+                              Total Operating Expenses
+                            </th>
+                            <td class="number" headers="MsStockReportFisY1">
+                              15.10
+                            </td>
+                            <td class="number" headers="MsStockReportFisY2">
+                              60.70
+                            </td>
+                            <td class="number" headers="MsStockReportFisY3">
+                              72.94
+                            </td>
+                            <td class="number" headers="MsStockReportFisY4">
+                              86.36
+                            </td>
+                            <td class="number" headers="MsStockReportFisY5">
+                              90.91
+                            </td>
+                          </tr>
+                          <tr class="totals">
+                            <th headers="MsStockReportFisDp" scope="row">
+                              Operating income before interest and taxes
+                            </th>
+                            <td class="number" headers="MsStockReportFisY1">
+                              11.99
+                            </td>
+                            <td class="number" headers="MsStockReportFisY2">
+                              -15.43
+                            </td>
+                            <td class="number" headers="MsStockReportFisY3">
+                              -13.56
+                            </td>
+                            <td class="number" headers="MsStockReportFisY4">
+                              -29.81
+                            </td>
+                            <td class="number" headers="MsStockReportFisY5">
+                              -38.82
+                            </td>
+                          </tr>
+                        </tbody>
+                        <tbody>
+                          <tr>
+                            <th headers="MsStockReportFisDp" scope="row">
+                              Non-operating income
+                            </th>
+                            <td class="number" headers="MsStockReportFisY1">
+                              0.07
+                            </td>
+                            <td class="number" headers="MsStockReportFisY2">
+                              0.14
+                            </td>
+                            <td class="number" headers="MsStockReportFisY3">
+                              -2.21
+                            </td>
+                            <td class="number" headers="MsStockReportFisY4">
+                              -4.59
+                            </td>
+                            <td class="number" headers="MsStockReportFisY5">
+                              -5.36
+                            </td>
+                          </tr>
+                          <tr class="alternate">
+                            <th headers="MsStockReportFisDp" scope="row">
+                              Income before income taxes
+                            </th>
+                            <td class="number" headers="MsStockReportFisY1">
+                              12.06
+                            </td>
+                            <td class="number" headers="MsStockReportFisY2">
+                              -15.29
+                            </td>
+                            <td class="number" headers="MsStockReportFisY3">
+                              -15.77
+                            </td>
+                            <td class="number" headers="MsStockReportFisY4">
+                              -34.40
+                            </td>
+                            <td class="number" headers="MsStockReportFisY5">
+                              -44.18
+                            </td>
+                          </tr>
+                          <tr>
+                            <th headers="MsStockReportFisDp" scope="row">
+                              Provision for income taxes
+                            </th>
+                            <td class="number" headers="MsStockReportFisY1">
+                              0.27
+                            </td>
+                            <td class="number" headers="MsStockReportFisY2">
+                              0.00
+                            </td>
+                            <td class="number" headers="MsStockReportFisY3">
+                              0.00
+                            </td>
+                            <td class="number" headers="MsStockReportFisY4">
+                              0.00
+                            </td>
+                            <td class="number" headers="MsStockReportFisY5">
+                              0.00
+                            </td>
+                          </tr>
+                          <tr class="alternate">
+                            <th headers="MsStockReportFisDp" scope="row">
+                              Net income from continuing operations
+                            </th>
+                            <td class="number" headers="MsStockReportFisY1">
+                              11.78
+                            </td>
+                            <td class="number" headers="MsStockReportFisY2">
+                              -15.29
+                            </td>
+                            <td class="number" headers="MsStockReportFisY3">
+                              -15.77
+                            </td>
+                            <td class="number" headers="MsStockReportFisY4">
+                              -34.40
+                            </td>
+                            <td class="number" headers="MsStockReportFisY5">
+                              -44.18
+                            </td>
+                          </tr>
+                          <tr class="totals">
+                            <th headers="MsStockReportFisDp" scope="row">
+                              Net Income
+                            </th>
+                            <td class="number" headers="MsStockReportFisY1">
+                              11.78
+                            </td>
+                            <td class="number" headers="MsStockReportFisY2">
+                              -15.29
+                            </td>
+                            <td class="number" headers="MsStockReportFisY3">
+                              -15.77
+                            </td>
+                            <td class="number" headers="MsStockReportFisY4">
+                              -34.40
+                            </td>
+                            <td class="number" headers="MsStockReportFisY5">
+                              -44.18
+                            </td>
+                          </tr>
+                        </tbody>
+                        <tbody>
+                          <tr>
+                            <th headers="MsStockReportFisDp" scope="row">
+                              Net income available for common shareholders
+                            </th>
+                            <td class="number" headers="MsStockReportFisY1">
+                              11.78
+                            </td>
+                            <td class="number" headers="MsStockReportFisY2">
+                              -15.29
+                            </td>
+                            <td class="number" headers="MsStockReportFisY3">
+                              -15.77
+                            </td>
+                            <td class="number" headers="MsStockReportFisY4">
+                              -34.40
+                            </td>
+                            <td class="number" headers="MsStockReportFisY5">
+                              -44.18
+                            </td>
+                          </tr>
+                        </tbody>
+                        <tbody>
+                          <tr class="subHeader">
+                            <th colspan="6">Earnings per share</th>
+                          </tr>
+                          <tr>
+                            <th headers="MsStockReportFisDp" scope="row">
+                              Basic
+                            </th>
+                            <td class="number" headers="MsStockReportFisY1">
+                              12.23
+                            </td>
+                            <td class="number" headers="MsStockReportFisY2">
+                              -15.86
+                            </td>
+                            <td class="number" headers="MsStockReportFisY3">
+                              -16.36
+                            </td>
+                            <td class="number" headers="MsStockReportFisY4">
+                              -24.00
+                            </td>
+                            <td class="number" headers="MsStockReportFisY5">
+                              -21.41
+                            </td>
+                          </tr>
+                          <tr class="alternate">
+                            <th headers="MsStockReportFisDp" scope="row">
+                              Diluted
+                            </th>
+                            <td class="number" headers="MsStockReportFisY1">
+                              12.23
+                            </td>
+                            <td class="number" headers="MsStockReportFisY2">
+                              -15.86
+                            </td>
+                            <td class="number" headers="MsStockReportFisY3">
+                              -16.36
+                            </td>
+                            <td class="number" headers="MsStockReportFisY4">
+                              -24.00
+                            </td>
+                            <td class="number" headers="MsStockReportFisY5">
+                              -21.41
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <span class="hidden">(End of Section)</span
+                    ><!-- end of FinancialsIncomeStatement--><!-- start of FinancialDisclaimer --><span
+                      class="hidden"
+                      >(Start of Section)</span
+                    >
+                    <div id="FinancialDisclaimer" class="box">
+                      <p class="disclaimer">
+                        Figures in millions. Currency is DKK.
+                      </p>
+                    </div>
+                    <span class="hidden">(End of Section)</span
+                    ><!-- end of FinancialDisclaimer --><!-- start of FinancialsBalanceSheet--><span
+                      class="hidden"
+                      >(Start of Section)</span
+                    >
+                    <div
+                      id="FinancialsBalanceSheet"
+                      class="box financialsBalanceSheet"
+                    >
+                      <table class="right years5 toggleFinancialRows">
+                        <caption class="sectionHeader">
+                          Balance Sheet
+                        </caption>
+                        <col class="colDataPoint" />
+                        <col class="data" />
+                        <col class="data" />
+                        <col class="data" />
+                        <col class="data" />
+                        <col class="data" />
+                        <thead>
+                          <tr>
+                            <th
+                              class="colDataPoint"
+                              id="MsStockReportFbsDp"
+                              scope="col"
+                            ></th>
+                            <th
+                              scope="col"
+                              class="number"
+                              id="MsStockReportFbsY1"
+                            >
+                              2020
+                            </th>
+                            <th
+                              scope="col"
+                              class="number"
+                              id="MsStockReportFbsY2"
+                            >
+                              2021
+                            </th>
+                            <th
+                              scope="col"
+                              class="number"
+                              id="MsStockReportFbsY3"
+                            >
+                              2022
+                            </th>
+                            <th
+                              scope="col"
+                              class="number"
+                              id="MsStockReportFbsY4"
+                            >
+                              2023
+                            </th>
+                            <th
+                              scope="col"
+                              class="number"
+                              id="MsStockReportFbsY5"
+                            >
+                              2024
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="majorGrouping" id="Assets">
+                            <th colspan="6" class="expand">Assets</th>
+                          </tr>
+                          <tr class="subGrouping assets" id="CAssets">
+                            <th colspan="6" class="expand">Current Assets</th>
+                          </tr>
+                          <tr
+                            class="subSubGrouping assets cAssets"
+                            id="LiAssets"
+                          >
+                            <th colspan="6" class="expand">
+                              Cash, cash equivalents, and short-term investments
+                            </th>
+                          </tr>
+                          <tr class="assets cAssets liAssets tripleIndent">
+                            <th headers="MsStockReportFbsDp" scope="row">
+                              Cash and cash equivalents
+                            </th>
+                            <td class="number" headers="MsStockReportFbsY1">
+                              41.79
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY2">
+                              38.16
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY3">
+                              18.28
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY4">
+                              39.50
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY5">
+                              51.66
+                            </td>
+                          </tr>
+                          <tr
+                            class="assets cAssets liAssets tripleIndent alternate"
+                          >
+                            <th headers="MsStockReportFbsDp" scope="row">
+                              Short-term investments
+                            </th>
+                            <td class="number" headers="MsStockReportFbsY1">
+                              11.91
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY2">
+                              23.87
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY3">
+                              10.77
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY4">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY5">
+                              -
+                            </td>
+                          </tr>
+                          <tr class="assets cAssets subSubTotals">
+                            <th headers="MsStockReportFbsDp" scope="row">
+                              Total cash, cash equivalents, and short-term
+                              investments
+                            </th>
+                            <td class="number" headers="MsStockReportFbsY1">
+                              53.70
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY2">
+                              62.03
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY3">
+                              29.05
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY4">
+                              39.50
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY5">
+                              51.66
+                            </td>
+                          </tr>
+                          <tr class="assets cAssets doubleIndent">
+                            <th headers="MsStockReportFbsDp" scope="row">
+                              Accounts receivable
+                            </th>
+                            <td class="number" headers="MsStockReportFbsY1">
+                              2.03
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY2">
+                              2.39
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY3">
+                              0.92
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY4">
+                              2.61
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY5">
+                              1.91
+                            </td>
+                          </tr>
+                          <tr class="assets cAssets doubleIndent alternate">
+                            <th headers="MsStockReportFbsDp" scope="row">
+                              Inventory
+                            </th>
+                            <td class="number" headers="MsStockReportFbsY1">
+                              0.61
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY2">
+                              2.11
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY3">
+                              3.24
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY4">
+                              2.09
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY5">
+                              3.12
+                            </td>
+                          </tr>
+                          <tr class="assets cAssets doubleIndent">
+                            <th headers="MsStockReportFbsDp" scope="row">
+                              Other Current Assets
+                            </th>
+                            <td class="number" headers="MsStockReportFbsY1">
+                              40.04
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY2">
+                              10.99
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY3">
+                              30.37
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY4">
+                              28.25
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY5">
+                              9.48
+                            </td>
+                          </tr>
+                          <tr class="assets subTotals">
+                            <th headers="MsStockReportFbsDp" scope="row">
+                              Total current assets
+                            </th>
+                            <td class="number" headers="MsStockReportFbsY1">
+                              96.38
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY2">
+                              77.52
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY3">
+                              63.58
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY4">
+                              72.44
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY5">
+                              66.17
+                            </td>
+                          </tr>
+                          <tr class="subGrouping assets" id="NcAssets">
+                            <th colspan="6" class="expand">
+                              Non Current Assets
+                            </th>
+                          </tr>
+                          <tr class="assets ncAssets doubleIndent">
+                            <th headers="MsStockReportFbsDp" scope="row">
+                              <abbr title="Property, plant and equipment"
+                                >Not property, plant and equipment</abbr
+                              >
+                            </th>
+                            <td class="number" headers="MsStockReportFbsY1">
+                              38.91
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY2">
+                              38.57
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY3">
+                              42.47
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY4">
+                              37.79
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY5">
+                              34.23
+                            </td>
+                          </tr>
+                          <tr class="assets ncAssets doubleIndent alternate">
+                            <th headers="MsStockReportFbsDp" scope="row">
+                              Equity and other investments
+                            </th>
+                            <td class="number" headers="MsStockReportFbsY1">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY2">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY3">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY4">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY5">
+                              -
+                            </td>
+                          </tr>
+                          <tr class="assets ncAssets doubleIndent">
+                            <th headers="MsStockReportFbsDp" scope="row">
+                              Intangibles
+                            </th>
+                            <td class="number" headers="MsStockReportFbsY1">
+                              26.46
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY2">
+                              22.05
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY3">
+                              26.96
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY4">
+                              17.65
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY5">
+                              13.47
+                            </td>
+                          </tr>
+                          <tr class="assets ncAssets doubleIndent alternate">
+                            <th headers="MsStockReportFbsDp" scope="row">
+                              Deferred Income Taxes
+                            </th>
+                            <td class="number" headers="MsStockReportFbsY1">
+                              0.00
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY2">
+                              0.00
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY3">
+                              0.00
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY4">
+                              0.00
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY5">
+                              0.00
+                            </td>
+                          </tr>
+                          <tr class="assets ncAssets doubleIndent">
+                            <th headers="MsStockReportFbsDp" scope="row">
+                              Other Long-Term Assets
+                            </th>
+                            <td class="number" headers="MsStockReportFbsY1">
+                              0.71
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY2">
+                              0.77
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY3">
+                              0.88
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY4">
+                              0.90
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY5">
+                              3.94
+                            </td>
+                          </tr>
+                          <tr class="assets subTotals">
+                            <th headers="MsStockReportFbsDp" scope="row">
+                              Total non-current assets
+                            </th>
+                            <td class="number" headers="MsStockReportFbsY1">
+                              66.08
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY2">
+                              61.38
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY3">
+                              70.30
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY4">
+                              56.35
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY5">
+                              51.64
+                            </td>
+                          </tr>
+                          <tr class="totals indent">
+                            <th headers="MsStockReportFbsDp" scope="row">
+                              Total Assets
+                            </th>
+                            <td class="number" headers="MsStockReportFbsY1">
+                              162.46
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY2">
+                              138.91
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY3">
+                              133.88
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY4">
+                              128.79
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY5">
+                              117.82
+                            </td>
+                          </tr>
+                        </tbody>
+                        <tbody>
+                          <tr class="majorGrouping" id="LiabilitiesStock">
+                            <th colspan="6" class="expand">
+                              Liabilities and stockholders' equity
+                            </th>
+                          </tr>
+                          <tr
+                            class="subGrouping liabilitiesStock"
+                            id="Liabilities"
+                          >
+                            <th colspan="6" class="expand">Liabilities</th>
+                          </tr>
+                          <tr
+                            class="subSubGrouping liabilitiesStock liabilities"
+                            id="CLiabilities"
+                          >
+                            <th colspan="6" class="expand">
+                              Current Liabilities
+                            </th>
+                          </tr>
+                          <tr
+                            class="liabilitiesStock liabilities cLiabilities tripleIndent"
+                          >
+                            <th headers="MsStockReportFbsDp" scope="row">
+                              Accounts Payable
+                            </th>
+                            <td class="number" headers="MsStockReportFbsY1">
+                              4.03
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY2">
+                              6.64
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY3">
+                              6.00
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY4">
+                              5.68
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY5">
+                              4.33
+                            </td>
+                          </tr>
+                          <tr
+                            class="liabilitiesStock liabilities cLiabilities tripleIndent alternate"
+                          >
+                            <th headers="MsStockReportFbsDp" scope="row">
+                              Taxes Payable
+                            </th>
+                            <td class="number" headers="MsStockReportFbsY1">
+                              0.27
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY2">
+                              0.00
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY3">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY4">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY5">
+                              -
+                            </td>
+                          </tr>
+                          <tr
+                            class="liabilitiesStock liabilities cLiabilities tripleIndent"
+                          >
+                            <th headers="MsStockReportFbsDp" scope="row">
+                              Current Debt
+                            </th>
+                            <td class="number" headers="MsStockReportFbsY1">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY2">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY3">
+                              15.15
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY4">
+                              0.00
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY5">
+                              4.46
+                            </td>
+                          </tr>
+                          <tr
+                            class="liabilitiesStock liabilities cLiabilities tripleIndent alternate"
+                          >
+                            <th headers="MsStockReportFbsDp" scope="row">
+                              Other current liabilities
+                            </th>
+                            <td class="number" headers="MsStockReportFbsY1">
+                              49.48
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY2">
+                              39.37
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY3">
+                              30.56
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY4">
+                              33.42
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY5">
+                              24.86
+                            </td>
+                          </tr>
+                          <tr class="liabilitiesStock liabilities subSubTotals">
+                            <th headers="MsStockReportFbsDp" scope="row">
+                              Total current liabilities
+                            </th>
+                            <td class="number" headers="MsStockReportFbsY1">
+                              53.78
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY2">
+                              46.01
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY3">
+                              51.71
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY4">
+                              39.10
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY5">
+                              33.64
+                            </td>
+                          </tr>
+                          <tr
+                            class="subSubGrouping liabilitiesStock liabilities"
+                            id="NcLiabilities"
+                          >
+                            <th colspan="6" class="expand">
+                              Non-current liabilities
+                            </th>
+                          </tr>
+                          <tr
+                            class="liabilitiesStock liabilities ncLiabilities tripleIndent"
+                          >
+                            <th headers="MsStockReportFbsDp" scope="row">
+                              Deferred taxes liabilities
+                            </th>
+                            <td class="number" headers="MsStockReportFbsY1">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY2">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY3">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY4">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY5">
+                              -
+                            </td>
+                          </tr>
+                          <tr
+                            class="liabilitiesStock liabilities ncLiabilities tripleIndent alternate"
+                          >
+                            <th headers="MsStockReportFbsDp" scope="row">
+                              Long Term Debt
+                            </th>
+                            <td class="number" headers="MsStockReportFbsY1">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY2">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY3">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY4">
+                              15.15
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY5">
+                              10.70
+                            </td>
+                          </tr>
+                          <tr
+                            class="liabilitiesStock liabilities ncLiabilities tripleIndent"
+                          >
+                            <th headers="MsStockReportFbsDp" scope="row">
+                              Other long-term liabilities
+                            </th>
+                            <td class="number" headers="MsStockReportFbsY1">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY2">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY3">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY4">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY5">
+                              -
+                            </td>
+                          </tr>
+                          <tr class="liabilitiesStock liabilities subSubTotals">
+                            <th headers="MsStockReportFbsDp" scope="row">
+                              Total non-current liabilities
+                            </th>
+                            <td class="number" headers="MsStockReportFbsY1">
+                              15.86
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY2">
+                              15.37
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY3">
+                              20.42
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY4">
+                              33.67
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY5">
+                              27.46
+                            </td>
+                          </tr>
+                          <tr class="liabilitiesStock subTotals">
+                            <th headers="MsStockReportFbsDp" scope="row">
+                              Total Liabilities
+                            </th>
+                            <td class="number" headers="MsStockReportFbsY1">
+                              69.64
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY2">
+                              61.38
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY3">
+                              72.12
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY4">
+                              72.76
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY5">
+                              61.10
+                            </td>
+                          </tr>
+                          <tr class="subGrouping liabilitiesStock" id="Stock">
+                            <th colspan="6" class="expand">
+                              Stockholders' equity
+                            </th>
+                          </tr>
+                          <tr class="liabilitiesStock stock doubleIndent">
+                            <th headers="MsStockReportFbsDp" scope="row">
+                              Common stock
+                            </th>
+                            <td class="number" headers="MsStockReportFbsY1">
+                              9.67
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY2">
+                              9.67
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY3">
+                              9.67
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY4">
+                              16.71
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY5">
+                              26.96
+                            </td>
+                          </tr>
+                          <tr
+                            class="liabilitiesStock stock doubleIndent alternate"
+                          >
+                            <th headers="MsStockReportFbsDp" scope="row">
+                              Additional paid-in capital
+                            </th>
+                            <td class="number" headers="MsStockReportFbsY1">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY2">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY3">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY4">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY5">
+                              -
+                            </td>
+                          </tr>
+                          <tr class="liabilitiesStock stock doubleIndent">
+                            <th headers="MsStockReportFbsDp" scope="row">
+                              Other reserves
+                            </th>
+                            <td class="number" headers="MsStockReportFbsY1">
+                              0.00
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY2">
+                              0.00
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY3">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY4">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY5">
+                              2.85
+                            </td>
+                          </tr>
+                          <tr
+                            class="liabilitiesStock stock doubleIndent alternate"
+                          >
+                            <th headers="MsStockReportFbsDp" scope="row">
+                              Retained earnings
+                            </th>
+                            <td class="number" headers="MsStockReportFbsY1">
+                              83.15
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY2">
+                              67.86
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY3">
+                              52.10
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY4">
+                              39.32
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY5">
+                              26.91
+                            </td>
+                          </tr>
+                          <tr class="liabilitiesStock stock doubleIndent">
+                            <th headers="MsStockReportFbsDp" scope="row">
+                              Minority Interests
+                            </th>
+                            <td class="number" headers="MsStockReportFbsY1">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY2">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY3">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY4">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY5">
+                              -
+                            </td>
+                          </tr>
+                          <tr class="liabilitiesStock subTotals">
+                            <th headers="MsStockReportFbsDp" scope="row">
+                              Total stockholders' equity
+                            </th>
+                            <td class="number" headers="MsStockReportFbsY1">
+                              92.82
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY2">
+                              77.53
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY3">
+                              61.76
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY4">
+                              56.03
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY5">
+                              56.72
+                            </td>
+                          </tr>
+                          <tr class="totals indent">
+                            <th headers="MsStockReportFbsDp" scope="row">
+                              Total liabilities and stockholders' equity
+                            </th>
+                            <td class="number" headers="MsStockReportFbsY1">
+                              162.46
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY2">
+                              138.91
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY3">
+                              133.88
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY4">
+                              128.79
+                            </td>
+                            <td class="number" headers="MsStockReportFbsY5">
+                              117.82
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <span class="hidden">(End of Section)</span
+                    ><!-- end of FinancialsBalanceSheet-->
+                    <script
+                      type="text/javascript"
+                      src="/js/jquery-lt/jquery.lt.financialsToggle.min.js?25627256"
+                    ></script>
+                    <!-- start of FinancialDisclaimer --><span class="hidden"
+                      >(Start of Section)</span
+                    >
+                    <div id="FinancialDisclaimer" class="box">
+                      <p class="disclaimer">
+                        Figures in millions. Currency is DKK.
+                      </p>
+                    </div>
+                    <span class="hidden">(End of Section)</span
+                    ><!-- end of FinancialDisclaimer --><!-- start of FinancialsCashFlow--><span
+                      class="hidden"
+                      >(Start of Section)</span
+                    >
+                    <div id="FinancialsCashFlow" class="box financialsCashFlow">
+                      <table class="right years5">
+                        <caption class="sectionHeader">
+                          Cash Flow
+                        </caption>
+                        <col class="colDataPoint" />
+                        <col class="data" />
+                        <col class="data" />
+                        <col class="data" />
+                        <col class="data" />
+                        <col class="data" />
+                        <thead>
+                          <tr>
+                            <th
+                              class="colDataPoint"
+                              id="MsStockReportFcfDp"
+                              scope="col"
+                            ></th>
+                            <th
+                              scope="col"
+                              class="number"
+                              id="MsStockReportFcfY1"
+                            >
+                              2020
+                            </th>
+                            <th
+                              scope="col"
+                              class="number"
+                              id="MsStockReportFcfY2"
+                            >
+                              2021
+                            </th>
+                            <th
+                              scope="col"
+                              class="number"
+                              id="MsStockReportFcfY3"
+                            >
+                              2022
+                            </th>
+                            <th
+                              scope="col"
+                              class="number"
+                              id="MsStockReportFcfY4"
+                            >
+                              2023
+                            </th>
+                            <th
+                              scope="col"
+                              class="number"
+                              id="MsStockReportFcfY5"
+                            >
+                              2024
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="subHeader">
+                            <th colspan="6">
+                              Cash Flows From Operating Activities
+                            </th>
+                          </tr>
+                          <tr>
+                            <th headers="MsStockReportFcfDp" scope="row">
+                              Net Income
+                            </th>
+                            <td class="number" headers="MsStockReportFcfY1">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY2">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY3">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY4">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY5">
+                              -
+                            </td>
+                          </tr>
+                          <tr class="alternate">
+                            <th headers="MsStockReportFcfDp" scope="row">
+                              Depreciation and amortization
+                            </th>
+                            <td class="number" headers="MsStockReportFcfY1">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY2">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY3">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY4">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY5">
+                              -
+                            </td>
+                          </tr>
+                          <tr>
+                            <th headers="MsStockReportFcfDp" scope="row">
+                              Deferred income taxes
+                            </th>
+                            <td class="number" headers="MsStockReportFcfY1">
+                              0.27
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY2">
+                              0.00
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY3">
+                              0.00
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY4">
+                              0.14
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY5">
+                              -
+                            </td>
+                          </tr>
+                          <tr class="alternate">
+                            <th headers="MsStockReportFcfDp" scope="row">
+                              Accounts receivable
+                            </th>
+                            <td class="number" headers="MsStockReportFcfY1">
+                              -36.88
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY2">
+                              28.69
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY3">
+                              2.77
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY4">
+                              2.65
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY5">
+                              -1.36
+                            </td>
+                          </tr>
+                          <tr>
+                            <th headers="MsStockReportFcfDp" scope="row">
+                              Inventory
+                            </th>
+                            <td class="number" headers="MsStockReportFcfY1">
+                              0.20
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY2">
+                              -1.51
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY3">
+                              -1.12
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY4">
+                              1.15
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY5">
+                              -1.03
+                            </td>
+                          </tr>
+                          <tr class="alternate">
+                            <th headers="MsStockReportFcfDp" scope="row">
+                              Account payable
+                            </th>
+                            <td class="number" headers="MsStockReportFcfY1">
+                              30.41
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY2">
+                              -7.59
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY3">
+                              -18.29
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY4">
+                              3.39
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY5">
+                              -9.76
+                            </td>
+                          </tr>
+                          <tr>
+                            <th headers="MsStockReportFcfDp" scope="row">
+                              Other working capital
+                            </th>
+                            <td class="number" headers="MsStockReportFcfY1">
+                              0.00
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY2">
+                              0.00
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY3">
+                              0.00
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY4">
+                              0.00
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY5">
+                              0.00
+                            </td>
+                          </tr>
+                          <tr class="alternate">
+                            <th headers="MsStockReportFcfDp" scope="row">
+                              Other non-cash items
+                            </th>
+                            <td class="number" headers="MsStockReportFcfY1">
+                              24.58
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY2">
+                              2.98
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY3">
+                              -26.63
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY4">
+                              -34.84
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY5">
+                              -34.17
+                            </td>
+                          </tr>
+                          <tr class="totals">
+                            <th headers="MsStockReportFcfDp" scope="row">
+                              Net cash provided by operating activities
+                            </th>
+                            <td class="number" headers="MsStockReportFcfY1">
+                              18.58
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY2">
+                              22.58
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY3">
+                              -43.27
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY4">
+                              -27.50
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY5">
+                              -46.32
+                            </td>
+                          </tr>
+                        </tbody>
+                        <tbody>
+                          <tr class="subHeader">
+                            <th colspan="6">
+                              Cash Flows From Investing Activities
+                            </th>
+                          </tr>
+                          <tr>
+                            <th headers="MsStockReportFcfDp" scope="row">
+                              Investment in property, plant and equipment
+                            </th>
+                            <td class="number" headers="MsStockReportFcfY1">
+                              -1.33
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY2">
+                              -3.59
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY3">
+                              -1.04
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY4">
+                              -0.46
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY5">
+                              -1.07
+                            </td>
+                          </tr>
+                          <tr class="alternate">
+                            <th headers="MsStockReportFcfDp" scope="row">
+                              Acquisitions Net
+                            </th>
+                            <td class="number" headers="MsStockReportFcfY1">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY2">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY3">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY4">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY5">
+                              -
+                            </td>
+                          </tr>
+                          <tr>
+                            <th headers="MsStockReportFcfDp" scope="row">
+                              Purchases of investments
+                            </th>
+                            <td class="number" headers="MsStockReportFcfY1">
+                              -3.98
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY2">
+                              -36.02
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY3">
+                              -8.20
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY4">
+                              -2.63
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY5">
+                              -0.05
+                            </td>
+                          </tr>
+                          <tr class="alternate">
+                            <th headers="MsStockReportFcfDp" scope="row">
+                              Sales/Maturities of investments
+                            </th>
+                            <td class="number" headers="MsStockReportFcfY1">
+                              4.19
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY2">
+                              24.09
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY3">
+                              19.43
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY4">
+                              13.63
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY5">
+                              0.00
+                            </td>
+                          </tr>
+                          <tr>
+                            <th headers="MsStockReportFcfDp" scope="row">
+                              Purchases of intangibles
+                            </th>
+                            <td class="number" headers="MsStockReportFcfY1">
+                              -15.09
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY2">
+                              -10.29
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY3">
+                              4.09
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY4">
+                              6.24
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY5">
+                              20.02
+                            </td>
+                          </tr>
+                          <tr class="alternate">
+                            <th headers="MsStockReportFcfDp" scope="row">
+                              Other investing activities
+                            </th>
+                            <td class="number" headers="MsStockReportFcfY1">
+                              8.43
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY2">
+                              0.00
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY3">
+                              0.00
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY4">
+                              0.00
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY5">
+                              -2.85
+                            </td>
+                          </tr>
+                          <tr class="totals">
+                            <th headers="MsStockReportFcfDp" scope="row">
+                              Net cash used for investing activities
+                            </th>
+                            <td class="number" headers="MsStockReportFcfY1">
+                              -7.78
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY2">
+                              -25.81
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY3">
+                              14.27
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY4">
+                              16.77
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY5">
+                              16.06
+                            </td>
+                          </tr>
+                        </tbody>
+                        <tbody>
+                          <tr class="subHeader">
+                            <th colspan="6">
+                              Cash Flows From Financing Activities
+                            </th>
+                          </tr>
+                          <tr>
+                            <th headers="MsStockReportFcfDp" scope="row">
+                              Common stock issued
+                            </th>
+                            <td class="number" headers="MsStockReportFcfY1">
+                              24.93
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY2">
+                              0.00
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY3">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY4">
+                              28.66
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY5">
+                              44.87
+                            </td>
+                          </tr>
+                          <tr class="alternate">
+                            <th headers="MsStockReportFcfDp" scope="row">
+                              Dividends
+                            </th>
+                            <td class="number" headers="MsStockReportFcfY1">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY2">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY3">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY4">
+                              -
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY5">
+                              -
+                            </td>
+                          </tr>
+                          <tr>
+                            <th headers="MsStockReportFcfDp" scope="row">
+                              Other financing activities
+                            </th>
+                            <td class="number" headers="MsStockReportFcfY1">
+                              -0.38
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY2">
+                              -0.40
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY3">
+                              9.12
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY4">
+                              3.30
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY5">
+                              -2.45
+                            </td>
+                          </tr>
+                          <tr class="totals">
+                            <th headers="MsStockReportFcfDp" scope="row">
+                              Net cash provided by (used for) financing
+                              activities
+                            </th>
+                            <td class="number" headers="MsStockReportFcfY1">
+                              24.55
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY2">
+                              -0.40
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY3">
+                              9.12
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY4">
+                              31.96
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY5">
+                              42.42
+                            </td>
+                          </tr>
+                          <tr>
+                            <th headers="MsStockReportFcfDp" scope="row">
+                              Net Change in Cash
+                            </th>
+                            <td class="number" headers="MsStockReportFcfY1">
+                              35.34
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY2">
+                              -3.63
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY3">
+                              -19.88
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY4">
+                              21.22
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY5">
+                              12.16
+                            </td>
+                          </tr>
+                          <tr class="alternate">
+                            <th headers="MsStockReportFcfDp" scope="row">
+                              Cash at beginning of period
+                            </th>
+                            <td class="number" headers="MsStockReportFcfY1">
+                              6.45
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY2">
+                              41.79
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY3">
+                              38.16
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY4">
+                              18.28
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY5">
+                              39.50
+                            </td>
+                          </tr>
+                          <tr>
+                            <th headers="MsStockReportFcfDp" scope="row">
+                              Cash at end of period
+                            </th>
+                            <td class="number" headers="MsStockReportFcfY1">
+                              41.79
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY2">
+                              38.16
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY3">
+                              18.28
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY4">
+                              39.50
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY5">
+                              51.66
+                            </td>
+                          </tr>
+                        </tbody>
+                        <tbody>
+                          <tr class="subHeader">
+                            <th colspan="6">Free cash in flow</th>
+                          </tr>
+                          <tr>
+                            <th headers="MsStockReportFcfDp" scope="row">
+                              Operating Cash Flow
+                            </th>
+                            <td class="number" headers="MsStockReportFcfY1">
+                              18.58
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY2">
+                              22.58
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY3">
+                              -43.27
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY4">
+                              -27.50
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY5">
+                              -46.32
+                            </td>
+                          </tr>
+                          <tr class="alternate">
+                            <th headers="MsStockReportFcfDp" scope="row">
+                              Capital Expenditure
+                            </th>
+                            <td class="number" headers="MsStockReportFcfY1">
+                              -16.42
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY2">
+                              -13.88
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY3">
+                              -13.01
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY4">
+                              -15.54
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY5">
+                              -11.10
+                            </td>
+                          </tr>
+                          <tr>
+                            <th headers="MsStockReportFcfDp" scope="row">
+                              Free Cash Flow
+                            </th>
+                            <td class="number" headers="MsStockReportFcfY1">
+                              2.16
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY2">
+                              8.70
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY3">
+                              -56.28
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY4">
+                              -43.04
+                            </td>
+                            <td class="number" headers="MsStockReportFcfY5">
+                              -57.42
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <span class="hidden">(End of Section)</span
+                    ><!-- end of FinancialsCashFlow--><!-- start of FinancialDisclaimer --><span
+                      class="hidden"
+                      >(Start of Section)</span
+                    >
+                    <div id="FinancialDisclaimer" class="box">
+                      <p class="disclaimer">
+                        Figures in millions. Currency is DKK.
+                      </p>
+                    </div>
+                    <span class="hidden">(End of Section)</span
+                    ><!-- end of FinancialDisclaimer -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of stock report -->
+
+            <!-- start of disclaimer -->
+            <script type="text/javascript">
+              //<![CDATA[
+              var customDisclaimer =
+                "ctl00_ContentPlaceHolder1_msBottomDisclaimer_ms_disclaimer_custom_section";
+              var customDisclaimerInnerHTML = "";
+              var hdnUserId =
+                "ctl00_ContentPlaceHolder1_msBottomDisclaimer_hdnUserId";
+              //]]>
+            </script>
+
+            <div
+              id="ctl00_ContentPlaceHolder1_msBottomDisclaimer_general_disclaimer"
+              class="general_disclaimer&#32;msDisclaimer"
+            >
+              <div class="ms_disclaimer msDisclaimerCopyright clearfix">
+                <a
+                  id="ctl00_ContentPlaceHolder1_msBottomDisclaimer_lnkMorningstarLogo"
+                  title="Visit&#32;the&#32;Morningstar&#32;website"
+                  class="ms_disclaimer_logo&#32;msDisclaimerCopyrightLogo&#32;external"
+                  href="http://www.morningstar.co.uk"
+                  ><img
+                    id="ctl00_ContentPlaceHolder1_msBottomDisclaimer_imgCompanyLogo"
+                    title="Visit&#32;the&#32;Morningstar&#32;website"
+                    src="/img/MstarLogo_black.gif"
+                    alt="Morningstar"
+                    style="border-width: 0px"
+                /></a>
+                <span
+                  id="ctl00_ContentPlaceHolder1_msBottomDisclaimer_ms_disclaimer_single_line"
+                >
+                  <a
+                    id="ctl00_ContentPlaceHolder1_msBottomDisclaimer_lnkCopyrightLinkSingleLine"
+                    title="©&#32;Copyright&#32;2025&#32;Morningstar."
+                    onclick="return&#32;openDisclaimer(&#39;copyright&#39;,&#39;gj8uge2g9k&#39;);"
+                    href="/gj8uge2g9k/util/disclaimer.aspx?type=copyright"
+                    >© Copyright 2025 Morningstar.</a
+                  >
+                  All rights reserved.
+                </span>
+              </div>
+            </div>
+            <!-- end of disclaimer -->
+          </div>
+
+          <input
+            type="hidden"
+            name="ctl00$__RequestVerificationToken"
+            id="ctl00___RequestVerificationToken"
+            value="W1-Eo_LXNTgwf7q1UgsN5CmaeEuk9ciU1Zmbf24ubPbJPSwifXNljFh4cWexLwwkAjr45bjRlyBscIcU_R-3FhOPGUCcCVi2cBHXQNtV_ys1"
+          />
+
+          <script type="text/javascript">
+            //<![CDATA[
+            $.ajaxSetup({
+              headers: {
+                __RequestVerificationToken:
+                  "QoPTMMEeHM1-PyJaXuij1NnriRd19HTpuJx-wr3qSrz4PpAiS6R2JCnixJAQSOlhRwNnPCKyo4owPp5-9j0q9N55WajhUUZKZ1g09aRjqBM1:W1-Eo_LXNTgwf7q1UgsN5CmaeEuk9ciU1Zmbf24ubPbJPSwifXNljFh4cWexLwwkAjr45bjRlyBscIcU_R-3FhOPGUCcCVi2cBHXQNtV_ys1",
+              },
+            }); //]]>
+          </script>
+        </form>
+
+        <div id="MasterMainContentBottom">
+          <script type="text/javascript">
+            if (tab == "1") {
+              var currDiv = $(
+                '#divTitleBarOptions select[id$="ddlTitleBarCurrency"]'
+              )
+                .wrap(
+                  '<div style="text-align:right;" class="page1-dropdown" />'
+                )
+                .parent();
+              $('#divTitleBarOptions label[for$="ddlTitleBarCurrency"]')
+                .show()
+                .prependTo(currDiv);
+              currDiv.prependTo("#SnapshotBodyContent");
+            }
+
+            //send frame-height for outerframe to adjust.
+            var lastPostedMorningstarIFrameHeight = 50;
+            $(document).ready(function () {
+              if (window.parent) {
+                setInterval(function () {
+                  var newHeight = 40 + $("#MasterMainContent").height();
+                  if (newHeight != lastPostedMorningstarIFrameHeight) {
+                    window.parent.postMessage(
+                      "MorningstarSetIFrameHeight:" + newHeight,
+                      "*"
+                    );
+                    lastPostedMorningstarIFrameHeight = newHeight;
+                  }
+                }, 1000);
+              }
+            });
+          </script>
+
+          <div class="NasdaqDisclaimer">
+            <table style="width: 100%">
+              <tbody>
+                <tr>
+                  <td class="colA NasdaqHeader">
+                    <h4>Nasdaq Disclaimer</h4>
+                    <p>
+                      Nasdaq makes no representations or warranties with respect
+                      to the Information and disclaims all liability for any use
+                      made of the contents of this document. All Information is
+                      provided “as is” without warranty of any kind. Nasdaq
+                      assumes no responsibility for any errors or omissions.
+                      This information is provided for informational purposes
+                      only.
+                    </p>
+                  </td>
+                  <td class="colB NasdaqHeader">
+                    <h4>Morningstar Disclaimer</h4>
+                    <p>
+                      &copy;
+                      <script type="text/javascript">
+                        document.write(new Date().getFullYear());
+                      </script>
+                      Morningstar. All Rights Reserved. The information, data,
+                      analyses and opinions (“Information”) contained herein:
+                      (1) includes the proprietary information of Morningstar
+                      and Morningstar’s third party licensors; (2) may not be
+                      copied or redistributed except as specifically
+                      authorised;(3) do not constitute investment advice;(4) are
+                      provided solely for informational purposes; and (5) may be
+                      drawn from fund data published on various dates.
+                    </p>
+                  </td>
+                  <td class="colC NasdaqHeader">
+                    <h4>Nasdaq &amp; Morningstar Disclaimer</h4>
+                    <p>
+                      Assume no liability for the accuracy of the information
+                      provided and a make no warranties, express or implied that
+                      the Information is error free, timely, accurate or
+                      contains no omissions. This document does not contain
+                      legal advice, nor does it contain investment advice and
+                      should not be relied upon for these purposes. Investing in
+                      securities involves risks. We are not responsible for any
+                      trading decisions, damages or other losses related to the
+                      Information or its use. Securities can increase and
+                      decrease in value and there is no guarantee that you will
+                      get your investment back.
+                      <img
+                        title="Visit the Morningstar website"
+                        src="/img/MstarLogo_black.gif"
+                        alt="Morningstar"
+                        style="
+                          float: right;
+                          border-width: 0;
+                          padding: 3px 0 0 8px;
+                        "
+                      />
+                      Past performance is no guarantee of future returns. Advice
+                      from a securities professional is strongly advised before
+                      taking or refraining from taking any action as a result of
+                      the contents of this document.
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div id="MasterNavigationRight"></div>
+    </div>
+
+    <div id="MasterNavigationBottom"></div>
+
+    <div><!-- xxxx: PROD.eu-central-1 --></div>
+  </body>
+</html>
