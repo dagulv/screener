@@ -32,7 +32,6 @@ jobs:
         host: ${{ vars.HOST }}
         username: ${{ vars.USERNAME }}
         key: ${{ secrets.KEY }}
-        port: ${{ vars.PORT }}
         
     - name: Deploy to ${{ vars.HOST }}
       run: rsync -azh --delay-updates --stats ${{ github.workspace }}/build/ remote:${{ vars.TARGET }}
