@@ -29,12 +29,13 @@ jobs:
     - name: SSH Remote Commands
       uses: appleboy/ssh-action@v1.2.2
       with:
-        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        REMOTE_HOST: ${{ vars.REMOTE_HOST }}
-        REMOTE_USER: ${{ vars.REMOTE_USER }}
+        host: ${{ vars.HOST }}
+        username: ${{ vars.USERNAME }}
+        key: ${{ secrets.KEY }}
+        port: ${{ vars.PORT }}
         
-    - name: Deploy to ${{ vars.REMOTE_HOST }}
-      run: rsync -azh --delay-updates --stats ${{ github.workspace }}/build/ remote:${{ vars.REMOTE_TARGET }}
+    - name: Deploy to ${{ vars.HOST }}
+      run: rsync -azh --delay-updates --stats ${{ github.workspace }}/build/ remote:${{ vars.TARGET }}
       
     - name: Restart service
       run: ssh remote 'sudo systemctl restart wld.service'
