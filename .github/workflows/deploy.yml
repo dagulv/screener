@@ -34,7 +34,7 @@ jobs:
         key: ${{ secrets.KEY }}
         
     - name: Deploy to ${{ vars.HOST }}
-      run: rsync -azh --delay-updates --stats ${{ github.workspace }}/build/ remote:${{ vars.TARGET }}
+      run: rsync -azh --delay-updates --stats ${{ github.workspace }}/build/ ${{ vars.USERNAME }}@${{ vars.HOST }}:${{ vars.TARGET }}
       
     - name: Restart service
       run: ssh remote 'sudo systemctl restart wld.service'
@@ -67,11 +67,11 @@ jobs:
         uses: ayeressian/bunnycdn-storage-deploy@v2.4.0
         with:
           source: "frontend/build"
-          storageEndpoint: "${{ secrets.STORAGE_ENDPOINT }}"
-          storageZoneName: "${{ secrets.STORAGE_NAME }}"
+          storageEndpoint: "${{ vars.STORAGE_ENDPOINT }}"
+          storageZoneName: "${{ vars.STORAGE_NAME }}"
           storagePassword: "${{ secrets.STORAGE_PASSWORD }}"
           accessKey: "${{ secrets.STORAGE_KEY }}"
-          pullZoneId: "${{ secrets.ZONE_ID }}"
+          pullZoneId: "${{ vars.ZONE_ID }}"
           upload: "true"
           remove: "true"
           purgePullZone: "true"
