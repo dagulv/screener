@@ -26,7 +26,7 @@ jobs:
     - name: Build
       run: CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -v -o ./build/ ./cmd/api/...
           
-    - name: Setup SSH
+    - name: Deploy
       run: |
         mkdir -p ~/.ssh/ && touch ~/.ssh/known_hosts
         ssh-keyscan ${{ vars.HOST }} >> ~/.ssh/known_hosts
@@ -34,7 +34,7 @@ jobs:
         ssh-add - <<< "${{ secrets.KEY }}"
         rsync -azh --delay-updates --stats ${{ github.workspace }}/build/ ${{ vars.USERNAME }}@${{ vars.HOST }}:${{ vars.TARGET }}
 
-    - name: SSH Remote Commands
+    - name: Restart service
       uses: appleboy/ssh-action@v1.2.2
       with:
         host: ${{ vars.HOST }}
@@ -66,6 +66,8 @@ jobs:
 
       - name: Build SvelteKit
         run: cd frontend && npm run build
+        env:
+          PUBLIC_API_URL: ${{ vars.PUBLIC_API_URL }}
 
       - name: Upload to BunnyCDN
         uses: ayeressian/bunnycdn-storage-deploy@v2.4.0
