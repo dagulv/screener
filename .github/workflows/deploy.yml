@@ -32,7 +32,7 @@ jobs:
         ssh-keyscan ${{ vars.HOST }} >> ~/.ssh/known_hosts
         eval $(ssh-agent)
         ssh-add - <<< "${{ secrets.KEY }}"
-        rsync -azh --delay-updates --stats ${{ github.workspace }}/build/ ${{ vars.TARGET }}
+        rsync -azh --delay-updates --stats ${{ github.workspace }}/build/ ${{ vars.USERNAME }}@${{ vars.HOST }}:${{ vars.TARGET }}
 
     - name: SSH Remote Commands
       uses: appleboy/ssh-action@v1.2.2
