@@ -26,6 +26,12 @@ jobs:
     - name: Build
       run: CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -v -o ./build ./cmd/api/...
 
+    - name: Setup SSH
+      run: mkdir -p ~/.ssh/ && touch ~/.ssh/known_hosts &&
+        ssh-keyscan ${{ vars.HOST }} >> ~/.ssh/known_hosts &&
+        eval $(ssh-agent) &&
+        ssh-add - <<< "${{ secrets.KEY }}"
+
     - name: SSH Remote Commands
       uses: appleboy/ssh-action@v1.2.2
       with:
