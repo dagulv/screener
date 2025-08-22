@@ -26,21 +26,14 @@ jobs:
     - name: Build
       run: CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -v -o ./build ./cmd/api/...
 
-    - name: Setup SSH
-      run: mkdir -p ~/.ssh/ && touch ~/.ssh/known_hosts &&
-        ssh-keyscan ${{ vars.HOST }} >> ~/.ssh/known_hosts &&
-        eval $(ssh-agent) &&
-        ssh-add - <<< "${{ secrets.KEY }}"
-
     - name: SSH Remote Commands
       uses: appleboy/ssh-action@v1.2.2
       with:
         host: ${{ vars.HOST }}
         username: ${{ vars.USERNAME }}
         key: ${{ secrets.KEY }}
-        
-    - name: Deploy to ${{ vars.HOST }}
-      run: rsync -azh -e "ssh -o StrictHostKeyChecking=no" --delay-updates --stats ${{ github.workspace }}/build/ ${{ vars.USERNAME }}@${{ vars.HOST }}:${{ vars.TARGET }}
+        script: |
+          rsync -azh --delay-updates --stats ${{ github.workspace }}/build/ ${{ vars.TARGET }}
       
     - name: Restart service
       run: ssh remote 'sudo systemctl restart wld.service'
