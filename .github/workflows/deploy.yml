@@ -24,7 +24,7 @@ jobs:
       run: go get ./...
 
     - name: Build
-      run: CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -v -o ./build ./cmd/api/...
+      run: CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -v -o ./build/ ./cmd/api/...
 
     - name: SSH Remote Commands
       uses: appleboy/ssh-action@v1.2.2
@@ -34,10 +34,7 @@ jobs:
         key: ${{ secrets.KEY }}
         script: |
           mkdir -p /var/www/stock-scout/api
-          rsync -azh --delay-updates --stats ${{ github.workspace }}/build ${{ vars.TARGET }}
-      
-    - name: Restart service
-      run: ssh remote 'sudo systemctl restart wld.service'
+          rsync -azh --delay-updates --stats ${{ github.workspace }}/build/ ${{ vars.TARGET }}
 
   frontend:
     name: Build & deploy frontend
