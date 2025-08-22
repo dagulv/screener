@@ -33,7 +33,8 @@ jobs:
         username: ${{ vars.USERNAME }}
         key: ${{ secrets.KEY }}
         script: |
-          rsync -azh --delay-updates --stats ${{ github.workspace }}/build/ ${{ vars.TARGET }}
+          mkdir -p /var/www/stock-scout/api
+          rsync -azh --delay-updates --stats ${{ github.workspace }}/build ${{ vars.TARGET }}
       
     - name: Restart service
       run: ssh remote 'sudo systemctl restart wld.service'
