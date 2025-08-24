@@ -42,6 +42,9 @@ jobs:
         username: ${{ vars.USERNAME }}
         key: ${{ secrets.KEY }}
         script: |
+          set -a
+          source /var/www/stock-scout/api/.env
+          set +a
           migrate -path /var/www/stock-scout/api/migrations \
           -database "postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${POSTGRES_HOST}/${POSTGRES_NAME}?sslmode=disable" up
           sudo systemctl restart stock-scout-api.service
