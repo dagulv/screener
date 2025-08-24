@@ -46,7 +46,7 @@ jobs:
           source /var/www/stock-scout/api/.env
           set +a
           migrate -path /var/www/stock-scout/api/migrations \
-          -database "postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${POSTGRES_HOST}/${POSTGRES_NAME}?sslmode=disable" up
+          -database "postgres://$POSTGRES_USER:$POSTGRES_PASSWORD@127.0.0.1:5432/$POSTGRES_NAME?sslmode=disable" up
           sudo systemctl restart stock-scout-api.service
 
   frontend:
