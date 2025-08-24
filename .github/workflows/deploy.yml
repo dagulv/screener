@@ -33,7 +33,7 @@ jobs:
         eval $(ssh-agent)
         ssh-add - <<< "${{ secrets.KEY }}"
         rsync -azh --delay-updates --stats ${{ github.workspace }}/build/ ${{ vars.USERNAME }}@${{ vars.HOST }}:${{ vars.TARGET }}
-        rsync -azh --delay-updates --stats ${{ github.workspace }}/internal/adapter/postgres/migrations?ref=${{ github.ref_name }} ${{ vars.USERNAME }}@${{ vars.HOST }}:${{ vars.TARGET }}
+        rsync -azh --delay-updates --stats ${{ github.workspace }}/internal/adapter/postgres/migrations ${{ vars.USERNAME }}@${{ vars.HOST }}:${{ vars.TARGET }}
 
     - name: Migrate & Restart service
       uses: appleboy/ssh-action@v1.2.2
