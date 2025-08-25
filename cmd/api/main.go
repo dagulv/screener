@@ -7,7 +7,6 @@ import (
 
 	"github.com/dagulv/screener/internal/adapter/http"
 	"github.com/dagulv/screener/internal/adapter/postgres"
-	"github.com/dagulv/screener/internal/adapter/scraper"
 	"github.com/dagulv/screener/internal/core/service"
 	"github.com/dagulv/screener/internal/env"
 )
@@ -37,27 +36,12 @@ func start(ctx context.Context) (err error) {
 	currencyStore := postgres.NewCurrency(db)
 	sectorStore := postgres.NewSector(db)
 	companyStore := postgres.NewCompany(db)
-	scraper := scraper.NewScraper(ctx, env, currencyStore, companyStore)
+	// scraper := scraper.NewScraper(ctx, env, currencyStore, companyStore)
 	screener := postgres.NewScreener(db)
 
 	service := http.Service{
-		Company:  service.NewCompany(companyStore, currencyStore, sectorStore, scraper),
+		Company:  service.NewCompany(companyStore, currencyStore, sectorStore),
 		Screener: service.NewScreener(screener),
-	}
-	// if err = service.Company.ImportCompanies(ctx); err != nil {
-	// 	return
-	// }
-	// if err = service.Company.ImportCompanyFinancials(ctx); err != nil {
-	// 	return
-	// }
-	// if err = service.Company.ImportCompanyShares(ctx); err != nil {
-	// 	return
-	// }
-	// if err = service.Company.ImportCompanySharesByFinancials(ctx); err != nil {
-	// 	return
-	// }
-	if err = service.Company.ImportCompanyMeta(ctx); err != nil {
-		return
 	}
 
 	api, err := http.NewApi(env, service, nil)
