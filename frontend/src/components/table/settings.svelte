@@ -33,6 +33,7 @@
 	import * as Command from '$components/shadcn/ui/command/index.js';
 	import { tick } from 'svelte';
 	import { CheckIcon } from '@lucide/svelte';
+	import { derivedFinancials, metrics, staticFinancials } from '$lib/screener';
 
 	let { table, onchange }: { table: Table<TData>; onchange?: () => void } = $props();
 
@@ -48,6 +49,8 @@
 		});
 	}
 	const triggerId = $props.id();
+
+	const labels = { ...staticFinancials, ...derivedFinancials, ...metrics };
 </script>
 
 <DropdownMenu.Root>
@@ -72,14 +75,14 @@
 							.getAllColumns()
 							.filter((col) => typeof col.accessorFn !== 'undefined' && col.getCanHide()) as column (column)}
 							<Command.Item
-								value={column.id}
+								value={labels[column.id]?.label ?? column.id}
 								onSelect={() => {
 									column.toggleVisibility();
 									onchange?.();
 									closeAndFocusTrigger(triggerId);
 								}}
 							>
-								{column.id}
+								{labels[column.id]?.label ?? column.id}
 
 								<CheckIcon class={['ml-auto', !column.getIsVisible() && 'text-transparent']} />
 							</Command.Item>

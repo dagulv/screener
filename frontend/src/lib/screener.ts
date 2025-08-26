@@ -33,3 +33,8 @@ export const derivedFinancials: Record<
 	ps: { label: 'P/S', style: 'decimal' },
 	pb: { label: 'P/B', style: 'decimal' }
 };
+
+export const metrics: Record<string, { label: string }> = {
+	sector: { label: 'Sector' },
+	magicRank: { label: 'Magic rank' }
+};
