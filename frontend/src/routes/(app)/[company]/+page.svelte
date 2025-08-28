@@ -17,15 +17,19 @@
 		data: Financials[],
 		key: keyof (FinancialData & DerivedFinancialData)
 	): ValueLabel<number>[] {
-		return data.map((f) => {
-			return {
-				label: String(f.fiscalYear),
-				value:
-					f.staticData?.[key as keyof FinancialData] ??
-					f.derivedData?.[key as keyof DerivedFinancialData] ??
-					0
-			};
-		});
+		const formattedData = data
+			.map((f) => {
+				return {
+					label: String(f.fiscalYear),
+					value:
+						f.staticData?.[key as keyof FinancialData] ??
+						f.derivedData?.[key as keyof DerivedFinancialData] ??
+						0
+				};
+			})
+			.sort((a, b) => (a.label > b.label ? 1 : -1));
+
+		return formattedData;
 	}
 
 	const properties = [
