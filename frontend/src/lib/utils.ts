@@ -140,3 +140,60 @@ export function listErrors(error: unknown) {
 	const msg = error.errors[0].expect ?? error.errors[0].message;
 	notice.setNotice(msg, { type: 'error' });
 }
+
+class NumberParser {
+	private _group: RegExp;
+	private _minusSign: RegExp;
+	private _decimal: RegExp;
+	private _numeral: RegExp;
+	private _index: (d: string) => number | undefined;
+	constructor(locale: Intl.LocalesArgument) {
+		const format = new Intl.NumberFormat(locale);
+		const parts = format.formatToParts(-12345.6);
+		const numerals = Array.from({ length: 10 }).map((_, i) => format.format(i));
+		const index = new Map(numerals.map((d, i) => [d, i]));
+		this._minusSign = new RegExp(`[${parts.find((d) => d.type === 'minusSign')?.value}]`);
+		this._group = new RegExp(`[${parts.find((d) => d.type === 'group')?.value}]`, 'g');
+		this._decimal = new RegExp(`[${parts.find((d) => d.type === 'decimal')?.value}]`);
+		this._numeral = new RegExp(`[${numerals.join('')}]`, 'g');
+		this._index = (d: string) => index.get(d);
+	}
+	parse(input: unknown) {
+		if (typeof input === 'number' || typeof input === 'bigint') {
+			return Number(input);
+		} else if (typeof input !== 'string') {
+			return 0;
+		}
+		const DIRECTION_MARK = /\u061c|\u200e/g;
+		return +input
+			.trim()
+			.replace(DIRECTION_MARK, '')
+			.replace(this._group, '')
+			.replace(this._decimal, '.')
+			.replace(this._numeral, this._index)
+			.replace(this._minusSign, '-');
+	}
+}
+
+const numberParser = new NumberParser('en-US');
+
+export function toNumber(input: unknown, isFloat = false): number {
+	// let n = 0;
+
+	// switch (typeof input) {
+	// 	case 'string':
+	// 		if (isFloat) {
+	// 			n = parseFloat(input);
+	// 		} else {
+	// 			n = parseInt(input);
+	// 		}
+	// 		break;
+	// 	case 'number':
+	// 	case 'bigint':
+	// 		return Number(input);
+	// }
+	// return Number.isNaN(n) ? 0 : n;
+	console.log(input);
+
+	return numberParser.parse(input);
+}

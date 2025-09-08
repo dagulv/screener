@@ -1,5 +1,5 @@
 <script lang="ts" generics="TData extends { [rowId]: string }">
-	import { createSvelteTable, renderComponent } from '$components/shadcn/ui/data-table';
+	import { createSvelteTable } from '$components/shadcn/ui/data-table';
 	import {
 		getCoreRowModel,
 		type ColumnDef,
@@ -13,13 +13,15 @@
 	import * as Table from '$components/shadcn/ui/table';
 	import Button from '$components/shadcn/ui/button/button.svelte';
 	import FlexRender from '$components/shadcn/ui/data-table/flex-render.svelte';
-	import { ChevronLeft, ChevronRight } from '@lucide/svelte';
+	import { ChevronLeft, ChevronRight, Settings2 } from '@lucide/svelte';
 	import { orderKey, pageKey, perPage, sortKey } from '$lib/constants';
 	import Settings from './settings.svelte';
 	import { newURLUpdater } from '$lib/utils';
 	import { page } from '$app/state';
 	import { invalidate } from '$app/navigation';
 	import { tick } from 'svelte';
+	import * as Sheet from '$components/shadcn/ui/sheet/index.js';
+	import Filters from '$components/filters/filters.svelte';
 
 	let {
 		id,
@@ -74,13 +76,7 @@
 		// 	enableSorting: false,
 		// 	enableHiding: false
 		// },
-		...rawColumns,
-		{
-			id: 'actions',
-			header: () => renderComponent(Settings, { table: table, onchange: onchangeColumnToggle }),
-			// cell: ({ row }) => renderSnippet(ActionsCell, { row }),
-			enableHiding: false
-		}
+		...rawColumns
 	];
 
 	async function onchangeColumnToggle() {
@@ -212,89 +208,112 @@
 	}
 </script>
 
-<section
-	class={[
-		'h-full min-w-0 max-w-full flex-1 rounded-md border [--footer-height:calc(var(--spacing)*8)] [--table-header-height:calc(var(--spacing)*8)]',
-		className
-	]}
-	style={`--column-count: ${visibleColumns.size};`}
+<div
+	class="flex h-full min-w-0 max-w-full flex-1 flex-col [--table-filter-header-height:calc(var(--spacing)*8)]"
 >
-	<Table.Root bind:parentRef={tableRef}>
-		<Table.Header>
-			{#each table.getHeaderGroups() as headerGroup (headerGroup.id)}
-				<Table.Row>
-					{#each headerGroup.headers as header (header.id)}
-						<Table.Head data-name={header.id}>
-							{#if !header.isPlaceholder}
-								<FlexRender
-									context={header.getContext()}
-									content={header.column.columnDef.header}
-								/>
-							{/if}
-						</Table.Head>
-					{/each}
-				</Table.Row>
-			{/each}
-		</Table.Header>
-		<Table.Body>
-			{#if table.getRowModel().rows?.length}
-				{#each table.getRowModel().rows as row (row.id)}
-					<Table.Row data-state={row.getIsSelected() && 'selected'} onclick={() => onclickRow(row)}>
-						{#each row.getVisibleCells() as cell (cell.id)}
-							<Table.Cell data-name={cell.column.id}>
-								<FlexRender context={cell.getContext()} content={cell.column.columnDef.cell} />
-							</Table.Cell>
+	<div
+		class="ml-auto flex h-[var(--table-filter-header-height)] min-h-[var(--table-filter-header-height)] items-center gap-1 py-1"
+	>
+		<Sheet.Root>
+			<Sheet.Trigger>
+				{#snippet child({ props })}
+					<Button variant="outline" size="icon" class="h-full" {...props}>
+						<Settings2 />
+					</Button>
+				{/snippet}
+			</Sheet.Trigger>
+			<Sheet.Content class="sm:max-w-lg">
+				<Filters />
+			</Sheet.Content>
+		</Sheet.Root>
+
+		<Settings class="h-full" {table} onchange={onchangeColumnToggle} />
+	</div>
+	<section
+		class={[
+			'rounded-md border [--footer-height:calc(var(--spacing)*8)] [--table-header-height:calc(var(--spacing)*8)]',
+			className
+		]}
+		style={`--column-count: ${visibleColumns.size - 1};`}
+	>
+		<Table.Root bind:parentRef={tableRef}>
+			<Table.Header>
+				{#each table.getHeaderGroups() as headerGroup (headerGroup.id)}
+					<Table.Row>
+						{#each headerGroup.headers as header (header.id)}
+							<Table.Head data-name={header.id}>
+								{#if !header.isPlaceholder}
+									<FlexRender
+										context={header.getContext()}
+										content={header.column.columnDef.header}
+									/>
+								{/if}
+							</Table.Head>
 						{/each}
 					</Table.Row>
 				{/each}
-			{:else}
-				<Table.Row>
-					<Table.Cell colspan={columns.length} class="h-24 text-center">No results.</Table.Cell>
-				</Table.Row>
-			{/if}
-		</Table.Body>
-	</Table.Root>
-	<div class="flex h-[var(--footer-height)] items-center justify-end gap-2 border-t px-3 py-1">
-		<div class="text-muted-foreground h-full flex-1 content-center text-xs">
-			{table.getRowCount()} total row(s)
-		</div>
-		<div class="flex h-full items-center gap-2">
-			<div class="text-muted-foreground flex-1 content-center text-xs">
-				{tableState.pagination.pageIndex * tableState.pagination.pageSize + 1}
-				-
-				{(tableState.pagination.pageIndex + 1) * tableState.pagination.pageSize}
+			</Table.Header>
+			<Table.Body>
+				{#if table.getRowModel().rows?.length}
+					{#each table.getRowModel().rows as row (row.id)}
+						<Table.Row
+							data-state={row.getIsSelected() && 'selected'}
+							onclick={() => onclickRow(row)}
+						>
+							{#each row.getVisibleCells() as cell (cell.id)}
+								<Table.Cell data-name={cell.column.id}>
+									<FlexRender context={cell.getContext()} content={cell.column.columnDef.cell} />
+								</Table.Cell>
+							{/each}
+						</Table.Row>
+					{/each}
+				{:else}
+					<Table.Row>
+						<Table.Cell colspan={columns.length} class="h-24 text-center">No results.</Table.Cell>
+					</Table.Row>
+				{/if}
+			</Table.Body>
+		</Table.Root>
+		<div class="flex h-[var(--footer-height)] items-center justify-end gap-2 border-t px-3 py-1">
+			<div class="text-muted-foreground h-full flex-1 content-center text-xs">
+				{table.getRowCount()} total row(s)
 			</div>
-			<Button
-				variant="outline"
-				size="sm"
-				class="h-full"
-				onclick={() => table.previousPage()}
-				disabled={!table.getCanPreviousPage()}
-			>
-				<ChevronLeft />
-			</Button>
-			<Button
-				variant="outline"
-				size="sm"
-				class="h-full"
-				onclick={() => table.nextPage()}
-				disabled={!table.getCanNextPage()}
-			>
-				<ChevronRight />
-			</Button>
+			<div class="flex h-full items-center gap-2">
+				<div class="text-muted-foreground flex-1 content-center text-xs">
+					{tableState.pagination.pageIndex * tableState.pagination.pageSize + 1}
+					-
+					{(tableState.pagination.pageIndex + 1) * tableState.pagination.pageSize}
+				</div>
+				<Button
+					variant="outline"
+					size="sm"
+					class="h-full"
+					onclick={() => table.previousPage()}
+					disabled={!table.getCanPreviousPage()}
+				>
+					<ChevronLeft />
+				</Button>
+				<Button
+					variant="outline"
+					size="sm"
+					class="h-full"
+					onclick={() => table.nextPage()}
+					disabled={!table.getCanNextPage()}
+				>
+					<ChevronRight />
+				</Button>
+			</div>
 		</div>
-	</div>
-</section>
+	</section>
+</div>
 
 <style>
 	@reference "tailwindcss";
 
 	section {
-		@apply select-none;
-
 		:global {
 			table {
-				@apply grid h-full w-full select-none auto-rows-auto grid-cols-[repeat(var(--column-count),1fr)];
+				@apply grid h-full w-full select-none select-auto auto-rows-auto grid-cols-[repeat(var(--column-count),1fr)];
 
 				thead {
 					@apply contents;

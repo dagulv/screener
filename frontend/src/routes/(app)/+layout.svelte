@@ -99,28 +99,6 @@
 				}
 			};
 		})
-		// {
-		// 	accessorKey: 'amount',
-		// 	header: () =>
-		// 		renderSnippet(
-		// 			createRawSnippet(() => ({
-		// 				render: () => `<div class="text-right">Amount</div>`
-		// 			}))
-		// 		),
-		// 	cell: ({ row }) => {
-		// 		const amountSnippet = createRawSnippet<[string]>((getAmount) => {
-		// 			const amount = Number.parseFloat(getAmount());
-		// 			const formatted = new Intl.NumberFormat('en-US', {
-		// 				style: 'currency',
-		// 				currency: 'USD'
-		// 			}).format(amount);
-		// 			return {
-		// 				render: () => `<div class="text-right font-medium">${formatted}</div>`
-		// 			};
-		// 		});
-		// 		return renderSnippet(amountSnippet, row.getValue('amount'));
-		// 	}
-		// }
 	];
 
 	const outputs = {
@@ -156,7 +134,7 @@
 
 {#snippet tableSnippet()}
 	<Table
-		class="h-[calc(100vh-var(--header-height)-1rem)]! sticky top-[calc(var(--header-height)+0.5rem)]"
+		class="h-[calc(100vh-var(--header-height)-var(--table-filter-header-height)-1rem)]! sticky top-[calc(var(--header-height)+0.5rem)]"
 		id="screener"
 		rowId="companyId"
 		{columns}

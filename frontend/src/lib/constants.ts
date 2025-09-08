@@ -17,6 +17,7 @@ const numberFormatOptions: Intl.NumberFormatOptions = {
 };
 const numberPrefixes = { B: 1_000_000_000, M: 1_000_000, K: 1_000 };
 const currencies: Currency[] = ['SEK', 'EUR', 'DKK', 'ISK'];
+export const numberFormatter = new Intl.NumberFormat(numberFormatLocale);
 export const flags: Record<CountryCode, string> = {
 	se: seFlag,
 	dk: dkFlag,
