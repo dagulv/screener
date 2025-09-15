@@ -4,7 +4,7 @@ import { screenerKey, sortKey } from '$lib/constants';
 import z from 'zod';
 import type { LayoutLoad } from '../$types';
 import { queryStringParser } from '$lib/query';
-import { newURLUpdater } from '$lib/utils';
+import { newURLUpdater } from '$lib/utils.svelte';
 import { page } from '$app/state';
 
 const defaultVisibleColumns = ['magicRank'];

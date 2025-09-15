@@ -1,26 +1,28 @@
 <script lang="ts">
 	import type {
+		FormEventHandler,
 		HTMLInputAttributes,
-		HTMLInputTypeAttribute,
 		KeyboardEventHandler
 	} from 'svelte/elements';
-	import { cn, toNumber, type WithElementRef } from '$lib/utils.js';
+	import { cn, toNumber, type WithElementRef } from '$lib/utils.svelte.js';
 	import { numberFormatter } from '$lib/constants';
+	import { tick } from 'svelte';
+	import { de } from 'zod/locales';
 
 	type Props = WithElementRef<
 		Omit<HTMLInputAttributes, 'type' | 'onchange'> & {
-			onchange?: (value: number) => void;
+			onchange: (value: number) => void;
 			limit?: number;
 		}
 	>;
 
 	let {
 		ref = $bindable(null),
-		value: anyValue = $bindable(),
+		value: anyValue,
 		files = $bindable(),
 		class: className,
-		limit,
-		onchange,
+		limit = 0,
+		onchange: onChange,
 		...restProps
 	}: Props = $props();
 
@@ -28,35 +30,82 @@
 	const min = toNumber(restProps.min);
 	const step = toNumber(restProps.step);
 	let value = $derived.by(() => {
-		const state = $state(toNumber(anyValue));
+		let state = $state(toNumber(anyValue));
 		return state;
 	});
+	let valueString = $derived(formatNumber());
+	// svelte-ignore state_referenced_locally
+	let lastValidValue = $state<number>(getValidValue(value));
+
+	function isValid(value: number): boolean {
+		return value >= min && value <= max;
+	}
+
+	function getValidValue(value: number): number {
+		return isValid(value) ? value : (lastValidValue ?? limit);
+	}
+
+	function onchange(value: number): void {
+		if (!isValid(value)) {
+			return;
+		}
+		lastValidValue = value;
+
+		onChange(value);
+	}
 
 	function onkeydown(e: Parameters<KeyboardEventHandler<HTMLInputElement>>[0]) {
-		const inputValue = (e.target as HTMLInputElement).value;
+		switch (e.key) {
+			case 'ArrowUp':
+			case 'ArrowDown':
+				handleArrows(e);
+				break;
+			case 'ArrowLeft':
+			case 'ArrowRight':
+				break;
+		}
+	}
 
+	async function handleArrows(e: Parameters<KeyboardEventHandler<HTMLInputElement>>[0]) {
+		e.preventDefault();
+		let oldValue = parseNumber((e.target as HTMLInputElement).value);
 		let newValue = 0;
-		// console.log(inputValue || 0);
 
 		switch (e.key) {
 			case 'ArrowUp':
-				newValue = Number(inputValue || 0) + step;
-				if (value <= max) {
-					value = newValue;
-				}
+				newValue = oldValue + step;
+				break;
 			case 'ArrowDown':
-				newValue = Number(inputValue || 0) - step;
-				if (value >= min) {
-					value = newValue;
-				}
+				newValue = oldValue - step;
+				break;
 		}
 
-		// onchange?.(value);
+		if (newValue >= min && newValue <= max) {
+			value = newValue;
+		} else {
+			value = limit;
+		}
+
+		onchange(value);
+
+		await tick();
+		const end = (ref as HTMLInputElement)?.value.length;
+		(ref as HTMLInputElement)?.setSelectionRange(end, end);
+		ref?.focus();
 	}
 
-	function parseNumber(v: any): void {
-		value = toNumber(v);
-		console.log(v, value);
+	function parseNumber(v: string): number {
+		if (v.trim() === '') {
+			return limit;
+		}
+
+		const current = toNumber(v);
+
+		if (isNaN(current)) {
+			return value;
+		}
+
+		return current;
 	}
 
 	function formatNumber(): string {
@@ -65,6 +114,41 @@
 		}
 
 		return '';
+	}
+
+	async function oninput(e: Parameters<FormEventHandler<HTMLInputElement>>[0]) {
+		const target = e.target as HTMLInputElement;
+		const newValue = parseNumber(target.value);
+		const selectionStart = target.selectionStart ?? 0;
+		let leftDigits = 0;
+		for (let i = 0; i < selectionStart; i++) {
+			if (!isNaN(+target.value[i])) leftDigits++;
+		}
+
+		try {
+			if (newValue === value) {
+				return;
+			}
+
+			value = newValue;
+
+			onchange(value);
+		} finally {
+			await tick();
+
+			const newStringValue = formatNumber();
+
+			(e.target as HTMLInputElement).value = newStringValue;
+
+			let digitsSeen = 0;
+			let newPos = 0;
+			while (digitsSeen < leftDigits && newPos < newStringValue.length) {
+				if (!isNaN(+newStringValue[newPos])) digitsSeen++;
+				newPos++;
+			}
+
+			(e.target as HTMLInputElement).setSelectionRange(newPos, newPos);
+		}
 	}
 </script>
 
@@ -78,10 +162,15 @@
 		className
 	)}
 	type="text"
-	pattern="(?:0|[1-9]\d*)"
+	pattern="\d*"
 	inputMode="decimal"
 	autoComplete="off"
+	{oninput}
 	{onkeydown}
-	bind:value={formatNumber, parseNumber}
-	{...restProps}
+	value={valueString}
+	{...{ ...restProps, ...{ min: undefined, max: undefined, step: undefined } }}
 />
+
+{#if !isValid(value)}
+	{value} is invalid
+{/if}

@@ -178,22 +178,31 @@ class NumberParser {
 const numberParser = new NumberParser('en-US');
 
 export function toNumber(input: unknown, isFloat = false): number {
-	// let n = 0;
-
-	// switch (typeof input) {
-	// 	case 'string':
-	// 		if (isFloat) {
-	// 			n = parseFloat(input);
-	// 		} else {
-	// 			n = parseInt(input);
-	// 		}
-	// 		break;
-	// 	case 'number':
-	// 	case 'bigint':
-	// 		return Number(input);
-	// }
-	// return Number.isNaN(n) ? 0 : n;
-	console.log(input);
-
 	return numberParser.parse(input);
+}
+
+export function debounce<F extends (...args: never[]) => void>(
+	func: F,
+	delay = 300
+): (...args: Parameters<F>) => void {
+	let timer: ReturnType<typeof setTimeout>;
+
+	return (...args: Parameters<F>) => {
+		clearTimeout(timer);
+		timer = setTimeout(() => func(...args), delay);
+	};
+}
+
+export function watch<T>(
+	getter: () => T,
+	effectCallback: (value: T | undefined) => (() => void) | undefined
+) {
+	let previous: T | undefined = undefined;
+	$effect(() => {
+		const current = getter();
+		const cleanup = effectCallback(previous);
+		previous = current;
+
+		return cleanup;
+	});
 }

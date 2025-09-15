@@ -11,7 +11,7 @@ export const limitKey = 'limit';
 export const pageKey = 'page';
 export const searchKey = 's';
 export const sortKey = 'sort';
-const numberFormatLocale: Intl.LocalesArgument = 'se-SV';
+const numberFormatLocale: Intl.LocalesArgument = 'en-US';
 const numberFormatOptions: Intl.NumberFormatOptions = {
 	maximumFractionDigits: 2
 };

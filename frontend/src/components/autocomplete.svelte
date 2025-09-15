@@ -30,7 +30,7 @@
 
 <script lang="ts" generics="TData extends Data">
 	import * as Command from '$components/shadcn/ui/command/index.js';
-	import { cn } from '$lib/utils';
+	import { cn } from '$lib/utils.svelte';
 	import { Check } from '@lucide/svelte';
 	import type { FormEventHandler } from 'svelte/elements';
 	import Skeleton from './shadcn/ui/skeleton/skeleton.svelte';

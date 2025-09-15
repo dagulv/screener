@@ -1,12 +1,12 @@
 <script lang="ts">
 	import type { HTMLInputAttributes, HTMLInputTypeAttribute } from 'svelte/elements';
-	import { cn, type WithElementRef } from '$lib/utils.js';
+	import { cn, type WithElementRef } from '$lib/utils.svelte.js';
 	import { NumberInput } from '.';
 
 	type InputType = Exclude<HTMLInputTypeAttribute, 'file'>;
 
 	type Props = WithElementRef<
-		Omit<HTMLInputAttributes, 'type'> & { limit?: number } & (
+		Omit<HTMLInputAttributes, 'type'> & { limit?: number; onchange?: (value: number) => void } & (
 				| { type: 'file'; files?: FileList }
 				| { type?: InputType; files?: undefined }
 			)
@@ -18,6 +18,7 @@
 		type,
 		files = $bindable(),
 		class: className,
+		onchange,
 		...restProps
 	}: Props = $props();
 </script>
@@ -35,10 +36,18 @@
 		type="file"
 		bind:files
 		bind:value
+		{onchange}
 		{...restProps}
 	/>
 {:else if type === 'number'}
-	<NumberInput bind:ref {...{ ...restProps, ...{ onchange: undefined } }} />
+	<NumberInput
+		bind:ref
+		{value}
+		{...{ ...restProps, ...{ onchange: undefined } }}
+		onchange={(v) => {
+			onchange?.(v);
+		}}
+	/>
 {:else}
 	<input
 		bind:this={ref}
@@ -51,6 +60,7 @@
 		)}
 		{type}
 		bind:value
+		{onchange}
 		{...restProps}
 	/>
 {/if}

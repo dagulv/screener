@@ -2,7 +2,10 @@
 	import { page } from '$app/state';
 	import { Input } from '$components/shadcn/ui/input/index.js';
 	import { Slider } from '$components/shadcn/ui/slider/index.js';
-	import { formatNumber, numberFormatter } from '$lib/constants';
+	import { numberFormatter } from '$lib/constants';
+	import { debounce, newURLUpdater, watch } from '$lib/utils.svelte';
+	import { tick } from 'svelte';
+	import type { get } from 'svelte/store';
 
 	let {
 		label,
@@ -20,29 +23,54 @@
 		maxLabel?: string;
 	} = $props();
 
-	const step = Math.max(Math.round((max - min) / 1000), 1);
+	const urlUpdater = newURLUpdater({ page });
 
-	let { min: minValue, max: maxValue } = $derived.by(() => {
+	const step = Math.max(Math.round((max - min) / 1000), 1);
+	let sliderOverride = true;
+	let value = $derived.by(() => {
 		const values = page.url.searchParams.get(key)?.split(',') ?? [];
-		let minState = $state(min);
-		let maxState = $state(max);
+		let minState = min;
+		let maxState = max;
 
 		const minValue = parseInt(values[0]);
 		if (!isNaN(minValue)) minState = minValue;
 		const maxValue = parseInt(values[1]);
 		if (!isNaN(maxValue)) maxState = maxValue;
 
-		return {
-			get min() {
-				return minState;
-			},
-			get max() {
-				console.log('maxState', maxState);
-
-				return maxState;
-			}
-		};
+		// return {
+		// 	get min() {
+		// 		return minState;
+		// 	},
+		// 	get max() {
+		// 		return maxState;
+		// 	}
+		// };
+		const state = $state([minState, maxState]);
+		sliderOverride = true;
+		tick().then(() => (sliderOverride = false));
+		return state;
 	});
+	// let value = $derived.by(() => {
+	// 	let state = $state([min, max]);
+	// 	return state;
+	// });
+
+	function setFilter(minValue: number, maxValue: number) {
+		let value = '';
+
+		if (minValue !== min || maxValue !== max) {
+			if (minValue !== min) {
+				value += minValue;
+			}
+			value += ',';
+			if (maxValue !== max) {
+				value += maxValue;
+			}
+		}
+
+		urlUpdater.query(key, value);
+	}
+	const debounceFilter = debounce(setFilter, 300);
 </script>
 
 <fieldset>
@@ -56,45 +84,53 @@
 		<Slider
 			class="w-full"
 			type="multiple"
-			bind:value={
-				() => [minValue, maxValue],
-				(value) => {
-					minValue = value[0];
-					maxValue = value[1];
-				}
-			}
+			{value}
 			{min}
 			{max}
 			{step}
-			onValueCommit={(value) => console.log(value)}
+			onValueChange={(v) => {
+				if (sliderOverride) {
+					return;
+				}
+
+				value = v;
+			}}
+			onValueCommit={(value) => debounceFilter(value[0], value[1])}
 		/>
 		<div class="flex w-full items-center justify-between gap-2">
 			<Input
 				type="number"
-				placeholder={String(min)}
+				placeholder={numberFormatter.format(min)}
 				{min}
-				max={maxValue}
-				bind:value={minValue}
+				max={value[1] ?? max}
+				value={value[0]}
+				limit={min}
 				class="max-w-xs"
 				{step}
-				onchange={() => console.log(minValue)}
+				onchange={(v) => {
+					if (typeof v === 'number') {
+						value[0] = v;
+					}
+
+					debounceFilter(value[0], value[1]);
+				}}
 			/>
 			<Input
 				type="number"
-				placeholder={String(max)}
-				min={minValue}
+				placeholder={numberFormatter.format(max)}
+				min={value[0] ?? min}
 				{max}
+				value={value[1]}
 				limit={max}
-				bind:value={
-					() => numberFormatter.format(maxValue),
-					(value) => {
-						maxValue = +value;
-						console.log(+value, maxValue);
-					}
-				}
 				class="max-w-xs"
 				{step}
-				onchange={() => console.log(maxValue)}
+				onchange={(v) => {
+					if (typeof v === 'number') {
+						value[1] = v;
+					}
+
+					debounceFilter(value[0], value[1]);
+				}}
 			/>
 		</div>
 	</div>

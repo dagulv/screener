@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { HTMLTableAttributes } from 'svelte/elements';
-	import { cn, type WithElementParentRef, type WithElementRef } from '$lib/utils.js';
+	import { cn, type WithElementParentRef, type WithElementRef } from '$lib/utils.svelte.js';
 
 	let {
 		ref = $bindable(null),

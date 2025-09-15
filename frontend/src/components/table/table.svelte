@@ -16,7 +16,7 @@
 	import { ChevronLeft, ChevronRight, Settings2 } from '@lucide/svelte';
 	import { orderKey, pageKey, perPage, sortKey } from '$lib/constants';
 	import Settings from './settings.svelte';
-	import { newURLUpdater } from '$lib/utils';
+	import { newURLUpdater } from '$lib/utils.svelte';
 	import { page } from '$app/state';
 	import { invalidate } from '$app/navigation';
 	import { tick } from 'svelte';

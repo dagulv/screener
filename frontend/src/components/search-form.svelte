@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { HTMLFormAttributes } from 'svelte/elements';
-	import { newURLUpdater, type WithElementRef } from '$lib/utils.js';
+	import { newURLUpdater, type WithElementRef } from '$lib/utils.svelte.js';
 	import { iterateCompanies, type Company, type IdAndName } from '$lib/api';
 	import Autocomplete from './autocomplete.svelte';
 	import { page } from '$app/state';
