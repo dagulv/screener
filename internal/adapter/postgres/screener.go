@@ -23,7 +23,8 @@ func NewScreener(pool *pg.DB) port.Screener {
 func (s screenerStore) CountScreener(ctx context.Context, filters domain.ScreenerFilter) (count int, err error) {
 	c := Company.Alias("c")
 
-	_, cond, joins := screenerQuery(filters, c)
+	_, joins := screenerQuery(filters, c)
+	cond := screenerFilter(filters)
 
 	row := s.db.QueryRow(ctx, `
 			select
@@ -44,8 +45,8 @@ func (s screenerStore) IterateScreener(ctx context.Context, filters domain.Scree
 		c := Company.Alias("c")
 		curr := Currency.Alias("curr")
 
-		cols, cond, joins := screenerQuery(filters, c)
-
+		cols, joins := screenerQuery(filters, c)
+		cond := screenerFilter(filters)
 		orderBy := screenerOrderBy(filters.OrderBy)
 
 		rows, err := s.db.Query(ctx, `
@@ -133,7 +134,26 @@ func screenerOrderBy(orderBy string) any {
 	}
 }
 
-func screenerQuery(filters domain.ScreenerFilter, a pg.Alias) (columns, pg.QueryEncoder, []pg.QueryEncoder) {
+func screenerFilter(filters domain.ScreenerFilter) pg.QueryEncoder {
+	// m := MagicFormulaRankings.Alias("m")
+	f := Financials.Alias("f")
+	// sec := Sector.Alias("sec")
+	// df := DerivedFinancials.Alias("df")
+
+	cond := pg.And()
+
+	if filters.Revenue.Min.Valid {
+		cond.And(pg.Gte(f.Col("revenue"), filters.Revenue.Min))
+	}
+
+	if filters.Revenue.Max.Valid {
+		cond.And(pg.Lte(f.Col("revenue"), filters.Revenue.Max))
+	}
+
+	return cond
+}
+
+func screenerQuery(filters domain.ScreenerFilter, a pg.Alias) (columns, []pg.QueryEncoder) {
 	curr := Currency.Alias("curr")
 
 	cols := make([]pg.ChainedIdentifier, 4, len(filters.Columns)+4)
@@ -141,7 +161,6 @@ func screenerQuery(filters domain.ScreenerFilter, a pg.Alias) (columns, pg.Query
 	cols[1] = a.Col("name")
 	cols[2] = curr.Col("name")
 	cols[3] = a.Col("country_code")
-	cond := pg.And()
 	joins := make([]pg.QueryEncoder, 0)
 	tables := make(map[pg.Identifier]struct{})
 
@@ -183,7 +202,7 @@ func screenerQuery(filters domain.ScreenerFilter, a pg.Alias) (columns, pg.Query
 		}
 	}
 
-	return columns{cols}, cond, joins
+	return columns{cols}, joins
 }
 
 func tryAddTable(tables map[pg.Identifier]struct{}, identifier pg.Identifier, a1 pg.Alias, a2 pg.Alias, filters domain.ScreenerFilter) pg.QueryEncoder {

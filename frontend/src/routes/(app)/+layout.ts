@@ -67,7 +67,9 @@ export const load: LayoutLoad = async ({ fetch, url, depends }) => {
 			limit: q.limit(),
 			search: q.search(),
 			include: url.searchParams.get('include')?.split(',') ?? undefined,
-			columns: visibleColumns
+			columns: visibleColumns,
+			// revenue: q.minmax('revenue')
+			revenue: url.searchParams.get('revenue') ?? undefined
 		}
 	});
 

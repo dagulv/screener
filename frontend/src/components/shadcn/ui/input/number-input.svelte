@@ -7,11 +7,10 @@
 	import { cn, toNumber, type WithElementRef } from '$lib/utils.svelte.js';
 	import { numberFormatter } from '$lib/constants';
 	import { tick } from 'svelte';
-	import { de } from 'zod/locales';
 
 	type Props = WithElementRef<
 		Omit<HTMLInputAttributes, 'type' | 'onchange'> & {
-			onchange: (value: number) => void;
+			onchange: (value?: number) => void;
 			limit?: number;
 		}
 	>;
@@ -26,16 +25,18 @@
 		...restProps
 	}: Props = $props();
 
-	const max = toNumber(restProps.max);
-	const min = toNumber(restProps.min);
-	const step = toNumber(restProps.step);
+	const max = $derived(toNumber(restProps.max));
+	const min = $derived(toNumber(restProps.min));
+	const step = $derived(toNumber(restProps.step));
 	let value = $derived.by(() => {
-		let state = $state(toNumber(anyValue));
+		let state = $state(typeof anyValue === 'undefined' ? limit : toNumber(anyValue));
 		return state;
 	});
-	let valueString = $derived(formatNumber());
+	let valueString = $derived(typeof anyValue === 'undefined' ? '' : numberFormatter.format(value));
 	// svelte-ignore state_referenced_locally
 	let lastValidValue = $state<number>(getValidValue(value));
+	//True when oninput false when onarrows
+	let forceBoundary = $state(false);
 
 	function isValid(value: number): boolean {
 		return value >= min && value <= max;
@@ -45,13 +46,17 @@
 		return isValid(value) ? value : (lastValidValue ?? limit);
 	}
 
+	function getValueWithinLimit(value: number): number {
+		return (limit === min && value < min) || (limit === max && value > max) ? limit : value;
+	}
+
 	function onchange(value: number): void {
 		if (!isValid(value)) {
 			return;
 		}
 		lastValidValue = value;
 
-		onChange(value);
+		onChange(typeof anyValue === 'undefined' && value === limit ? undefined : value);
 	}
 
 	function onkeydown(e: Parameters<KeyboardEventHandler<HTMLInputElement>>[0]) {
@@ -69,22 +74,22 @@
 	async function handleArrows(e: Parameters<KeyboardEventHandler<HTMLInputElement>>[0]) {
 		e.preventDefault();
 		let oldValue = parseNumber((e.target as HTMLInputElement).value);
-		let newValue = 0;
 
 		switch (e.key) {
 			case 'ArrowUp':
-				newValue = oldValue + step;
+				value = getValueWithinLimit(oldValue + step);
+				if (value === limit) {
+					anyValue = undefined;
+				}
 				break;
 			case 'ArrowDown':
-				newValue = oldValue - step;
+				value = getValueWithinLimit(oldValue - step);
+				if (value === limit) {
+					anyValue = undefined;
+				}
 				break;
 		}
-
-		if (newValue >= min && newValue <= max) {
-			value = newValue;
-		} else {
-			value = limit;
-		}
+		console.log(value, oldValue, anyValue);
 
 		onchange(value);
 
@@ -108,14 +113,6 @@
 		return current;
 	}
 
-	function formatNumber(): string {
-		if (value !== limit) {
-			return numberFormatter.format(value);
-		}
-
-		return '';
-	}
-
 	async function oninput(e: Parameters<FormEventHandler<HTMLInputElement>>[0]) {
 		const target = e.target as HTMLInputElement;
 		const newValue = parseNumber(target.value);
@@ -126,17 +123,17 @@
 		}
 
 		try {
-			if (newValue === value) {
+			if (newValue !== limit && newValue === value) {
 				return;
 			}
 
-			value = newValue;
+			value = getValueWithinLimit(newValue);
 
 			onchange(value);
 		} finally {
 			await tick();
 
-			const newStringValue = formatNumber();
+			const newStringValue = numberFormatter.format(value);
 
 			(e.target as HTMLInputElement).value = newStringValue;
 
@@ -152,25 +149,27 @@
 	}
 </script>
 
-<input
-	bind:this={ref}
-	data-slot="input"
-	class={cn(
-		'border-input bg-background selection:bg-primary dark:bg-input/30 selection:text-primary-foreground ring-offset-background placeholder:text-muted-foreground shadow-xs flex h-9 w-full min-w-0 rounded-md border px-3 py-1 text-base outline-none transition-[color,box-shadow] disabled:cursor-not-allowed disabled:opacity-50 md:text-sm',
-		'focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]',
-		'aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive',
-		className
-	)}
-	type="text"
-	pattern="\d*"
-	inputMode="decimal"
-	autoComplete="off"
-	{oninput}
-	{onkeydown}
-	value={valueString}
-	{...{ ...restProps, ...{ min: undefined, max: undefined, step: undefined } }}
-/>
+<div class="flex flex-col justify-start gap-0.5">
+	<input
+		bind:this={ref}
+		data-slot="input"
+		class={cn(
+			'border-input bg-background selection:bg-primary dark:bg-input/30 selection:text-primary-foreground ring-offset-background placeholder:text-muted-foreground shadow-xs flex h-9 w-full min-w-0 rounded-md border px-3 py-1 text-base outline-none transition-[color,box-shadow] disabled:cursor-not-allowed disabled:opacity-50 md:text-sm',
+			'focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]',
+			'aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive',
+			className
+		)}
+		type="text"
+		pattern="\d*"
+		inputMode="decimal"
+		autoComplete="off"
+		{oninput}
+		{onkeydown}
+		value={valueString}
+		{...{ ...restProps, ...{ min: undefined, max: undefined, step: undefined } }}
+	/>
 
-{#if !isValid(value)}
-	{value} is invalid
-{/if}
+	{#if !isValid(value)}
+		<i class="px-2 text-xs text-red-800">{numberFormatter.format(value)} is invalid</i>
+	{/if}
+</div>

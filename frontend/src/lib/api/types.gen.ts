@@ -13,6 +13,11 @@ export type Company = {
     marketPlaceCode?: string;
 };
 
+export type IdAndName = {
+    id?: string;
+    name?: string;
+};
+
 export type Financials = {
     companyId?: string;
     fiscalYear?: number;
@@ -52,11 +57,6 @@ export type Screener = {
     ps?: number;
 };
 
-export type IdAndName = {
-    id?: string;
-    name?: string;
-};
-
 export type FinancialData = {
     capital_expenditures?: number;
     cash_and_equivalents?: number;
@@ -84,6 +84,75 @@ export type DerivedFinancialData = {
     pe?: number;
     ps?: number;
 };
+
+export type IterateFinancialsData = {
+    body?: never;
+    path: {
+        id: string;
+    };
+    query?: {
+        order?: 'asc' | 'desc';
+        orderBy?: 'name';
+        limit?: number;
+        offset?: number;
+        include?: Array<string>;
+        search?: string;
+    };
+    url: '/financials/{id}';
+};
+
+export type IterateFinancialsResponses = {
+    /**
+     * List of Financials items
+     * List of Financials items
+     */
+    200: {
+        /**
+         * Meta data
+         */
+        meta: {
+            total: number;
+        };
+        items: Array<Financials>;
+    };
+};
+
+export type IterateFinancialsResponse = IterateFinancialsResponses[keyof IterateFinancialsResponses];
+
+export type IterateScreenerData = {
+    body?: never;
+    path?: never;
+    query?: {
+        order?: 'asc' | 'desc';
+        orderby?: 'name' | 'magicRank' | 'sector' | 'revenue' | 'cost_of_revenue' | 'gross_operating_profit' | 'ebit' | 'net_income' | 'total_assets' | 'total_liabilities' | 'cash_and_equivalents' | 'short_term_investments' | 'long_term_debt' | 'current_debt' | 'equity' | 'operating_cash_flow' | 'capital_expenditures' | 'free_cash_flow' | 'number_of_shares' | 'ppe' | 'eps' | 'pe' | 'evebit' | 'ps' | 'pb';
+        limit?: number;
+        offset?: number;
+        include?: Array<string>;
+        search?: string;
+        fiscalYear?: number;
+        columns?: Array<string>;
+        revenue?: number;
+    };
+    url: '/screener';
+};
+
+export type IterateScreenerResponses = {
+    /**
+     * List of Screener items
+     * List of Screener items
+     */
+    200: {
+        /**
+         * Meta data
+         */
+        meta: {
+            total: number;
+        };
+        items: Array<Screener>;
+    };
+};
+
+export type IterateScreenerResponse = IterateScreenerResponses[keyof IterateScreenerResponses];
 
 export type IterateCompaniesData = {
     body?: never;
@@ -184,78 +253,6 @@ export type UpdateCompanyResponses = {
 };
 
 export type UpdateCompanyResponse = UpdateCompanyResponses[keyof UpdateCompanyResponses];
-
-export type IterateFinancialsData = {
-    body?: never;
-    path: {
-        id: string;
-    };
-    query?: {
-        order?: 'asc' | 'desc';
-        orderBy?: 'name';
-        limit?: number;
-        offset?: number;
-        include?: Array<string>;
-        search?: string;
-    };
-    url: '/financials/{id}';
-};
-
-export type IterateFinancialsResponses = {
-    /**
-     * List of Financials items
-     * List of Financials items
-     */
-    200: {
-        /**
-         * Meta data
-         */
-        meta: {
-            total: number;
-        };
-        items: Array<Financials>;
-    };
-};
-
-export type IterateFinancialsResponse = IterateFinancialsResponses[keyof IterateFinancialsResponses];
-
-export type IterateScreenerData = {
-    body?: never;
-    path?: never;
-    query?: {
-        order?: 'asc' | 'desc';
-        orderby?: 'name' | 'magicRank' | 'sector' | 'revenue' | 'cost_of_revenue' | 'gross_operating_profit' | 'ebit' | 'net_income' | 'total_assets' | 'total_liabilities' | 'cash_and_equivalents' | 'short_term_investments' | 'long_term_debt' | 'current_debt' | 'equity' | 'operating_cash_flow' | 'capital_expenditures' | 'free_cash_flow' | 'number_of_shares' | 'ppe' | 'eps' | 'pe' | 'evebit' | 'ps' | 'pb';
-        limit?: number;
-        offset?: number;
-        include?: Array<string>;
-        search?: string;
-        fiscalYear?: number;
-        columns?: Array<string>;
-        revenue?: [
-            number,
-            number
-        ];
-    };
-    url: '/screener';
-};
-
-export type IterateScreenerResponses = {
-    /**
-     * List of Screener items
-     * List of Screener items
-     */
-    200: {
-        /**
-         * Meta data
-         */
-        meta: {
-            total: number;
-        };
-        items: Array<Screener>;
-    };
-};
-
-export type IterateScreenerResponse = IterateScreenerResponses[keyof IterateScreenerResponses];
 
 export type ClientOptions = {
     baseUrl: 'http://0.0.0.0:3001' | (string & {});

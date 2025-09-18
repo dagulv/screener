@@ -6,7 +6,7 @@
 	type InputType = Exclude<HTMLInputTypeAttribute, 'file'>;
 
 	type Props = WithElementRef<
-		Omit<HTMLInputAttributes, 'type'> & { limit?: number; onchange?: (value: number) => void } & (
+		Omit<HTMLInputAttributes, 'type'> & { limit?: number; onchange?: (value?: number) => void } & (
 				| { type: 'file'; files?: FileList }
 				| { type?: InputType; files?: undefined }
 			)

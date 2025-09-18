@@ -1,6 +1,8 @@
 package domain
 
-import "github.com/rs/xid"
+import (
+	"github.com/rs/xid"
+)
 
 type Screener struct {
 	CompanyId   xid.ID           `json:"companyId"`
@@ -38,14 +40,15 @@ type Screener struct {
 }
 
 type ScreenerFilter struct {
-	Order      string   `query:"order" enum:"asc,desc" default:"asc"`
-	OrderBy    string   `query:"orderby" enum:"name,magicRank,sector,revenue,cost_of_revenue,gross_operating_profit,ebit,net_income,total_assets,total_liabilities,cash_and_equivalents,short_term_investments,long_term_debt,current_debt,equity,operating_cash_flow,capital_expenditures,free_cash_flow,number_of_shares,ppe,eps,pe,evebit,ps,pb" default:"name"`
-	Limit      int      `query:"limit" min:"1" max:"500" default:"50"`
-	Offset     int      `query:"offset" min:"0"`
-	Include    []xid.ID `query:"include"`
-	Search     string   `query:"search"`
-	FiscalYear int      `query:"fiscalYear"`
-	Columns    []string `query:"columns"`
+	Order      string      `query:"order" enum:"asc,desc" default:"asc"`
+	OrderBy    string      `query:"orderby" enum:"name,magicRank,sector,revenue,cost_of_revenue,gross_operating_profit,ebit,net_income,total_assets,total_liabilities,cash_and_equivalents,short_term_investments,long_term_debt,current_debt,equity,operating_cash_flow,capital_expenditures,free_cash_flow,number_of_shares,ppe,eps,pe,evebit,ps,pb" default:"name"`
+	Limit      int         `query:"limit" min:"1" max:"500" default:"50"`
+	Offset     int         `query:"offset" min:"0"`
+	Include    []xid.ID    `query:"include"`
+	Search     string      `query:"search"`
+	FiscalYear int         `query:"fiscalYear"`
+	Columns    []string    `query:"columns"`
+	Revenue    MinMax[int] `query:"revenue"` //min:"0" max:"1000000"
 }
 
 type ScreenerColumn struct {

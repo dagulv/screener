@@ -117,3 +117,17 @@ func (v Nullable[T]) IsZero() bool {
 func (v Nullable[T]) IsNil() bool {
 	return !v.Valid
 }
+
+// Return a Nullable that is valid if not empty.
+func Optional[T comparable](v T, valid ...bool) Nullable[T] {
+	var empty T
+
+	if len(valid) < 1 || !valid[0] && v == empty {
+		return Nullable[T]{}
+	}
+
+	return Nullable[T]{
+		Content: v,
+		Valid:   true,
+	}
+}

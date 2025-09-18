@@ -52,6 +52,7 @@ export type QueryStringParser = {
 	offset: () => number;
 	page: () => number;
 	search: () => string | undefined;
+	minmax: (key: string) => { min: number | undefined; max: number | undefined } | undefined;
 };
 
 export type Response<T> = { rows: Array<T>; meta: { total: number } };

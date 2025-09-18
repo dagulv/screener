@@ -122,7 +122,9 @@
 		manualFiltering: true,
 		manualSorting: true,
 		manualPagination: true,
-		rowCount: count,
+		get rowCount() {
+			return count;
+		},
 		columns,
 		state: {
 			get pagination() {
@@ -209,7 +211,7 @@
 </script>
 
 <div
-	class="flex h-full min-w-0 max-w-full flex-1 flex-col [--table-filter-header-height:calc(var(--spacing)*8)]"
+	class="sticky top-[calc(var(--header-height)+0.5rem)] flex h-full min-w-0 max-w-full flex-1 flex-col [--table-filter-header-height:calc(var(--spacing)*8)]"
 >
 	<div
 		class="ml-auto flex h-[var(--table-filter-header-height)] min-h-[var(--table-filter-header-height)] items-center gap-1 py-1"
