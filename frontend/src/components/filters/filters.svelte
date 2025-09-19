@@ -38,13 +38,11 @@
 
 	const filters = [
 		{
-			label: 'Revenue',
+			label: 'Revenue (MUSD)',
 			value: 'revenue',
 			categories: ['income-statement'],
 			min: 0,
-			minLabel: '0 MUSD',
-			max: 1_000_000,
-			maxLabel: '1 000 000 MUSD'
+			max: 1_000_000
 		}
 	];
 
@@ -54,24 +52,28 @@
 	);
 </script>
 
-<section>
+<section class="flex h-full gap-4">
 	<h2 class="sr-only">Filter</h2>
-	<section>
-		<h3>Kategorier</h3>
+	<section class="h-full border-r p-4">
+		<h3 class="mb-4 text-xs font-bold uppercase text-gray-400">Categories</h3>
 		<ul
+			class="flex flex-col items-start"
 			onchange={(e) =>
 				(currentCategory =
 					(e.target as HTMLElement).closest('button')?.dataset.category ?? categories[0].value)}
 		>
 			{#each categories as category}
-				<li>
-					<button data-category={category.value}>{category.label}</button>
+				<li class="contents">
+					<button
+						class="w-full flex-1 cursor-pointer rounded-sm px-2 py-1 text-start text-xs transition hover:bg-gray-100"
+						data-category={category.value}>{category.label}</button
+					>
 				</li>
 			{/each}
 		</ul>
 	</section>
-	<section>
-		<h3>Filter</h3>
+	<section class="h-full p-4">
+		<h3 class="mb-4 text-xs font-bold uppercase text-gray-400">Filter</h3>
 		{#if currentFilters.length > 0}
 			<ul>
 				{#each currentFilters as filter}

@@ -34,14 +34,6 @@
 		const maxValue = parseInt(values[1]);
 		if (!isNaN(maxValue)) maxState = maxValue;
 
-		// return {
-		// 	get min() {
-		// 		return minState;
-		// 	},
-		// 	get max() {
-		// 		return maxState;
-		// 	}
-		// };
 		const state = $state([minState, maxState]);
 		return state;
 	});
@@ -51,14 +43,9 @@
 		tick().then(() => (sliderOverride = false));
 		return state;
 	});
-	// let value = $derived.by(() => {
-	// 	let state = $state([min, max]);
-	// 	return state;
-	// });
 
 	function setFilter(minValue?: number, maxValue?: number) {
 		let value = '';
-		console.log(minValue);
 
 		const validMinValue = typeof minValue === 'number' && minValue >= min;
 		const validMaxValue = typeof maxValue === 'number' && maxValue <= max;
@@ -79,9 +66,9 @@
 </script>
 
 <fieldset>
-	<legend>{label}</legend>
+	<legend class="mb-2 text-xs uppercase text-gray-600">{label}</legend>
 
-	<div class="flex flex-col gap-1">
+	<div class="flex flex-col gap-2">
 		<div class="flex w-full items-center justify-between gap-2">
 			<span class="text-xs text-gray-600">{numberFormatter.format(min)}</span>
 			<span class="text-xs text-gray-600">{numberFormatter.format(max) + '+'}</span>
