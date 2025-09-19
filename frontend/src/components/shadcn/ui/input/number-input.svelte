@@ -35,8 +35,6 @@
 	let valueString = $derived(typeof anyValue === 'undefined' ? '' : numberFormatter.format(value));
 	// svelte-ignore state_referenced_locally
 	let lastValidValue = $state<number>(getValidValue(value));
-	//True when oninput false when onarrows
-	let forceBoundary = $state(false);
 
 	function isValid(value: number): boolean {
 		return value >= min && value <= max;
@@ -89,7 +87,6 @@
 				}
 				break;
 		}
-		console.log(value, oldValue, anyValue);
 
 		onchange(value);
 
@@ -128,12 +125,13 @@
 			}
 
 			value = getValueWithinLimit(newValue);
+			anyValue = target.value.length > 0 ? value : undefined;
 
 			onchange(value);
 		} finally {
 			await tick();
 
-			const newStringValue = numberFormatter.format(value);
+			const newStringValue = typeof anyValue === 'undefined' ? '' : numberFormatter.format(value);
 
 			(e.target as HTMLInputElement).value = newStringValue;
 
@@ -160,15 +158,12 @@
 			className
 		)}
 		type="text"
-		pattern="\d*"
-		inputMode="decimal"
 		autoComplete="off"
 		{oninput}
 		{onkeydown}
 		value={valueString}
 		{...{ ...restProps, ...{ min: undefined, max: undefined, step: undefined } }}
 	/>
-
 	{#if !isValid(value)}
 		<i class="px-2 text-xs text-red-800">{numberFormatter.format(value)} is invalid</i>
 	{/if}
