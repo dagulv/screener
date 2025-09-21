@@ -39,19 +39,16 @@ export function queryStringParser(url: URL): QueryStringParser {
 				return;
 			}
 
-			let min: number | undefined = +rawValues[0];
+			let min: number | undefined = parseInt(rawValues[0]);
 			min = isNaN(min) ? undefined : min;
-			let max: number | undefined = +rawValues[1];
+			let max: number | undefined = parseInt(rawValues[1]);
 			max = isNaN(max) ? undefined : max;
 
 			if (typeof min === 'undefined' && typeof max === 'undefined') {
 				return;
 			}
 
-			return {
-				min,
-				max
-			};
+			return `${min ?? ''},${max ?? ''}`;
 		}
 	};
 }

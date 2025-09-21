@@ -85,9 +85,21 @@
 					return;
 				}
 
-				value = v;
+				const minValue = v[0] !== min ? v[0] : undefined;
+				const maxValue = v[1] !== max ? v[1] : undefined;
+
+				value[0] = minValue;
+				value[1] = maxValue;
 			}}
-			onValueCommit={(value) => debounceFilter(value[0], value[1])}
+			onValueCommit={(v) => {
+				const minValue = v[0] !== min ? v[0] : undefined;
+				const maxValue = v[1] !== max ? v[1] : undefined;
+
+				value[0] = minValue;
+				value[1] = maxValue;
+
+				debounceFilter(value[0], value[1]);
+			}}
 		/>
 		<div class="flex w-full items-stretch justify-between gap-2">
 			<Input

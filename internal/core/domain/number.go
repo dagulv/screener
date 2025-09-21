@@ -67,6 +67,12 @@ func (MinMax[T]) TypeDescription(reg *registry.Registry) registry.TypeDescriptio
 				if err != nil {
 					return err
 				}
+				if min.Valid && min.Content > max.Content {
+					min.Valid = false
+				}
+				if max.Valid && max.Content < min.Content {
+					max.Valid = false
+				}
 				*ptr = MinMax[T]{
 					Min: min,
 					Max: max,

@@ -39,12 +39,19 @@ export const load: LayoutLoad = async ({ fetch, url, depends }) => {
 				z.literal('capital_expenditures'),
 				z.literal('free_cash_flow'),
 				z.literal('number_of_shares'),
-				z.literal('ppe'),
 				z.literal('eps'),
-				z.literal('pe'),
 				z.literal('evebit'),
+				z.literal('pb'),
+				z.literal('pe'),
 				z.literal('ps'),
-				z.literal('pb')
+				z.literal('operating_margin'),
+				z.literal('net_margin'),
+				z.literal('roe'),
+				z.literal('roc'),
+				z.literal('liabilities_to_equity'),
+				z.literal('debt_to_ebit'),
+				z.literal('debt_to_assets'),
+				z.literal('cash_conversion')
 			])
 			.default('name')
 	);
@@ -68,8 +75,26 @@ export const load: LayoutLoad = async ({ fetch, url, depends }) => {
 			search: q.search(),
 			include: url.searchParams.get('include')?.split(',') ?? undefined,
 			columns: visibleColumns,
-			// revenue: q.minmax('revenue')
-			revenue: url.searchParams.get('revenue') ?? undefined
+			capital_expenditures: q.minmax('capital_expenditures'),
+			ebit: q.minmax('ebit'),
+			equity: q.minmax('equity'),
+			gross_operating_profit: q.minmax('gross_operating_profit'),
+			net_income: q.minmax('net_income'),
+			operating_cash_flow: q.minmax('operating_cash_flow'),
+			revenue: q.minmax('revenue'),
+			eps: q.minmax('eps'),
+			evebit: q.minmax('evebit'),
+			pb: q.minmax('pb'),
+			pe: q.minmax('pe'),
+			ps: q.minmax('ps'),
+			operating_margin: q.minmax('operating_margin'),
+			net_margin: q.minmax('net_margin'),
+			roe: q.minmax('roe'),
+			roc: q.minmax('roc'),
+			liabilities_to_equity: q.minmax('liabilities_to_equity'),
+			debt_to_ebit: q.minmax('debt_to_ebit'),
+			debt_to_assets: q.minmax('debt_to_assets'),
+			cash_conversion: q.minmax('cash_conversion')
 		}
 	});
 

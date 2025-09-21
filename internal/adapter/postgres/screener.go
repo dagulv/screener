@@ -9,6 +9,11 @@ import (
 	"github.com/webmafia/pg"
 )
 
+const (
+	FloatConstant     = 100
+	TransformConstant = 1_000_000 / FloatConstant
+)
+
 type screenerStore struct {
 	db
 }
@@ -88,22 +93,22 @@ func (s screenerStore) IterateScreener(ctx context.Context, filters domain.Scree
 }
 
 func screenerTransform(screener *domain.Screener) {
-	screener.Revenue.Content *= (1_000_000 / 100)
-	screener.CostOfRevenue.Content *= (1_000_000 / 100)
-	screener.GrossOperatingProfit.Content *= (1_000_000 / 100)
-	screener.Ebit.Content *= (1_000_000 / 100)
-	screener.NetIncome.Content *= (1_000_000 / 100)
-	screener.TotalAssets.Content *= (1_000_000 / 100)
-	screener.TotalLiabilities.Content *= (1_000_000 / 100)
-	screener.CashAndEquivalents.Content *= (1_000_000 / 100)
-	screener.ShortTermInvestments.Content *= (1_000_000 / 100)
-	screener.LongTermDebt.Content *= (1_000_000 / 100)
-	screener.CurrentDebt.Content *= (1_000_000 / 100)
-	screener.Equity.Content *= (1_000_000 / 100)
-	screener.OperatingCashFlow.Content *= (1_000_000 / 100)
-	screener.CapitalExpenditures.Content *= (1_000_000 / 100)
-	screener.FreeCashFlow.Content *= (1_000_000 / 100)
-	screener.PPE.Content *= (1_000_000 / 100)
+	screener.Revenue.Content *= TransformConstant
+	screener.CostOfRevenue.Content *= TransformConstant
+	screener.GrossOperatingProfit.Content *= TransformConstant
+	screener.EBIT.Content *= TransformConstant
+	screener.NetIncome.Content *= TransformConstant
+	screener.TotalAssets.Content *= TransformConstant
+	screener.TotalLiabilities.Content *= TransformConstant
+	screener.CashAndEquivalents.Content *= TransformConstant
+	screener.ShortTermInvestments.Content *= TransformConstant
+	screener.LongTermDebt.Content *= TransformConstant
+	screener.CurrentDebt.Content *= TransformConstant
+	screener.Equity.Content *= TransformConstant
+	screener.OperatingCashFlow.Content *= TransformConstant
+	screener.CapitalExpenditures.Content *= TransformConstant
+	screener.FreeCashFlow.Content *= TransformConstant
+	screener.PPE.Content *= TransformConstant
 }
 
 func screenerOrderBy(orderBy string) any {
@@ -127,7 +132,7 @@ func screenerOrderBy(orderBy string) any {
 	case "revenue", "cost_of_revenue", "gross_operating_profit", "ebit", "net_income", "total_assets", "total_liabilities", "cash_and_equivalents", "short_term_investments", "long_term_debt", "current_debt", "equity", "operating_cash_flow", "capital_expenditures", "free_cash_flow", "number_of_shares", "ppe":
 		return f.Col(orderBy)
 		// Derived financials
-	case "eps", "pe", "evebit", "ps", "pb":
+	case "eps", "pe", "evebit", "ps", "pb", "operating_margin", "net_margin", "roe", "roc", "liabilities_to_equity", "debt_to_ebit", "debt_to_assets", "cash_conversion":
 		return df.Col(orderBy)
 	default:
 		return orderBy
@@ -138,16 +143,148 @@ func screenerFilter(filters domain.ScreenerFilter) pg.QueryEncoder {
 	// m := MagicFormulaRankings.Alias("m")
 	f := Financials.Alias("f")
 	// sec := Sector.Alias("sec")
-	// df := DerivedFinancials.Alias("df")
+	df := DerivedFinancials.Alias("df")
 
 	cond := pg.And()
 
-	if filters.Revenue.Min.Valid {
-		cond.And(pg.Gte(f.Col("revenue"), filters.Revenue.Min))
+	if filters.CapitalExpenditures.Min.Valid {
+		cond.And(pg.Gte(f.Col("capital_expenditures"), filters.CapitalExpenditures.Min.Content*FloatConstant))
+	}
+	if filters.CapitalExpenditures.Max.Valid {
+		cond.And(pg.Lte(f.Col("capital_expenditures"), filters.CapitalExpenditures.Max.Content*FloatConstant))
 	}
 
+	if filters.EBIT.Min.Valid {
+		cond.And(pg.Gte(f.Col("ebit"), filters.EBIT.Min.Content*FloatConstant))
+	}
+	if filters.EBIT.Max.Valid {
+		cond.And(pg.Lte(f.Col("ebit"), filters.EBIT.Max.Content*FloatConstant))
+	}
+
+	if filters.Equity.Min.Valid {
+		cond.And(pg.Gte(f.Col("equity"), filters.Equity.Min.Content*FloatConstant))
+	}
+	if filters.Equity.Max.Valid {
+		cond.And(pg.Lte(f.Col("equity"), filters.Equity.Max.Content*FloatConstant))
+	}
+
+	if filters.GrossOperatingProfit.Min.Valid {
+		cond.And(pg.Gte(f.Col("gross_operating_profit"), filters.GrossOperatingProfit.Min.Content*FloatConstant))
+	}
+	if filters.GrossOperatingProfit.Max.Valid {
+		cond.And(pg.Lte(f.Col("gross_operating_profit"), filters.GrossOperatingProfit.Max.Content*FloatConstant))
+	}
+
+	if filters.NetIncome.Min.Valid {
+		cond.And(pg.Gte(f.Col("net_income"), filters.NetIncome.Min.Content*FloatConstant))
+	}
+	if filters.NetIncome.Max.Valid {
+		cond.And(pg.Lte(f.Col("net_income"), filters.NetIncome.Max.Content*FloatConstant))
+	}
+
+	if filters.OperatingCashFlow.Min.Valid {
+		cond.And(pg.Gte(f.Col("operating_cash_flow"), filters.OperatingCashFlow.Min.Content*FloatConstant))
+	}
+	if filters.OperatingCashFlow.Max.Valid {
+		cond.And(pg.Lte(f.Col("operating_cash_flow"), filters.OperatingCashFlow.Max.Content*FloatConstant))
+	}
+
+	if filters.Revenue.Min.Valid {
+		cond.And(pg.Gte(f.Col("revenue"), filters.Revenue.Min.Content*FloatConstant))
+	}
 	if filters.Revenue.Max.Valid {
-		cond.And(pg.Lte(f.Col("revenue"), filters.Revenue.Max))
+		cond.And(pg.Lte(f.Col("revenue"), filters.Revenue.Max.Content*FloatConstant))
+	}
+
+	if filters.EPS.Min.Valid {
+		cond.And(pg.Gte(df.Col("eps"), filters.EPS.Min))
+	}
+	if filters.EPS.Max.Valid {
+		cond.And(pg.Lte(df.Col("eps"), filters.EPS.Max))
+	}
+
+	if filters.EVEBIT.Min.Valid {
+		cond.And(pg.Gte(df.Col("evebit"), filters.EVEBIT.Min))
+	}
+	if filters.EVEBIT.Max.Valid {
+		cond.And(pg.Lte(df.Col("evebit"), filters.EVEBIT.Max))
+	}
+
+	if filters.PB.Min.Valid {
+		cond.And(pg.Gte(df.Col("pb"), filters.PB.Min))
+	}
+	if filters.PB.Max.Valid {
+		cond.And(pg.Lte(df.Col("pb"), filters.PB.Max))
+	}
+
+	if filters.PE.Min.Valid {
+		cond.And(pg.Gte(df.Col("pe"), filters.PE.Min))
+	}
+	if filters.PE.Max.Valid {
+		cond.And(pg.Lte(df.Col("pe"), filters.PE.Max))
+	}
+
+	if filters.PS.Min.Valid {
+		cond.And(pg.Gte(df.Col("ps"), filters.PS.Min))
+	}
+	if filters.PS.Max.Valid {
+		cond.And(pg.Lte(df.Col("ps"), filters.PS.Max))
+	}
+
+	if filters.OperatingMargin.Min.Valid {
+		cond.And(pg.Gte(df.Col("operating_margin"), filters.OperatingMargin.Min))
+	}
+	if filters.OperatingMargin.Max.Valid {
+		cond.And(pg.Lte(df.Col("operating_margin"), filters.OperatingMargin.Max))
+	}
+
+	if filters.NetMargin.Min.Valid {
+		cond.And(pg.Gte(df.Col("net_margin"), filters.NetMargin.Min))
+	}
+	if filters.NetMargin.Max.Valid {
+		cond.And(pg.Lte(df.Col("net_margin"), filters.NetMargin.Max))
+	}
+
+	if filters.ROE.Min.Valid {
+		cond.And(pg.Gte(df.Col("roe"), filters.ROE.Min))
+	}
+	if filters.ROE.Max.Valid {
+		cond.And(pg.Lte(df.Col("roe"), filters.ROE.Max))
+	}
+
+	if filters.ROC.Min.Valid {
+		cond.And(pg.Gte(df.Col("roc"), filters.ROC.Min))
+	}
+	if filters.ROC.Max.Valid {
+		cond.And(pg.Lte(df.Col("roc"), filters.ROC.Max))
+	}
+
+	if filters.LiabilitiesToEquity.Min.Valid {
+		cond.And(pg.Gte(df.Col("liabilities_to_equity"), filters.LiabilitiesToEquity.Min))
+	}
+	if filters.LiabilitiesToEquity.Max.Valid {
+		cond.And(pg.Lte(df.Col("liabilities_to_equity"), filters.LiabilitiesToEquity.Max))
+	}
+
+	if filters.DebtToEBIT.Min.Valid {
+		cond.And(pg.Gte(df.Col("debt_to_ebit"), filters.DebtToEBIT.Min))
+	}
+	if filters.DebtToEBIT.Max.Valid {
+		cond.And(pg.Lte(df.Col("debt_to_ebit"), filters.DebtToEBIT.Max))
+	}
+
+	if filters.DebtToAssets.Min.Valid {
+		cond.And(pg.Gte(df.Col("debt_to_assets"), filters.DebtToAssets.Min))
+	}
+	if filters.DebtToAssets.Max.Valid {
+		cond.And(pg.Lte(df.Col("debt_to_assets"), filters.DebtToAssets.Max))
+	}
+
+	if filters.CashConversion.Min.Valid {
+		cond.And(pg.Gte(df.Col("cash_conversion"), filters.CashConversion.Min))
+	}
+	if filters.CashConversion.Max.Valid {
+		cond.And(pg.Lte(df.Col("cash_conversion"), filters.CashConversion.Max))
 	}
 
 	return cond
@@ -194,7 +331,7 @@ func screenerQuery(filters domain.ScreenerFilter, a pg.Alias) (columns, []pg.Que
 			}
 
 		// Derived financials
-		case "eps", "pe", "evebit", "ps", "pb":
+		case "eps", "pe", "evebit", "ps", "pb", "operating_margin", "net_margin", "roe", "roc", "liabilities_to_equity", "debt_to_ebit", "debt_to_assets", "cash_conversion":
 			cols = append(cols, df.Col(c))
 			if join := tryAddTable(tables, DerivedFinancials, a, df, filters); join != nil {
 				joins = append(joins, join)
@@ -238,7 +375,7 @@ func screenerScanColumns(screener *domain.Screener, cols []string) []any {
 		case "gross_operating_profit":
 			scans = append(scans, &screener.GrossOperatingProfit)
 		case "ebit":
-			scans = append(scans, &screener.Ebit)
+			scans = append(scans, &screener.EBIT)
 		case "net_income":
 			scans = append(scans, &screener.NetIncome)
 		case "total_assets":
@@ -268,15 +405,31 @@ func screenerScanColumns(screener *domain.Screener, cols []string) []any {
 
 		// Derived financials
 		case "eps":
-			scans = append(scans, &screener.Eps)
+			scans = append(scans, &screener.EPS)
 		case "pe":
-			scans = append(scans, &screener.Pe)
+			scans = append(scans, &screener.PE)
 		case "evebit":
-			scans = append(scans, &screener.Evebit)
+			scans = append(scans, &screener.EVEBIT)
 		case "ps":
-			scans = append(scans, &screener.Ps)
+			scans = append(scans, &screener.PS)
 		case "pb":
-			scans = append(scans, &screener.Pb)
+			scans = append(scans, &screener.PB)
+		case "operating_margin":
+			scans = append(scans, &screener.OperatingMargin)
+		case "net_margin":
+			scans = append(scans, &screener.NetMargin)
+		case "roe":
+			scans = append(scans, &screener.ROE)
+		case "roc":
+			scans = append(scans, &screener.ROC)
+		case "liabilities_to_equity":
+			scans = append(scans, &screener.LiabilitiesToEquity)
+		case "debt_to_ebit":
+			scans = append(scans, &screener.DebtToEbit)
+		case "debt_to_assets":
+			scans = append(scans, &screener.DebtToAssets)
+		case "cash_conversion":
+			scans = append(scans, &screener.CashConversion)
 		}
 	}
 

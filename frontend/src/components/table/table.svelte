@@ -277,14 +277,16 @@
 			</Table.Body>
 		</Table.Root>
 		<div class="flex h-[var(--footer-height)] items-center justify-end gap-2 border-t px-3 py-1">
-			<div class="text-muted-foreground h-full flex-1 content-center text-xs">
-				{table.getRowCount()} total row(s)
-			</div>
 			<div class="flex h-full items-center gap-2">
 				<div class="text-muted-foreground flex-1 content-center text-xs">
 					{tableState.pagination.pageIndex * tableState.pagination.pageSize + 1}
 					-
-					{(tableState.pagination.pageIndex + 1) * tableState.pagination.pageSize}
+					{Math.min(
+						(tableState.pagination.pageIndex + 1) * tableState.pagination.pageSize,
+						table.getRowCount()
+					)}
+					of
+					{table.getRowCount()}
 				</div>
 				<Button
 					variant="outline"

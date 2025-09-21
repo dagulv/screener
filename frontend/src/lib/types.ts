@@ -52,7 +52,7 @@ export type QueryStringParser = {
 	offset: () => number;
 	page: () => number;
 	search: () => string | undefined;
-	minmax: (key: string) => { min: number | undefined; max: number | undefined } | undefined;
+	minmax: (key: string) => string | undefined;
 };
 
 export type Response<T> = { rows: Array<T>; meta: { total: number } };
@@ -63,3 +63,11 @@ export type ValueLabel<T> = {
 };
 export type Currency = 'SEK' | 'EUR' | 'DKK' | 'ISK' | 'USD';
 export type CountryCode = 'se' | 'dk' | 'fi' | 'is';
+
+export type Filter = {
+	label: string;
+	value: string;
+	categories: string[];
+	min: number;
+	max: number;
+};

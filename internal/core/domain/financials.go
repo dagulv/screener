@@ -2,6 +2,10 @@ package domain
 
 import "github.com/rs/xid"
 
+const (
+	TaxRate = 20.6
+)
+
 type Financials struct {
 	CompanyID   xid.ID               `json:"companyId"`
 	FiscalYear  int                  `json:"fiscalYear"`
@@ -30,13 +34,21 @@ type FinancialData struct {
 	TotalLiabilities     int `json:"total_liabilities"`
 }
 
+// Derived financials
 type DerivedFinancialData struct {
-	// Derived financials
-	EPS    Nullable[float64] `json:"eps"`
-	EVEBIT Nullable[float64] `json:"evebit"`
-	PB     Nullable[float64] `json:"pb"`
-	PE     Nullable[float64] `json:"pe"`
-	PS     Nullable[float64] `json:"ps"`
+	EPS                 Nullable[float64] `json:"eps"`
+	EVEBIT              Nullable[float64] `json:"evebit"`
+	PB                  Nullable[float64] `json:"pb"`
+	PE                  Nullable[float64] `json:"pe"`
+	PS                  Nullable[float64] `json:"ps"`
+	OperatingMargin     Nullable[float64] `json:"operating_margin"`
+	NetMargin           Nullable[float64] `json:"net_margin"`
+	ROE                 Nullable[float64] `json:"roe"`
+	ROC                 Nullable[float64] `json:"roc"`
+	LiabilitiesToEquity Nullable[float64] `json:"liabilities_to_equity"`
+	DebtToEbit          Nullable[float64] `json:"debt_to_ebit"`
+	DebtToAssets        Nullable[float64] `json:"debt_to_assets"`
+	CashConversion      Nullable[float64] `json:"cash_conversion"`
 }
 
 type FinancialFilter struct {

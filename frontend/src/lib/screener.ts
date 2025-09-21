@@ -31,7 +31,15 @@ export const derivedFinancials: Record<
 	pe: { label: 'P/E', style: 'decimal' },
 	evebit: { label: 'EV/EBIT', style: 'decimal' },
 	ps: { label: 'P/S', style: 'decimal' },
-	pb: { label: 'P/B', style: 'decimal' }
+	pb: { label: 'P/B', style: 'decimal' },
+	operating_margin: { label: 'Operating margin', style: 'decimal' },
+	net_margin: { label: 'Net margin', style: 'decimal' },
+	roe: { label: 'ROE', style: 'decimal' },
+	roc: { label: 'ROC', style: 'decimal' },
+	liabilities_to_equity: { label: 'L/E', style: 'decimal' },
+	debt_to_ebit: { label: 'D/EBIT', style: 'decimal' },
+	debt_to_assets: { label: 'D/A', style: 'decimal' },
+	cash_conversion: { label: 'CCR', style: 'decimal' }
 };
 
 export const metrics: Record<string, { label: string }> = {
