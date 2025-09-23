@@ -178,14 +178,16 @@
 	);
 </script>
 
-<section class="flex h-full gap-4">
+<section class="no-scrollbar flex h-full flex-col gap-0 overflow-auto md:flex-row">
 	<h2 class="sr-only">Filter</h2>
-	<section class="h-full border-r p-4">
+	<section
+		class="h-max w-full border-b p-4 md:sticky md:top-0 md:h-full md:w-auto md:basis-40 md:border-r"
+	>
 		<h3 class="mb-4 px-1 text-xs font-bold uppercase text-gray-400">Categories</h3>
 		<!-- svelte-ignore a11y_click_events_have_key_events -->
 		<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
 		<ul
-			class="flex flex-col items-start gap-1"
+			class="flex w-full snap-x snap-mandatory items-start gap-1 overflow-x-auto scroll-smooth md:flex-col"
 			onclick={(e) => {
 				currentCategory =
 					(e.target as HTMLElement).closest('button')?.dataset.category ?? categories[0].value;
@@ -195,7 +197,7 @@
 				<li class="contents">
 					<button
 						class={[
-							'w-full flex-1 cursor-pointer rounded-sm px-2 py-1 text-start text-xs transition hover:bg-gray-100',
+							'w-full flex-1 shrink-0 cursor-pointer snap-start text-nowrap rounded-sm px-2 py-1 text-start text-xs transition hover:bg-gray-100 md:text-wrap',
 							currentCategory === category.value && 'bg-gray-100'
 						]}
 						data-category={category.value}>{category.label}</button
@@ -204,10 +206,10 @@
 			{/each}
 		</ul>
 	</section>
-	<section class="flex h-full flex-col p-4">
+	<section class="flex-4 flex flex-col p-4">
 		<h3 class="mb-4 px-1 text-xs font-bold uppercase text-gray-400">Filter</h3>
 		{#if currentFilters.length > 0}
-			<ul class="flex flex-1 flex-col gap-6 overflow-auto px-1">
+			<ul class=" flex flex-1 flex-col gap-6 px-1">
 				{#each currentFilters as filter}
 					<li class="contents">
 						<Filter {...filter} />

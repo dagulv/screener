@@ -22,6 +22,7 @@
 	import { tick } from 'svelte';
 	import * as Sheet from '$components/shadcn/ui/sheet/index.js';
 	import Filters from '$components/filters/filters.svelte';
+	import Input from '$components/shadcn/ui/input/input.svelte';
 
 	let {
 		id,
@@ -54,6 +55,8 @@
 	}
 
 	const urlUpdater = newURLUpdater({ page });
+
+	const s = $derived(page.url.searchParams.get('s') ?? '');
 
 	const columns: ColumnDef<TData>[] = [
 		// TODO: Add checkbox when its needed.
@@ -211,25 +214,37 @@
 </script>
 
 <div
-	class="sticky top-[calc(var(--header-height)+0.5rem)] flex h-full min-w-0 max-w-full flex-1 flex-col [--table-filter-header-height:calc(var(--spacing)*8)]"
+	class="sticky top-[calc(var(--header-height)+0.5rem)] flex h-full min-w-0 max-w-full flex-1 flex-col [--table-filter-header-height:calc(var(--spacing)*10)]"
 >
 	<div
-		class="ml-auto flex h-[var(--table-filter-header-height)] min-h-[var(--table-filter-header-height)] items-center gap-1 py-1"
+		class="flex h-[var(--table-filter-header-height)] min-h-[var(--table-filter-header-height)] flex-wrap items-stretch justify-between gap-1 py-1"
 	>
-		<Sheet.Root>
-			<Sheet.Trigger>
-				{#snippet child({ props })}
-					<Button variant="outline" size="icon" class="h-full" {...props}>
-						<Settings2 />
-					</Button>
-				{/snippet}
-			</Sheet.Trigger>
-			<Sheet.Content class="sm:max-w-lg">
-				<Filters />
-			</Sheet.Content>
-		</Sheet.Root>
+		<div class="flex shrink-0 items-center gap-1">
+			<Input
+				placeholder="Search companies..."
+				class="mr-auto h-full"
+				id="search-companies"
+				value={s}
+				oninput={(e) => urlUpdater.query('s', e.currentTarget.value)}
+			/>
+		</div>
 
-		<Settings class="h-full" {table} onchange={onchangeColumnToggle} />
+		<div class="flex shrink-0 items-center gap-1">
+			<Sheet.Root>
+				<Sheet.Trigger>
+					{#snippet child({ props })}
+						<Button variant="outline" size="icon" class="h-full" {...props}>
+							<Settings2 />
+						</Button>
+					{/snippet}
+				</Sheet.Trigger>
+				<Sheet.Content class="sm:max-w-lg">
+					<Filters />
+				</Sheet.Content>
+			</Sheet.Root>
+
+			<Settings class="h-full" {table} onchange={onchangeColumnToggle} />
+		</div>
 	</div>
 	<section
 		class={[
@@ -317,10 +332,10 @@
 	section {
 		:global {
 			table {
-				@apply grid h-full w-full select-none select-auto auto-rows-auto grid-cols-[repeat(var(--column-count),1fr)];
+				@apply grid h-full w-full select-auto auto-rows-max grid-cols-[repeat(var(--column-count),1fr)];
 
 				thead {
-					@apply contents;
+					@apply contents select-none;
 
 					tr th {
 						@apply border-b border-gray-100;

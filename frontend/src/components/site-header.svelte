@@ -22,6 +22,6 @@
 		<h1 class="hidden lg:block">
 			{company.current?.name}
 		</h1>
-		<SearchForm class="w-full sm:ml-auto sm:w-auto" />
+		<!-- <SearchForm class="w-full sm:ml-auto sm:w-auto" /> -->
 	</div>
 </header>

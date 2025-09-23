@@ -140,12 +140,18 @@ func screenerOrderBy(orderBy string) any {
 }
 
 func screenerFilter(filters domain.ScreenerFilter) pg.QueryEncoder {
+	c := Company.Alias("c")
+	cond := pg.And()
+	if filters.Search != "" {
+		cond.And(pg.Search(c.Col("ts"), filters.Search, pg.SearchOptions{
+			Preprocessor: pg.PrefixSearch,
+		}))
+		return cond
+	}
 	// m := MagicFormulaRankings.Alias("m")
 	f := Financials.Alias("f")
 	// sec := Sector.Alias("sec")
 	df := DerivedFinancials.Alias("df")
-
-	cond := pg.And()
 
 	if filters.CapitalExpenditures.Min.Valid {
 		cond.And(pg.Gte(f.Col("capital_expenditures"), filters.CapitalExpenditures.Min.Content*FloatConstant))

@@ -22,7 +22,34 @@
 
 	const urlUpdater = newURLUpdater({ page });
 
-	const step = Math.max(Math.round((max - min) / 1000), 1);
+	const minimumStepAmount = 10;
+	const minimumStep = 0.05;
+	const maximumStep = 1000;
+	const step = $derived.by(() => {
+		const range = max - min;
+		let step = Math.max(
+			Math.min(Math.round((max - min) / minimumStepAmount), maximumStep),
+			minimumStep
+		);
+
+		if (step > 1) {
+			while (range % step !== 0 && step > minimumStep) {
+				step--;
+			}
+			while (range % step !== 0 && step < maximumStep) {
+				step++;
+			}
+		} else {
+			let steps = Math.round(range / step);
+
+			step = range / steps;
+
+			if (step < minimumStep) step = minimumStep;
+			if (step > maximumStep) step = maximumStep;
+		}
+		return step;
+	});
+
 	let sliderOverride = true;
 	let value = $derived.by(() => {
 		const values = page.url.searchParams.get(key)?.split(',') ?? [];
@@ -85,8 +112,8 @@
 					return;
 				}
 
-				const minValue = v[0] !== min ? v[0] : undefined;
-				const maxValue = v[1] !== max ? v[1] : undefined;
+				const minValue = v[0] > min ? v[0] : undefined;
+				const maxValue = v[1] < max ? v[1] : undefined;
 
 				value[0] = minValue;
 				value[1] = maxValue;
