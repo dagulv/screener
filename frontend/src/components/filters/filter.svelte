@@ -56,9 +56,9 @@
 		let minState = undefined;
 		let maxState = undefined;
 
-		const minValue = parseInt(values[0]);
+		const minValue = parseFloat(values[0]);
 		if (!isNaN(minValue)) minState = minValue;
-		const maxValue = parseInt(values[1]);
+		const maxValue = parseFloat(values[1]);
 		if (!isNaN(maxValue)) maxState = maxValue;
 
 		const state = $state([minState, maxState]);

@@ -41,7 +41,7 @@
 	}
 
 	function getValidValue(value: number): number {
-		return isValid(value) ? value : (lastValidValue ?? limit);
+		return isValid(value) ? value : limit;
 	}
 
 	function getValueWithinLimit(value: number): number {

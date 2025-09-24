@@ -177,7 +177,7 @@ class NumberParser {
 
 const numberParser = new NumberParser('en-US');
 
-export function toNumber(input: unknown, isFloat = false): number {
+export function toNumber(input: unknown): number {
 	return numberParser.parse(input);
 }
 
