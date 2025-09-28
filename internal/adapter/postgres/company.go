@@ -283,7 +283,15 @@ func (s companyStore) IterateFinancials(ctx context.Context, filters domain.Fina
 				df.evebit,
 				df.pb,
 				df.pe,
-				df.ps
+				df.ps,
+				df.operating_margin,
+				df.net_margin,
+				df.roe,
+				df.roc,
+				df.liabilities_to_equity,
+				df.debt_to_ebit,
+				df.debt_to_assets,
+				df.cash_conversion
 			from %T
 			left join %T on df.company_id = f.company_id and df.fiscal_year = f.fiscal_year
 			where %c
@@ -325,6 +333,14 @@ func (s companyStore) IterateFinancials(ctx context.Context, filters domain.Fina
 				&financials.DerivedData.PB,
 				&financials.DerivedData.PE,
 				&financials.DerivedData.PS,
+				&financials.DerivedData.OperatingMargin,
+				&financials.DerivedData.NetMargin,
+				&financials.DerivedData.ROE,
+				&financials.DerivedData.ROC,
+				&financials.DerivedData.LiabilitiesToEquity,
+				&financials.DerivedData.DebtToEbit,
+				&financials.DerivedData.DebtToAssets,
+				&financials.DerivedData.CashConversion,
 			); err != nil {
 				yield(nil, err)
 				return
