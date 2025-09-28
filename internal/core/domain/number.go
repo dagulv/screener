@@ -54,7 +54,7 @@ func (MinMax[T]) TypeDescription(reg *registry.Registry) registry.TypeDescriptio
 		Schema: func(tags reflect.StructTag) (schema openapi.Schema, err error) {
 			return reg.Schema(reflect.TypeFor[T](), tags)
 		},
-		Decoder: func(tags reflect.StructTag) (registry.Decoder, error) {
+		Parser: func(tags reflect.StructTag) (registry.Parser, error) {
 			return func(p unsafe.Pointer, s string) error {
 				ptr := (*MinMax[T])(p)
 

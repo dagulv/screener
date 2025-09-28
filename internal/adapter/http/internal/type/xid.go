@@ -26,7 +26,7 @@ func (i idType) TypeDescription(reg *registry.Registry) registry.TypeDescription
 		Schema: func(tags reflect.StructTag) (openapi.Schema, error) {
 			return &openapi.String{}, nil
 		},
-		Decoder: func(tags reflect.StructTag) (registry.Decoder, error) {
+		Parser: func(tags reflect.StructTag) (registry.Parser, error) {
 			return func(p unsafe.Pointer, s string) (err error) {
 				id := (*xid.ID)(p)
 				*id, err = xid.FromString(s)

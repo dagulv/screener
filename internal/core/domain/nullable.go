@@ -92,8 +92,8 @@ func (Nullable[T]) TypeDescription(reg *registry.Registry) registry.TypeDescript
 		Schema: func(tags reflect.StructTag) (schema openapi.Schema, err error) {
 			return reg.Schema(reflect.TypeFor[T](), tags)
 		},
-		Decoder: func(tags reflect.StructTag) (registry.Decoder, error) {
-			v, err := reg.Decoder(reflect.TypeFor[T](), tags)
+		Parser: func(tags reflect.StructTag) (registry.Parser, error) {
+			v, err := reg.Parser(reflect.TypeFor[T](), tags)
 
 			if err != nil {
 				return nil, err
