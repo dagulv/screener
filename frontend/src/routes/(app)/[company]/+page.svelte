@@ -47,12 +47,11 @@
 	{company.current?.name}
 </h1>
 
-<div class="grid grid-cols-[repeat(auto-fill,minmax(14rem,1fr))] gap-4">
+<div class="grid grid-cols-[repeat(auto-fill,minmax(14rem,1fr))] gap-2">
 	{#each properties as property}
 		<ChartBar
 			label={`${property.label} (${data.company?.currency?.name})`}
-			class="h-32"
-			height={128}
+			class="h-40 w-full rounded-sm border border-gray-200 bg-gray-50 p-2"
 			data={formatData(data.financials?.items ?? [], property.value as keyof FinancialData)}
 			style="decimal"
 		/>

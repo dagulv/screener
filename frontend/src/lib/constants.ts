@@ -15,7 +15,7 @@ const numberFormatLocale: Intl.LocalesArgument = 'en-US';
 const numberFormatOptions: Intl.NumberFormatOptions = {
 	maximumFractionDigits: 2
 };
-const numberPrefixes = { B: 1_000_000_000, M: 1_000_000, K: 1_000 };
+const numberPrefixes = { T: 1_000_000_000_000, B: 1_000_000_000, M: 1_000_000, K: 1_000 };
 const currencies: Currency[] = ['SEK', 'EUR', 'DKK', 'ISK'];
 export const numberFormatter = new Intl.NumberFormat(numberFormatLocale);
 export const flags: Record<CountryCode, string> = {
@@ -39,20 +39,27 @@ export const formatters = {
 	decimal: new Intl.NumberFormat(numberFormatLocale, { style: 'decimal', ...numberFormatOptions })
 };
 
-const defaultOpts: { style: Intl.NumberFormatOptions['style']; currency?: Currency } = {
+const defaultOpts: {
+	style: Intl.NumberFormatOptions['style'];
+	currency?: Currency;
+	digits: number;
+} = {
 	style: 'currency',
-	currency: 'SEK'
+	currency: 'SEK',
+	digits: 3
 };
 export function formatNumber(
 	number: number,
-	newOpts?: { style: Intl.NumberFormatOptions['style']; currency?: Currency }
+	newOpts?: { style: Intl.NumberFormatOptions['style']; currency?: Currency; digits?: number }
 ): string {
 	const opts = { ...defaultOpts, ...newOpts };
 
 	let prefix = '';
 
+	const absNumber = Math.abs(number);
+	number = capNumber(number, opts.digits);
 	for (const [key, value] of Object.entries(numberPrefixes)) {
-		if (Math.abs(number) >= value) {
+		if (absNumber >= value) {
 			number /= value;
 			prefix = key;
 			break;
@@ -67,5 +74,23 @@ export function formatNumber(
 		return formatters.currency[opts.currency].format(number) + ' ' + prefix + opts.currency;
 	}
 
-	return formatters[opts.style].format(number) + ' ' + prefix;
+	return formatters[opts.style].format(number) + prefix;
+}
+
+function capNumber(num: number, digits: number) {
+	if (num === 0) {
+		return 0;
+	}
+
+	const sign = Math.sign(num);
+	num = Math.abs(num);
+
+	const len = Math.floor(Math.log10(num)) + 1;
+
+	if (len <= digits) {
+		return sign * Number(num.toPrecision(digits));
+	}
+
+	const factor = 10 ** (len - digits);
+	return sign * Math.floor(num / factor) * factor;
 }

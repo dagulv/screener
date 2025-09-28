@@ -148,7 +148,7 @@ func screenerFilter(filters domain.ScreenerFilter) pg.QueryEncoder {
 		}))
 		return cond
 	}
-	// m := MagicFormulaRankings.Alias("m")
+	m := MagicFormulaRankings.Alias("m")
 	f := Financials.Alias("f")
 	// sec := Sector.Alias("sec")
 	df := DerivedFinancials.Alias("df")
@@ -291,6 +291,13 @@ func screenerFilter(filters domain.ScreenerFilter) pg.QueryEncoder {
 	}
 	if filters.CashConversion.Max.Valid {
 		cond.And(pg.Lte(df.Col("cash_conversion"), filters.CashConversion.Max))
+	}
+
+	if filters.MagicRank.Min.Valid {
+		cond.And(pg.Gte(m.Col("rank"), filters.MagicRank.Min))
+	}
+	if filters.MagicRank.Max.Valid {
+		cond.And(pg.Lte(m.Col("rank"), filters.MagicRank.Max))
 	}
 
 	return cond

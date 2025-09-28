@@ -94,7 +94,8 @@ export const load: LayoutLoad = async ({ fetch, url, depends }) => {
 			liabilities_to_equity: q.minmax('liabilities_to_equity'),
 			debt_to_ebit: q.minmax('debt_to_ebit'),
 			debt_to_assets: q.minmax('debt_to_assets'),
-			cash_conversion: q.minmax('cash_conversion')
+			cash_conversion: q.minmax('cash_conversion'),
+			magicRank: q.minmax('magicRank')
 		}
 	});
 

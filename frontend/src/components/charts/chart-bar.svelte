@@ -25,7 +25,9 @@
 	} = $props();
 
 	const chartConfig = {
-		value: { label: label, color: 'var(--chart-2)' }
+		get value() {
+			return { label: label, color: 'var(--chart-2)' };
+		}
 	} satisfies Chart.ChartConfig;
 </script>
 
@@ -34,9 +36,13 @@
 		labels={{ offset: 4 }}
 		renderContext="svg"
 		{data}
-		xScale={scaleBand().padding(0.25)}
+		xScale={scaleBand().padding(0.4)}
 		x="label"
 		y="value"
+		yNice={4}
+		yBaseline={0}
+		yPadding={[16, 0]}
+		padding={{ top: 8, bottom: 16 }}
 		series={[{ key: 'value', label: label, color: chartConfig.value.color }]}
 		axis="x"
 		rule={false}
@@ -58,7 +64,8 @@
 				format: (d) => {
 					return formatNumber(d, { style, currency });
 				}
-			}
+			},
+			xAxis: { labelPlacement: 'end' }
 		}}
 	>
 		{#snippet tooltip()}

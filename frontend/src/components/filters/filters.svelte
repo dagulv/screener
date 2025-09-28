@@ -165,7 +165,7 @@
 		},
 		{
 			label: 'Magic Formula',
-			value: 'magicFormula',
+			value: 'magicRank',
 			categories: ['strategies'],
 			min: 1,
 			max: 1_000

@@ -80,6 +80,7 @@ type ScreenerFilter struct {
 	DebtToEBIT          MinMax[float32] `query:"debt_to_ebit"`          // min="0" max="3"
 	DebtToAssets        MinMax[float32] `query:"debt_to_assets"`        // min="0" max="1"
 	CashConversion      MinMax[float32] `query:"cash_conversion"`       // min="0" max="2"
+	MagicRank           MinMax[int]     `query:"magicRank"`             // min="1" max="1000"
 }
 
 type ScreenerColumn struct {

@@ -28,14 +28,14 @@
 	});
 </script>
 
-<section class="m-auto flex w-max flex-col items-center justify-center">
+<section class={['m-auto flex flex-col items-center justify-center', className]}>
 	<span class="text-xs">{label}</span>
 	<div
 		bind:this={ref}
 		data-chart={chartId}
 		data-slot="chart"
 		class={cn(
-			'text-x box-content flex aspect-video justify-center overflow-visible pt-4',
+			'text-x box-content flex h-full w-full justify-center overflow-visible pt-4',
 			// Overrides
 			//
 			// Stroke around dots/marks when hovering
@@ -74,8 +74,7 @@
 			'[&_.lc-axis-tick-label]:fill-muted-foreground [&_.lc-axis-tick-label]:font-normal',
 			'[&_.lc-tooltip-rects-g]:fill-transparent',
 			'[&_.lc-layout-svg-g]:fill-transparent',
-			'[&_.lc-root-container]:w-full',
-			className
+			'[&_.lc-root-container]:w-full'
 		)}
 		{...restProps}
 	>
