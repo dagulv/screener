@@ -2,24 +2,29 @@ package service
 
 import (
 	"context"
+	"io"
 	"iter"
+	"strconv"
 
 	"github.com/dagulv/screener/internal/core/domain"
 	"github.com/dagulv/screener/internal/core/port"
 	"github.com/rs/xid"
+	"github.com/xuri/excelize/v2"
 )
 
 type Company struct {
 	store         port.Company
 	currencyStore port.Currency
 	sectorStore   port.Sector
+	screenerStore port.Screener
 }
 
-func NewCompany(store port.Company, currencyStore port.Currency, sectorStore port.Sector) Company {
+func NewCompany(store port.Company, currencyStore port.Currency, sectorStore port.Sector, screenerStore port.Screener) Company {
 	return Company{
 		store:         store,
 		currencyStore: currencyStore,
 		sectorStore:   sectorStore,
+		screenerStore: screenerStore,
 	}
 }
 
@@ -258,4 +263,441 @@ func (s Company) CountFinancials(ctx context.Context, filters domain.FinancialFi
 
 func (s Company) IterateFinancials(ctx context.Context, filters domain.FinancialFilter) iter.Seq2[*domain.Financials, error] {
 	return s.store.IterateFinancials(ctx, filters)
+}
+
+const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+func (s Company) DownloadFinancials(ctx context.Context, filters domain.ScreenerFilter, w io.Writer) (err error) {
+	financials := s.screenerStore.IterateScreener(ctx, filters)
+
+	if err != nil {
+		return
+	}
+
+	f := excelize.NewFile()
+	defer f.Close()
+
+	i := 1
+	for financial, err := range financials {
+		if err != nil {
+			return err
+		}
+		if i == 1 {
+			if err = setTitle(f, financial, i); err != nil {
+				return err
+			}
+			i++
+		}
+		j := 0
+		if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), financial.Name); err != nil {
+			return err
+		}
+		j++
+		if value, ok := financialField(financial.MagicRank); ok {
+			if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), value); err != nil {
+				return err
+			}
+			j++
+		}
+		if value, ok := financialField(financial.Sector); ok {
+			if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), value); err != nil {
+				return err
+			}
+			j++
+		}
+		if value, ok := financialField(financial.CapitalExpenditures); ok {
+			if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), value); err != nil {
+				return err
+			}
+			j++
+		}
+		if value, ok := financialField(financial.CashAndEquivalents); ok {
+			if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), value); err != nil {
+				return err
+			}
+			j++
+		}
+		if value, ok := financialField(financial.CostOfRevenue); ok {
+			if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), value); err != nil {
+				return err
+			}
+			j++
+		}
+		if value, ok := financialField(financial.CurrentDebt); ok {
+			if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), value); err != nil {
+				return err
+			}
+			j++
+		}
+		if value, ok := financialField(financial.EBIT); ok {
+			if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), value); err != nil {
+				return err
+			}
+			j++
+		}
+		if value, ok := financialField(financial.Equity); ok {
+			if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), value); err != nil {
+				return err
+			}
+			j++
+		}
+		if value, ok := financialField(financial.FreeCashFlow); ok {
+			if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), value); err != nil {
+				return err
+			}
+			j++
+		}
+		if value, ok := financialField(financial.GrossOperatingProfit); ok {
+			if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), value); err != nil {
+				return err
+			}
+			j++
+		}
+		if value, ok := financialField(financial.LongTermDebt); ok {
+			if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), value); err != nil {
+				return err
+			}
+			j++
+		}
+		if value, ok := financialField(financial.NetIncome); ok {
+			if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), value); err != nil {
+				return err
+			}
+			j++
+		}
+		if value, ok := financialField(financial.NumberOfShares); ok {
+			if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), value); err != nil {
+				return err
+			}
+			j++
+		}
+		if value, ok := financialField(financial.OperatingCashFlow); ok {
+			if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), value); err != nil {
+				return err
+			}
+			j++
+		}
+		if value, ok := financialField(financial.PPE); ok {
+			if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), value); err != nil {
+				return err
+			}
+			j++
+		}
+		if value, ok := financialField(financial.Revenue); ok {
+			if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), value); err != nil {
+				return err
+			}
+			j++
+		}
+		if value, ok := financialField(financial.ShortTermInvestments); ok {
+			if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), value); err != nil {
+				return err
+			}
+			j++
+		}
+		if value, ok := financialField(financial.TotalAssets); ok {
+			if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), value); err != nil {
+				return err
+			}
+			j++
+		}
+		if value, ok := financialField(financial.TotalLiabilities); ok {
+			if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), value); err != nil {
+				return err
+			}
+			j++
+		}
+		if value, ok := financialField(financial.EPS); ok {
+			if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), value); err != nil {
+				return err
+			}
+			j++
+		}
+		if value, ok := financialField(financial.EVEBIT); ok {
+			if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), value); err != nil {
+				return err
+			}
+			j++
+		}
+		if value, ok := financialField(financial.PB); ok {
+			if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), value); err != nil {
+				return err
+			}
+			j++
+		}
+		if value, ok := financialField(financial.PE); ok {
+			if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), value); err != nil {
+				return err
+			}
+			j++
+		}
+		if value, ok := financialField(financial.PS); ok {
+			if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), value); err != nil {
+				return err
+			}
+			j++
+		}
+		if value, ok := financialField(financial.OperatingMargin); ok {
+			if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), value); err != nil {
+				return err
+			}
+			j++
+		}
+		if value, ok := financialField(financial.NetMargin); ok {
+			if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), value); err != nil {
+				return err
+			}
+			j++
+		}
+		if value, ok := financialField(financial.ROE); ok {
+			if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), value); err != nil {
+				return err
+			}
+			j++
+		}
+		if value, ok := financialField(financial.ROC); ok {
+			if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), value); err != nil {
+				return err
+			}
+			j++
+		}
+		if value, ok := financialField(financial.LiabilitiesToEquity); ok {
+			if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), value); err != nil {
+				return err
+			}
+			j++
+		}
+		if value, ok := financialField(financial.DebtToEbit); ok {
+			if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), value); err != nil {
+				return err
+			}
+			j++
+		}
+		if value, ok := financialField(financial.DebtToAssets); ok {
+			if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), value); err != nil {
+				return err
+			}
+			j++
+		}
+		if value, ok := financialField(financial.CashConversion); ok {
+			if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), value); err != nil {
+				return err
+			}
+			j++
+		}
+
+		i++
+	}
+
+	return f.Write(w)
+}
+
+func setTitle(f *excelize.File, financial *domain.Screener, i int) (err error) {
+	j := 0
+	if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), "Name"); err != nil {
+		return err
+	}
+	j++
+	if _, ok := financialField(financial.MagicRank); ok {
+		if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), "Magic Formula"); err != nil {
+			return err
+		}
+		j++
+	}
+	if _, ok := financialField(financial.Sector); ok {
+		if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), "Sector"); err != nil {
+			return err
+		}
+		j++
+	}
+	if _, ok := financialField(financial.CapitalExpenditures); ok {
+		if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), "Capital Expenditures"); err != nil {
+			return err
+		}
+		j++
+	}
+	if _, ok := financialField(financial.CashAndEquivalents); ok {
+		if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), "Cash and Equivalents"); err != nil {
+			return err
+		}
+		j++
+	}
+	if _, ok := financialField(financial.CostOfRevenue); ok {
+		if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), "Cost of Revenue"); err != nil {
+			return err
+		}
+		j++
+	}
+	if _, ok := financialField(financial.CurrentDebt); ok {
+		if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), "Current Debt"); err != nil {
+			return err
+		}
+		j++
+	}
+	if _, ok := financialField(financial.EBIT); ok {
+		if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), "EBIT"); err != nil {
+			return err
+		}
+		j++
+	}
+	if _, ok := financialField(financial.Equity); ok {
+		if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), "Equity"); err != nil {
+			return err
+		}
+		j++
+	}
+	if _, ok := financialField(financial.FreeCashFlow); ok {
+		if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), "Free Cash Flow"); err != nil {
+			return err
+		}
+		j++
+	}
+	if _, ok := financialField(financial.GrossOperatingProfit); ok {
+		if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), "Gross Operating Profit"); err != nil {
+			return err
+		}
+		j++
+	}
+	if _, ok := financialField(financial.LongTermDebt); ok {
+		if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), "Long Term Debt"); err != nil {
+			return err
+		}
+		j++
+	}
+	if _, ok := financialField(financial.NetIncome); ok {
+		if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), "Net Income"); err != nil {
+			return err
+		}
+		j++
+	}
+	if _, ok := financialField(financial.NumberOfShares); ok {
+		if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), "Number of Shares"); err != nil {
+			return err
+		}
+		j++
+	}
+	if _, ok := financialField(financial.OperatingCashFlow); ok {
+		if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), "Operating Cash Flow"); err != nil {
+			return err
+		}
+		j++
+	}
+	if _, ok := financialField(financial.PPE); ok {
+		if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), "PPE"); err != nil {
+			return err
+		}
+		j++
+	}
+	if _, ok := financialField(financial.Revenue); ok {
+		if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), "Revenue"); err != nil {
+			return err
+		}
+		j++
+	}
+	if _, ok := financialField(financial.ShortTermInvestments); ok {
+		if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), "Short Term Investments"); err != nil {
+			return err
+		}
+		j++
+	}
+	if _, ok := financialField(financial.TotalAssets); ok {
+		if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), "Total Assets"); err != nil {
+			return err
+		}
+		j++
+	}
+	if _, ok := financialField(financial.TotalLiabilities); ok {
+		if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), "Total Liabilities"); err != nil {
+			return err
+		}
+		j++
+	}
+	if _, ok := financialField(financial.EPS); ok {
+		if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), "EPS"); err != nil {
+			return err
+		}
+		j++
+	}
+	if _, ok := financialField(financial.EVEBIT); ok {
+		if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), "EV/EBIT"); err != nil {
+			return err
+		}
+		j++
+	}
+	if _, ok := financialField(financial.PB); ok {
+		if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), "P/B"); err != nil {
+			return err
+		}
+		j++
+	}
+	if _, ok := financialField(financial.PE); ok {
+		if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), "P/E"); err != nil {
+			return err
+		}
+		j++
+	}
+	if _, ok := financialField(financial.PS); ok {
+		if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), "P/S"); err != nil {
+			return err
+		}
+		j++
+	}
+	if _, ok := financialField(financial.OperatingMargin); ok {
+		if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), "Operating Margin"); err != nil {
+			return err
+		}
+		j++
+	}
+	if _, ok := financialField(financial.NetMargin); ok {
+		if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), "Net Margin"); err != nil {
+			return err
+		}
+		j++
+	}
+	if _, ok := financialField(financial.ROE); ok {
+		if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), "ROE"); err != nil {
+			return err
+		}
+		j++
+	}
+	if _, ok := financialField(financial.ROC); ok {
+		if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), "ROC"); err != nil {
+			return err
+		}
+		j++
+	}
+	if _, ok := financialField(financial.LiabilitiesToEquity); ok {
+		if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), "Liabilities to Equity"); err != nil {
+			return err
+		}
+		j++
+	}
+	if _, ok := financialField(financial.DebtToEbit); ok {
+		if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), "Debt to Ebit"); err != nil {
+			return err
+		}
+		j++
+	}
+	if _, ok := financialField(financial.DebtToAssets); ok {
+		if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), "Debt to Assets"); err != nil {
+			return err
+		}
+		j++
+	}
+	if _, ok := financialField(financial.CashConversion); ok {
+		if err = f.SetCellValue("Sheet1", string(alphabet[j])+strconv.Itoa(i), "Cash Conversion Rate"); err != nil {
+			return err
+		}
+		j++
+	}
+	return
+}
+
+func financialField[T any](field domain.Nullable[T]) (T, bool) {
+	if field.Valid {
+		return field.Content, true
+	}
+
+	var t T
+	return t, false
 }

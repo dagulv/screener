@@ -13,7 +13,7 @@
 	import * as Table from '$components/shadcn/ui/table';
 	import Button from '$components/shadcn/ui/button/button.svelte';
 	import FlexRender from '$components/shadcn/ui/data-table/flex-render.svelte';
-	import { ChevronLeft, ChevronRight, Settings2 } from '@lucide/svelte';
+	import { ChevronLeft, ChevronRight, Download, Settings2 } from '@lucide/svelte';
 	import { orderKey, pageKey, perPage, sortKey } from '$lib/constants';
 	import Settings from './settings.svelte';
 	import { newURLUpdater } from '$lib/utils.svelte';
@@ -23,6 +23,8 @@
 	import * as Sheet from '$components/shadcn/ui/sheet/index.js';
 	import Filters from '$components/filters/filters.svelte';
 	import Input from '$components/shadcn/ui/input/input.svelte';
+	import { downloadFinancials } from '$lib/api';
+	import { queryStringParser } from '$lib/query';
 
 	let {
 		id,
@@ -211,6 +213,53 @@
 	function onclickRow(row: Row<TData>) {
 		urlUpdater.with({ keepParams: true }).url(`/${row.original.companyId}`);
 	}
+
+	async function ondownloadFinancials() {
+		const q = queryStringParser(page.url);
+		const data = await downloadFinancials({
+			query: {
+				orderby: 'name',
+				order: q.order(),
+				offset: q.offset(),
+				limit: q.limit(),
+				search: q.search(),
+				include: page.url.searchParams.get('include')?.split(',') ?? undefined,
+				columns: Array.from(visibleColumns),
+				capital_expenditures: q.minmax('capital_expenditures'),
+				ebit: q.minmax('ebit'),
+				equity: q.minmax('equity'),
+				gross_operating_profit: q.minmax('gross_operating_profit'),
+				net_income: q.minmax('net_income'),
+				operating_cash_flow: q.minmax('operating_cash_flow'),
+				revenue: q.minmax('revenue'),
+				eps: q.minmax('eps'),
+				evebit: q.minmax('evebit'),
+				pb: q.minmax('pb'),
+				pe: q.minmax('pe'),
+				ps: q.minmax('ps'),
+				operating_margin: q.minmax('operating_margin'),
+				net_margin: q.minmax('net_margin'),
+				roe: q.minmax('roe'),
+				roc: q.minmax('roc'),
+				liabilities_to_equity: q.minmax('liabilities_to_equity'),
+				debt_to_ebit: q.minmax('debt_to_ebit'),
+				debt_to_assets: q.minmax('debt_to_assets'),
+				cash_conversion: q.minmax('cash_conversion'),
+				magicRank: q.minmax('magicRank')
+			}
+		});
+
+		if (!data.data) {
+			return;
+		}
+
+		const url = URL.createObjectURL(data.data);
+		const a = document.createElement('a');
+		a.href = url;
+		const iso = new Date().toISOString().split('T')[0].replace(/-/g, '-');
+		a.download = 'stock-scout-financials' + '-' + iso + '.xls';
+		a.click();
+	}
 </script>
 
 <div
@@ -230,6 +279,9 @@
 		</div>
 
 		<div class="flex shrink-0 items-center gap-1">
+			<Button variant="outline" size="icon" onclick={ondownloadFinancials}>
+				<Download />
+			</Button>
 			<Sheet.Root>
 				<Sheet.Trigger>
 					{#snippet child({ props })}

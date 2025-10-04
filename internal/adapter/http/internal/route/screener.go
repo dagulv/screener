@@ -12,7 +12,7 @@ type Screener struct {
 	Service service.Screener
 }
 
-func (s Screener) IterateScreener(api *papi.API) error {
+func (r Screener) IterateScreener(api *papi.API) error {
 	type req struct {
 		Filter domain.ScreenerFilter
 	}
@@ -32,7 +32,7 @@ func (s Screener) IterateScreener(api *papi.API) error {
 				in.Filter.FiscalYear = y - 1
 			}
 
-			count, err := s.Service.CountScreener(ctx, in.Filter)
+			count, err := r.Service.CountScreener(ctx, in.Filter)
 
 			if err != nil {
 				return
@@ -40,7 +40,7 @@ func (s Screener) IterateScreener(api *papi.API) error {
 
 			out.SetTotal(count)
 
-			return out.WriteAll(s.Service.IterateScreener(ctx, in.Filter))
+			return out.WriteAll(r.Service.IterateScreener(ctx, in.Filter))
 		},
 	})
 }

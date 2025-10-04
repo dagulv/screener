@@ -1,6 +1,9 @@
 package domain
 
-import "github.com/rs/xid"
+import (
+	"github.com/rs/xid"
+	"github.com/webmafia/papi"
+)
 
 const (
 	TaxRate = 20.6
@@ -58,4 +61,16 @@ type FinancialFilter struct {
 	Offset  int      `query:"offset" min:"0"`
 	Include []xid.ID `query:"include"`
 	Search  string   `query:"search"`
+}
+
+var _ papi.FileType = FinancialsFile{}
+
+type FinancialsFile struct{}
+
+// Binary implements papi.FileType.
+func (FinancialsFile) Binary() bool { return true }
+
+// ContentType implements papi.FileType.
+func (p FinancialsFile) ContentType() string {
+	return "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
 }

@@ -17,7 +17,7 @@ export const load: LayoutLoad = async ({ fetch, url, depends }) => {
 	const q = queryStringParser(url);
 	let visibleColumns = localStorage.getItem(`table-columns/${screenerKey}`)?.split(',');
 
-	const orderby: NonNullable<IterateScreenerData['query']>['orderby'] = q.orderby(
+	const orderby = q.orderby(
 		z
 			.union([
 				z.literal('name'),

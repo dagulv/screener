@@ -37,11 +37,11 @@ func start(ctx context.Context) (err error) {
 	sectorStore := postgres.NewSector(db)
 	companyStore := postgres.NewCompany(db)
 	// scraper := scraper.NewScraper(ctx, env, currencyStore, companyStore)
-	screener := postgres.NewScreener(db)
+	screenerStore := postgres.NewScreener(db)
 
 	service := http.Service{
-		Company:  service.NewCompany(companyStore, currencyStore, sectorStore),
-		Screener: service.NewScreener(screener),
+		Company:  service.NewCompany(companyStore, currencyStore, sectorStore, screenerStore),
+		Screener: service.NewScreener(screenerStore),
 	}
 
 	api, err := http.NewApi(env, service, nil)

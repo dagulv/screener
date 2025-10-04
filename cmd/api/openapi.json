@@ -261,6 +261,381 @@
                 }
             }
         },
+        "/financials/download": {
+            "get": {
+                "summary": "Download financials",
+                "operationId": "download-financials",
+                "parameters": [
+                    {
+                        "name": "order",
+                        "in": "query",
+                        "description": "",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "asc",
+                                "desc"
+                            ],
+                            "default": "asc"
+                        }
+                    },
+                    {
+                        "name": "orderby",
+                        "in": "query",
+                        "description": "",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "name",
+                                "magicRank",
+                                "sector",
+                                "revenue",
+                                "cost_of_revenue",
+                                "gross_operating_profit",
+                                "ebit",
+                                "net_income",
+                                "total_assets",
+                                "total_liabilities",
+                                "cash_and_equivalents",
+                                "short_term_investments",
+                                "long_term_debt",
+                                "current_debt",
+                                "equity",
+                                "operating_cash_flow",
+                                "capital_expenditures",
+                                "free_cash_flow",
+                                "number_of_shares",
+                                "ppe",
+                                "eps",
+                                "pe",
+                                "evebit",
+                                "ps",
+                                "pb"
+                            ],
+                            "default": "name"
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "default": 50,
+                            "minimum": 1,
+                            "maximum": 500
+                        }
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 9223372036854775807
+                        }
+                    },
+                    {
+                        "name": "include",
+                        "in": "query",
+                        "description": "",
+                        "required": false,
+                        "explode": false,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    {
+                        "name": "search",
+                        "in": "query",
+                        "description": "",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "fiscalYear",
+                        "in": "query",
+                        "description": "",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "minimum": -9223372036854775808,
+                            "maximum": 9223372036854775807
+                        }
+                    },
+                    {
+                        "name": "columns",
+                        "in": "query",
+                        "description": "",
+                        "required": false,
+                        "explode": false,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    {
+                        "name": "capital_expenditures",
+                        "in": "query",
+                        "description": "",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "minimum": -9223372036854775808,
+                            "maximum": 9223372036854775807
+                        }
+                    },
+                    {
+                        "name": "ebit",
+                        "in": "query",
+                        "description": "",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "minimum": -9223372036854775808,
+                            "maximum": 9223372036854775807
+                        }
+                    },
+                    {
+                        "name": "equity",
+                        "in": "query",
+                        "description": "",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "minimum": -9223372036854775808,
+                            "maximum": 9223372036854775807
+                        }
+                    },
+                    {
+                        "name": "gross_operating_profit",
+                        "in": "query",
+                        "description": "",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "minimum": -9223372036854775808,
+                            "maximum": 9223372036854775807
+                        }
+                    },
+                    {
+                        "name": "net_income",
+                        "in": "query",
+                        "description": "",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "minimum": -9223372036854775808,
+                            "maximum": 9223372036854775807
+                        }
+                    },
+                    {
+                        "name": "operating_cash_flow",
+                        "in": "query",
+                        "description": "",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "minimum": -9223372036854775808,
+                            "maximum": 9223372036854775807
+                        }
+                    },
+                    {
+                        "name": "revenue",
+                        "in": "query",
+                        "description": "",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "minimum": -9223372036854775808,
+                            "maximum": 9223372036854775807
+                        }
+                    },
+                    {
+                        "name": "eps",
+                        "in": "query",
+                        "description": "",
+                        "required": false,
+                        "schema": {
+                            "type": "number",
+                            "minimum": -3.4028235e+38,
+                            "maximum": 3.4028235e+38
+                        }
+                    },
+                    {
+                        "name": "evebit",
+                        "in": "query",
+                        "description": "",
+                        "required": false,
+                        "schema": {
+                            "type": "number",
+                            "minimum": -3.4028235e+38,
+                            "maximum": 3.4028235e+38
+                        }
+                    },
+                    {
+                        "name": "pb",
+                        "in": "query",
+                        "description": "",
+                        "required": false,
+                        "schema": {
+                            "type": "number",
+                            "minimum": -3.4028235e+38,
+                            "maximum": 3.4028235e+38
+                        }
+                    },
+                    {
+                        "name": "pe",
+                        "in": "query",
+                        "description": "",
+                        "required": false,
+                        "schema": {
+                            "type": "number",
+                            "minimum": -3.4028235e+38,
+                            "maximum": 3.4028235e+38
+                        }
+                    },
+                    {
+                        "name": "ps",
+                        "in": "query",
+                        "description": "",
+                        "required": false,
+                        "schema": {
+                            "type": "number",
+                            "minimum": -3.4028235e+38,
+                            "maximum": 3.4028235e+38
+                        }
+                    },
+                    {
+                        "name": "operating_margin",
+                        "in": "query",
+                        "description": "",
+                        "required": false,
+                        "schema": {
+                            "type": "number",
+                            "minimum": -3.4028235e+38,
+                            "maximum": 3.4028235e+38
+                        }
+                    },
+                    {
+                        "name": "net_margin",
+                        "in": "query",
+                        "description": "",
+                        "required": false,
+                        "schema": {
+                            "type": "number",
+                            "minimum": -3.4028235e+38,
+                            "maximum": 3.4028235e+38
+                        }
+                    },
+                    {
+                        "name": "roe",
+                        "in": "query",
+                        "description": "",
+                        "required": false,
+                        "schema": {
+                            "type": "number",
+                            "minimum": -3.4028235e+38,
+                            "maximum": 3.4028235e+38
+                        }
+                    },
+                    {
+                        "name": "roc",
+                        "in": "query",
+                        "description": "",
+                        "required": false,
+                        "schema": {
+                            "type": "number",
+                            "minimum": -3.4028235e+38,
+                            "maximum": 3.4028235e+38
+                        }
+                    },
+                    {
+                        "name": "liabilities_to_equity",
+                        "in": "query",
+                        "description": "",
+                        "required": false,
+                        "schema": {
+                            "type": "number",
+                            "minimum": -3.4028235e+38,
+                            "maximum": 3.4028235e+38
+                        }
+                    },
+                    {
+                        "name": "debt_to_ebit",
+                        "in": "query",
+                        "description": "",
+                        "required": false,
+                        "schema": {
+                            "type": "number",
+                            "minimum": -3.4028235e+38,
+                            "maximum": 3.4028235e+38
+                        }
+                    },
+                    {
+                        "name": "debt_to_assets",
+                        "in": "query",
+                        "description": "",
+                        "required": false,
+                        "schema": {
+                            "type": "number",
+                            "minimum": -3.4028235e+38,
+                            "maximum": 3.4028235e+38
+                        }
+                    },
+                    {
+                        "name": "cash_conversion",
+                        "in": "query",
+                        "description": "",
+                        "required": false,
+                        "schema": {
+                            "type": "number",
+                            "minimum": -3.4028235e+38,
+                            "maximum": 3.4028235e+38
+                        }
+                    },
+                    {
+                        "name": "magicRank",
+                        "in": "query",
+                        "description": "",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "minimum": -9223372036854775808,
+                            "maximum": 9223372036854775807
+                        }
+                    }
+                ],
+                "tags": [
+                    "Company"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Response",
+                        "content": {
+                            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet": {
+                                "schema": {
+                                    "type": "string",
+                                    "format": "binary"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "/financials/{id}": {
             "get": {
                 "summary": "Iterate financials",

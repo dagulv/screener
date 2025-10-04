@@ -1,6 +1,8 @@
 package route
 
 import (
+	"time"
+
 	"github.com/dagulv/screener/internal/core/domain"
 	"github.com/dagulv/screener/internal/core/service"
 	"github.com/rs/xid"
@@ -11,7 +13,7 @@ type Company struct {
 	Service service.Company
 }
 
-func (s Company) CreateCompany(api *papi.API) error {
+func (r Company) CreateCompany(api *papi.API) error {
 	type req struct {
 		Body domain.Company `body:"json"`
 	}
@@ -19,14 +21,14 @@ func (s Company) CreateCompany(api *papi.API) error {
 	return papi.POST(api, papi.Route[req, domain.Company]{
 		Path: "/companies",
 		Handler: func(ctx *papi.RequestCtx, in *req, out *domain.Company) (err error) {
-			err = s.Service.Create(ctx, &in.Body)
+			err = r.Service.Create(ctx, &in.Body)
 			*out = in.Body
 			return
 		},
 	})
 }
 
-func (s Company) GetCompany(api *papi.API) error {
+func (r Company) GetCompany(api *papi.API) error {
 	type req struct {
 		CompanyID xid.ID `param:"id"`
 	}
@@ -35,12 +37,12 @@ func (s Company) GetCompany(api *papi.API) error {
 		Path: "/companies/{id}",
 		Handler: func(ctx *papi.RequestCtx, in *req, out *domain.Company) (err error) {
 			out.ID = in.CompanyID
-			return s.Service.Read(ctx, out)
+			return r.Service.Read(ctx, out)
 		},
 	})
 }
 
-func (s Company) UpdateCompany(api *papi.API) error {
+func (r Company) UpdateCompany(api *papi.API) error {
 	type req struct {
 		CompanyID xid.ID         `param:"id"`
 		Body      domain.Company `body:"json"`
@@ -56,14 +58,14 @@ func (s Company) UpdateCompany(api *papi.API) error {
 			// }
 
 			in.Body.ID = in.CompanyID
-			err = s.Service.Update(ctx, &in.Body)
+			err = r.Service.Update(ctx, &in.Body)
 			*out = in.Body
 			return
 		},
 	})
 }
 
-func (s Company) DeleteCompany(api *papi.API) error {
+func (r Company) DeleteCompany(api *papi.API) error {
 	type req struct {
 		CompanyId xid.ID
 	}
@@ -71,12 +73,12 @@ func (s Company) DeleteCompany(api *papi.API) error {
 	return papi.DELETE(api, papi.Route[req, domain.Company]{
 		Path: "/companies/{id}",
 		Handler: func(ctx *papi.RequestCtx, in *req, out *domain.Company) (err error) {
-			return s.Service.Delete(ctx, in.CompanyId)
+			return r.Service.Delete(ctx, in.CompanyId)
 		},
 	})
 }
 
-func (s Company) IterateCompanies(api *papi.API) error {
+func (r Company) IterateCompanies(api *papi.API) error {
 	type req struct {
 		Filter domain.CompanyFilter
 	}
@@ -90,7 +92,7 @@ func (s Company) IterateCompanies(api *papi.API) error {
 			// 	return
 			// }
 
-			count, err := s.Service.Count(ctx, in.Filter)
+			count, err := r.Service.Count(ctx, in.Filter)
 
 			if err != nil {
 				return
@@ -98,12 +100,12 @@ func (s Company) IterateCompanies(api *papi.API) error {
 
 			out.SetTotal(count)
 
-			return out.WriteAll(s.Service.Iterate(ctx, in.Filter))
+			return out.WriteAll(r.Service.Iterate(ctx, in.Filter))
 		},
 	})
 }
 
-func (s Company) IterateFinancials(api *papi.API) error {
+func (r Company) IterateFinancials(api *papi.API) error {
 	type req struct {
 		CompanyId xid.ID `param:"id"`
 		Filter    domain.FinancialFilter
@@ -120,7 +122,7 @@ func (s Company) IterateFinancials(api *papi.API) error {
 
 			in.Filter.Include = []xid.ID{in.CompanyId}
 
-			count, err := s.Service.CountFinancials(ctx, in.Filter)
+			count, err := r.Service.CountFinancials(ctx, in.Filter)
 
 			if err != nil {
 				return
@@ -128,7 +130,32 @@ func (s Company) IterateFinancials(api *papi.API) error {
 
 			out.SetTotal(count)
 
-			return out.WriteAll(s.Service.IterateFinancials(ctx, in.Filter))
+			return out.WriteAll(r.Service.IterateFinancials(ctx, in.Filter))
+		},
+	})
+}
+
+func (r Company) DownloadFinancials(api *papi.API) (err error) {
+	type req struct {
+		Filter domain.ScreenerFilter
+	}
+
+	return papi.GET(api, papi.Route[req, papi.File[domain.FinancialsFile]]{
+		Path: "/financials/download",
+
+		Handler: func(ctx *papi.RequestCtx, in *req, out *papi.File[domain.FinancialsFile]) (err error) {
+			if in.Filter.FiscalYear == 0 {
+				now := time.Now()
+				y, _, _ := now.Date()
+				in.Filter.FiscalYear = y - 1
+			}
+
+			in.Filter.OrderBy = "name"
+			in.Filter.Limit = 1000
+
+			out.SetFilename("financials.xlsx")
+
+			return r.Service.DownloadFinancials(ctx, in.Filter, out.Writer())
 		},
 	})
 }
