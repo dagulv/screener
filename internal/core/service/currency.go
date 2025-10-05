@@ -32,14 +32,14 @@ func NewCurrency(store port.Currency, env *env.Environment, scheduler gocron.Sch
 }
 
 func (s Currency) StartJobs(ctx context.Context) (err error) {
-	_, err = s.scheduler.NewJob(gocron.MonthlyJob(3, gocron.NewDaysOfTheMonth(-1), gocron.NewAtTimes(gocron.NewAtTime(23, 0, 0))), gocron.NewTask(s.FetchCurrencyRates), gocron.WithContext(ctx))
+	currencyRatesJob, err := s.scheduler.NewJob(gocron.MonthlyJob(3, gocron.NewDaysOfTheMonth(-1), gocron.NewAtTimes(gocron.NewAtTime(23, 0, 0))), gocron.NewTask(s.FetchCurrencyRates), gocron.WithContext(ctx))
 	if err != nil {
 		return
 	}
 	s.scheduler.Start()
-	// if err = job.RunNow(); err != nil {
-	// 	return
-	// }
+	if err = currencyRatesJob.RunNow(); err != nil {
+		return
+	}
 	return
 }
 
@@ -103,14 +103,14 @@ func (s Currency) FetchCurrencyRates(ctx context.Context) (err error) {
 					continue
 				}
 
-				if quartersSum == 10 {
+				if quartersSum == 6 {
 					break
 				}
 
 				quartersSum += r.Quarter
 			}
 
-			if quartersSum < 10 {
+			if quartersSum < 6 {
 				skip = false
 				break
 			}
