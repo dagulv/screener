@@ -16,4 +16,6 @@ type Currency interface {
 	UpdateCurrency(ctx context.Context, currency *domain.IDAndName) error
 	DeleteCurrency(ctx context.Context, currencyId xid.ID) error
 	IterateCurrencies(ctx context.Context, filters domain.IDAndNameFilter) iter.Seq2[*domain.IDAndName, error]
+	IterateCurrencyRates(ctx context.Context, filters domain.IDAndNameFilter) iter.Seq2[*domain.CurrencyRate, error]
+	SetCurrencyRates(ctx context.Context, currencyRates []domain.CurrencyRate) (err error)
 }

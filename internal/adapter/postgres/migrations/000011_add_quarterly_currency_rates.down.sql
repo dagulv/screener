@@ -1,0 +1,1 @@
+drop table quarterly_currency_rates;

@@ -5,6 +5,7 @@ import (
 	"log"
 	"sync"
 
+	"github.com/dagulv/screener/internal/adapter/cron"
 	"github.com/dagulv/screener/internal/adapter/http"
 	"github.com/dagulv/screener/internal/adapter/postgres"
 	"github.com/dagulv/screener/internal/core/service"
@@ -38,6 +39,18 @@ func start(ctx context.Context) (err error) {
 	companyStore := postgres.NewCompany(db)
 	// scraper := scraper.NewScraper(ctx, env, currencyStore, companyStore)
 	screenerStore := postgres.NewScreener(db)
+
+	scheduler, err := cron.New()
+
+	if err != nil {
+		return
+	}
+
+	currencyService := service.NewCurrency(currencyStore, env, scheduler)
+
+	if err = currencyService.StartJobs(ctx); err != nil {
+		return
+	}
 
 	service := http.Service{
 		Company:  service.NewCompany(companyStore, currencyStore, sectorStore, screenerStore),

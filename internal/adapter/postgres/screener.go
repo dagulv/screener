@@ -49,6 +49,7 @@ func (s screenerStore) IterateScreener(ctx context.Context, filters domain.Scree
 	return func(yield func(*domain.Screener, error) bool) {
 		c := Company.Alias("c")
 		curr := Currency.Alias("curr")
+		// cr := QuarterlyCurrencyRates.Alias("cr")
 
 		cols, joins := screenerQuery(filters, c)
 		cond := screenerFilter(filters)
@@ -128,10 +129,13 @@ func screenerOrderBy(orderBy string) any {
 		return sec.Col("name")
 	case "currency":
 		return curr.Col("name")
-	// Static financials
-	case "revenue", "cost_of_revenue", "gross_operating_profit", "ebit", "net_income", "total_assets", "total_liabilities", "cash_and_equivalents", "short_term_investments", "long_term_debt", "current_debt", "equity", "operating_cash_flow", "capital_expenditures", "free_cash_flow", "number_of_shares", "ppe":
+	// Static financials with currency
+	case "revenue", "cost_of_revenue", "gross_operating_profit", "ebit", "net_income", "total_assets", "total_liabilities", "cash_and_equivalents", "short_term_investments", "long_term_debt", "current_debt", "equity", "operating_cash_flow", "capital_expenditures", "free_cash_flow", "ppe":
+		return pg.Col("f." + orderBy + "::real / cr.rate")
+	// Static financials without currency
+	case "number_of_shares":
 		return f.Col(orderBy)
-		// Derived financials
+	// Derived financials
 	case "eps", "pe", "evebit", "ps", "pb", "operating_margin", "net_margin", "roe", "roc", "liabilities_to_equity", "debt_to_ebit", "debt_to_assets", "cash_conversion":
 		return df.Col(orderBy)
 	default:
@@ -141,6 +145,7 @@ func screenerOrderBy(orderBy string) any {
 
 func screenerFilter(filters domain.ScreenerFilter) pg.QueryEncoder {
 	c := Company.Alias("c")
+	// cr := QuarterlyCurrencyRates.Alias("cr")
 	cond := pg.And()
 	if filters.Search != "" {
 		cond.And(pg.Search(c.Col("ts"), filters.Search, pg.SearchOptions{
@@ -149,57 +154,58 @@ func screenerFilter(filters domain.ScreenerFilter) pg.QueryEncoder {
 		return cond
 	}
 	m := MagicFormulaRankings.Alias("m")
-	f := Financials.Alias("f")
+	// f := Financials.Alias("f")
 	// sec := Sector.Alias("sec")
 	df := DerivedFinancials.Alias("df")
 
 	if filters.CapitalExpenditures.Min.Valid {
-		cond.And(pg.Gte(f.Col("capital_expenditures"), filters.CapitalExpenditures.Min.Content*FloatConstant))
+		cond.And(pg.Raw("(f.capital_expenditures::real / cr.rate) >= %c", filters.CapitalExpenditures.Min.Content*FloatConstant))
 	}
 	if filters.CapitalExpenditures.Max.Valid {
-		cond.And(pg.Lte(f.Col("capital_expenditures"), filters.CapitalExpenditures.Max.Content*FloatConstant))
+		cond.And(pg.Raw("(f.capital_expenditures::real / cr.rate) <= %c", filters.CapitalExpenditures.Max.Content*FloatConstant))
 	}
 
 	if filters.EBIT.Min.Valid {
-		cond.And(pg.Gte(f.Col("ebit"), filters.EBIT.Min.Content*FloatConstant))
+		cond.And(pg.Raw("(f.ebit::real / cr.rate) >= %c", filters.EBIT.Min.Content*FloatConstant))
 	}
 	if filters.EBIT.Max.Valid {
-		cond.And(pg.Lte(f.Col("ebit"), filters.EBIT.Max.Content*FloatConstant))
+		cond.And(pg.Raw("(f.ebit::real / cr.rate) <= %c", filters.EBIT.Max.Content*FloatConstant))
 	}
 
 	if filters.Equity.Min.Valid {
-		cond.And(pg.Gte(f.Col("equity"), filters.Equity.Min.Content*FloatConstant))
+		cond.And(pg.Raw("(f.equity::real / cr.rate) >= %c", filters.Equity.Min.Content*FloatConstant))
 	}
 	if filters.Equity.Max.Valid {
-		cond.And(pg.Lte(f.Col("equity"), filters.Equity.Max.Content*FloatConstant))
+		cond.And(pg.Raw("(f.equity::real / cr.rate) <= %c", filters.Equity.Max.Content*FloatConstant))
 	}
 
 	if filters.GrossOperatingProfit.Min.Valid {
-		cond.And(pg.Gte(f.Col("gross_operating_profit"), filters.GrossOperatingProfit.Min.Content*FloatConstant))
+		cond.And(pg.Raw("(f.gross_operating_profit::real / cr.rate) >= %c", filters.GrossOperatingProfit.Min.Content*FloatConstant))
 	}
 	if filters.GrossOperatingProfit.Max.Valid {
-		cond.And(pg.Lte(f.Col("gross_operating_profit"), filters.GrossOperatingProfit.Max.Content*FloatConstant))
+		cond.And(pg.Raw("(f.gross_operating_profit::real / cr.rate) <= %c", filters.GrossOperatingProfit.Max.Content*FloatConstant))
 	}
 
 	if filters.NetIncome.Min.Valid {
-		cond.And(pg.Gte(f.Col("net_income"), filters.NetIncome.Min.Content*FloatConstant))
+		cond.And(pg.Raw("(f.net_income::real / cr.rate) >= %c", filters.NetIncome.Min.Content*FloatConstant))
 	}
 	if filters.NetIncome.Max.Valid {
-		cond.And(pg.Lte(f.Col("net_income"), filters.NetIncome.Max.Content*FloatConstant))
+		cond.And(pg.Raw("(f.net_income::real / cr.rate) <= %c", filters.NetIncome.Max.Content*FloatConstant))
 	}
 
 	if filters.OperatingCashFlow.Min.Valid {
-		cond.And(pg.Gte(f.Col("operating_cash_flow"), filters.OperatingCashFlow.Min.Content*FloatConstant))
+		cond.And(pg.Raw("(f.operating_cash_flow::real / cr.rate) >= %c", filters.OperatingCashFlow.Min.Content*FloatConstant))
 	}
 	if filters.OperatingCashFlow.Max.Valid {
-		cond.And(pg.Lte(f.Col("operating_cash_flow"), filters.OperatingCashFlow.Max.Content*FloatConstant))
+		cond.And(pg.Raw("(f.operating_cash_flow::real / cr.rate) <= %c", filters.OperatingCashFlow.Max.Content*FloatConstant))
 	}
 
 	if filters.Revenue.Min.Valid {
-		cond.And(pg.Gte(f.Col("revenue"), filters.Revenue.Min.Content*FloatConstant))
+		// cond.And(pg.Gte(f.Col("revenue"), filters.Revenue.Min.Content*FloatConstant))
+		cond.And(pg.Raw("(f.revenue::real / cr.rate) >= %c", filters.Revenue.Min.Content*FloatConstant))
 	}
 	if filters.Revenue.Max.Valid {
-		cond.And(pg.Lte(f.Col("revenue"), filters.Revenue.Max.Content*FloatConstant))
+		cond.And(pg.Raw("(f.revenue::real / cr.rate) <= %c", filters.Revenue.Max.Content*FloatConstant))
 	}
 
 	if filters.EPS.Min.Valid {
@@ -305,13 +311,16 @@ func screenerFilter(filters domain.ScreenerFilter) pg.QueryEncoder {
 
 func screenerQuery(filters domain.ScreenerFilter, a pg.Alias) (columns, []pg.QueryEncoder) {
 	curr := Currency.Alias("curr")
+	cr := QuarterlyCurrencyRates.Alias("cr")
 
 	cols := make([]pg.ChainedIdentifier, 4, len(filters.Columns)+4)
 	cols[0] = a.Col("id")
 	cols[1] = a.Col("name")
 	cols[2] = curr.Col("name")
 	cols[3] = a.Col("country_code")
-	joins := make([]pg.QueryEncoder, 0)
+	joins := make([]pg.QueryEncoder, 1)
+	joins[0] = pg.Raw("left join %T on %c", cr, pg.And(pg.Eq(cr.Col("fiscal_year"), filters.FiscalYear), pg.Eq(cr.Col("currency_id"), a.Col("currencyId")), pg.Eq(cr.Col("quarter"), 1)))
+	// joins[0] = pg.Raw(`left join quarterly_currency_rates cr on cr.fiscal_year = 2024 and cr.currency_id = c."currencyId" and cr.quarter = 1`)
 	tables := make(map[pg.Identifier]struct{})
 
 	m := MagicFormulaRankings.Alias("m")
