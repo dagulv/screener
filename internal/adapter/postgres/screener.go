@@ -361,6 +361,31 @@ func screenerQuery(filters domain.ScreenerFilter, a pg.Alias) (columns, []pg.Que
 		}
 	}
 
+	if domain.HasValid(filters.CapitalExpenditures, filters.EBIT, filters.Equity, filters.GrossOperatingProfit, filters.NetIncome, filters.OperatingCashFlow, filters.Revenue) {
+		if join := tryAddTable(tables, Financials, a, f, filters); join != nil {
+			joins = append(joins, join)
+		}
+	}
+
+	if domain.HasValid(filters.EPS,
+		filters.EVEBIT,
+		filters.PB,
+		filters.PE,
+		filters.PS,
+		filters.OperatingMargin,
+		filters.NetMargin,
+		filters.ROE,
+		filters.ROC,
+		filters.LiabilitiesToEquity,
+		filters.DebtToEBIT,
+		filters.DebtToAssets,
+		filters.CashConversion,
+		filters.MagicRank) {
+		if join := tryAddTable(tables, DerivedFinancials, a, df, filters); join != nil {
+			joins = append(joins, join)
+		}
+	}
+
 	return columns{cols}, joins
 }
 

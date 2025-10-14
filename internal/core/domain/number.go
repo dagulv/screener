@@ -48,6 +48,10 @@ type MinMax[T Number] struct {
 	Max Nullable[T] `json:"max"`
 }
 
+func (m MinMax[T]) IsZero() bool {
+	return !m.Min.Valid && !m.Max.Valid
+}
+
 // TypeDescription implements registry.TypeDescriber.
 func (MinMax[T]) TypeDescription(reg *registry.Registry) registry.TypeDescription {
 	return registry.TypeDescription{
